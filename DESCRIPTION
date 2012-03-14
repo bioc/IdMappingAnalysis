@@ -1,0 +1,22 @@
+Package: IdMappingAnalysis
+Imports: boot, mclust, RColorBrewer, Biobase
+Maintainer: Alex Lisovich <all67@pitt.edu>, Roger Day <day01@pitt.edu>
+License: GPL-2
+Title: ID Mapping Analysis
+LazyData: yes
+Type: Package
+Author: Alex Lisovich, Roger Day
+Description: Identifier mapping performance analysis
+Version: 0.99.0
+biocViews: Bioinformatics, Annotation, MultipleComparisons
+Date: 2012-03-07
+Depends: R (>= 2.14), R.oo, rChoiceDialogs
+Collate: 'bootstrap.R' 'corr.R' 'corrData.R' 'data.R' 'dataFilter.R'
+        'zzz.R' 'display.R' 'idMap.R' 'idMapBase.R' 'idMapCounts.R'
+        'idMapDiff.R' 'idMapDiffCounts.R' 'IdMappingAnalysis-package.R'
+        'jointIdMap.plots.R' 'jointIdMap.R'
+        'jointUniquePairs.extensions.R'
+        'jointUniquePairs.interactive.plots.R'
+        'jointUniquePairs.plots.R' 'jointUniquePairs.R' 'misc.R'
+        'mixture.R' 'subset.R' 'uniquePairs.R'
+Packaged: 2012-03-08 02:44:33 UTC; Alex
