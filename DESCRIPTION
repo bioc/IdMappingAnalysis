@@ -7,7 +7,7 @@ LazyData: yes
 Type: Package
 Author: Alex Lisovich, Roger Day
 Description: Identifier mapping performance analysis
-Version: 1.0.0
+Version: 1.1.0
 biocViews: Bioinformatics, Annotation, MultipleComparisons
 Date: 2012-03-07
 Depends: R (>= 2.14), R.oo, rChoiceDialogs
