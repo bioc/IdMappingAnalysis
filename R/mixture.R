@@ -69,7 +69,7 @@ setConstructorS3("Mixture",function(corr=NULL,G=c(1:5),Fisher=FALSE,verbose=FALS
 		corrData<-DataFilter$fisherTransform(corrData);
 		model$clust<-Mclust(corrData,G=G);
 	} else {
-		model$clust<-Mclust(corrData,G=G,model="V");
+		model$clust<-Mclust(corrData,G=G,modelNames="V");
 	}
 	model$corr<-(corrData);
 	model$sd = sqrt(model$clust$parameters$variance$sigmasq);
