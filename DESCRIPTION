@@ -7,9 +7,9 @@ LazyData: yes
 Type: Package
 Author: Alex Lisovich, Roger Day
 Description: Identifier mapping performance analysis
-Version: 1.1.0
+Version: 1.1.1
 biocViews: Bioinformatics, Annotation, MultipleComparisons
-Date: 2012-03-07
+Date: 2012-06-06
 Depends: R (>= 2.14), R.oo, rChoiceDialogs
 Collate: 'bootstrap.R' 'corr.R' 'corrData.R' 'data.R' 'dataFilter.R'
         'zzz.R' 'display.R' 'idMap.R' 'idMapBase.R' 'idMapCounts.R'
@@ -19,4 +19,3 @@ Collate: 'bootstrap.R' 'corr.R' 'corrData.R' 'data.R' 'dataFilter.R'
         'jointUniquePairs.interactive.plots.R'
         'jointUniquePairs.plots.R' 'jointUniquePairs.R' 'misc.R'
         'mixture.R' 'subset.R' 'uniquePairs.R'
-Packaged: 2012-03-08 02:44:33 UTC; Alex

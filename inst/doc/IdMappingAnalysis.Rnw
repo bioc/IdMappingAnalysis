@@ -181,6 +181,9 @@ code listed above and placed into the \Rpackage{IdMappingAnalysis} package data
 section.
 
 \begin{singlespace}
+<<chunk1,eval=TRUE,keep.source=FALSE>>=
+options(width=110)
+@
 <<chunk2,eval=FALSE,keep.source=TRUE>>=
 # Initialize the ID mapping retrieval system
 library(IdMappingRetrieval); 
