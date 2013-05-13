@@ -24,7 +24,6 @@
  series which do not pass the QC by applying the removeNASeries method as the last step.
  }
 
- \synopsis{do.apply.DataFilter(static, experimentSet, byRows=TRUE, filterFun=NULL, filtParams=NULL, verbose=FALSE, ...)}
 \usage{DataFilter$do.apply(experimentSet, byRows=TRUE, filterFun=NULL, filtParams=NULL, verbose=FALSE, ...)}
 
  \arguments{
