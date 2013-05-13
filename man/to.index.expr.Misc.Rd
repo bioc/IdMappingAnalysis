@@ -22,7 +22,6 @@
  i.e. for an object X and expression 'a+b' generate the expression 'X$a + X$b'
  }
 
- \synopsis{to.index.expr.Misc(static, obj, expr, ...)}
 \usage{Misc$to.index.expr(obj, expr, ...)}
 
  \arguments{

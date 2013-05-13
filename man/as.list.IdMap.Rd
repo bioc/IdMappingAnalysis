@@ -23,7 +23,6 @@
  otherwise an exception will be thrown.
  }
 
- \synopsis{as.list.IdMap(x, idMapList, verbose=FALSE, ...)}
 \usage{IdMap$as.list(idMapList, verbose=FALSE, ...)}
 
  \arguments{

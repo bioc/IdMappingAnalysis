@@ -19,7 +19,6 @@
  Display a message accompanied by the percentage of completion.
  }
 
- \synopsis{progressMsg.Display(static, msg, i, total, ...)}
 \usage{Display$progressMsg(msg, i, total, ...)}
 
  \arguments{

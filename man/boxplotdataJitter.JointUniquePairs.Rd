@@ -20,7 +20,6 @@
  Plot a set of points representing the density distribution of a data set.
  }
 
- \synopsis{boxplotdataJitter.JointUniquePairs(static, y, round, verbose=FALSE, ...)}
 \usage{JointUniquePairs$boxplotdataJitter(y, round, verbose=FALSE, ...)}
 
  \arguments{

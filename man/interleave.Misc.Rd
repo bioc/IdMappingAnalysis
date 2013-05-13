@@ -17,7 +17,6 @@
 
  \description{Interleave two matrixes by columns.}
 
- \synopsis{interleave.Misc(stati, A, B, ...)}
 \usage{Misc$interleave(A, B, ...)}
 
  \arguments{

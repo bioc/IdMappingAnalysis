@@ -17,7 +17,6 @@
 
  \description{Plot loess transformed data.}
 
- \synopsis{line.loess.Display(static, x, y, ...)}
 \usage{Display$line.loess(x, y, ...)}
 
  \arguments{

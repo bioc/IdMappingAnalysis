@@ -17,7 +17,6 @@
 
  \description{Draw a curve from unsorted points.}
 
- \synopsis{line.unsorted.Display(static, x, y, type="l", ...)}
 \usage{Display$line.unsorted(x, y, type="l", ...)}
 
  \arguments{

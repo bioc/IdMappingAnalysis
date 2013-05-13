@@ -19,7 +19,6 @@
  Save current plot to the file.
  }
 
- \synopsis{copy.Display(static, filename, zoom=1, plotFun=NULL, plotArgs=list(), type=c("png", "jpeg", "jpg", "tiff", "bmp", "pdf"), res=72, quality=100, compression=c("none", "rle", "lzw", "jpeg", "zip"), ...)}
 \usage{Display$copy(filename, zoom=1, plotFun=NULL, plotArgs=list(), type=c("png", "jpeg", "jpg", "tiff", "bmp", "pdf"), res=72, quality=100, compression=c("none", "rle", "lzw", "jpeg", "zip"), ...)}
 
  \arguments{

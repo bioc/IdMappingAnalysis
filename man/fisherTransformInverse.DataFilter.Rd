@@ -16,7 +16,6 @@
  \title{Compute the Fisher inversed transform}
  \description{Compute the Fisher inversed transform.}
 
- \synopsis{fisherTransformInverse.DataFilter(static, z, ...)}
 \usage{DataFilter$fisherTransformInverse(z, ...)}
 
  \arguments{

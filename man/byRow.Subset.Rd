@@ -23,7 +23,6 @@
  of the imput data frame(s) columns with a given set of names (subset).
  }
 
- \synopsis{byRow.Subset(static, frameData, subset, row, verbose=FALSE, ...)}
 \usage{Subset$byRow(frameData, subset, row, verbose=FALSE, ...)}
 
  \arguments{

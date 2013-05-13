@@ -16,7 +16,6 @@
  \title{Perform mean based thresholding of an input vector}
  \description{Perform mean based thresholding of an input vector.}
 
- \synopsis{minAvgCountConstraint.DataFilter(static, x, filtParams, ...)}
 \usage{DataFilter$minAvgCountConstraint(x, filtParams, ...)}
 
  \arguments{

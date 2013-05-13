@@ -17,7 +17,6 @@
 
  \description{Zoom graphics parameters.}
 
- \synopsis{zoom.pars.Display(static, zoom, par.names=c("lwd", "cex", "cex.axis", "cex.lab", "cex.main", "cex.sub", "mai"), ...)}
 \usage{Display$zoom.pars(zoom, par.names=c("lwd", "cex", "cex.axis", "cex.lab", "cex.main", "cex.sub", "mai"), ...)}
 
  \arguments{

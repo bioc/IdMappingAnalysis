@@ -16,7 +16,6 @@
  \title{Swap the primary and secondary key columns}
  \description{Swap the primary and secondary key columns.}
 
- \synopsis{swapKeys.UniquePairs(static, uniquePairs, ...)}
 \usage{UniquePairs$swapKeys(uniquePairs, ...)}
 
  \arguments{

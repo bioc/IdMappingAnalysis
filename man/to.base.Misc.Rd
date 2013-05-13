@@ -17,7 +17,6 @@
 
  \description{Convert number to a numeric vector of a given base.}
 
- \synopsis{to.base.Misc(static, n, base=2, r=TRUE, ...)}
 \usage{Misc$to.base(n, base=2, r=TRUE, ...)}
 
  \arguments{

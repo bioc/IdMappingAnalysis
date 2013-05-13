@@ -19,7 +19,6 @@
  Pairwise merge of two string vectors.
  }
 
- \synopsis{CsvList.merge.Misc(static, s1, s2, mergeOp, asStrings=TRUE, ...)}
 \usage{Misc$CsvList.merge(s1, s2, mergeOp, asStrings=TRUE, ...)}
 
  \arguments{

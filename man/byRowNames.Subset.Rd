@@ -23,7 +23,6 @@
  which are not in an original data frame, the new rows are filled with value from na.value parameter.
  }
 
- \synopsis{byRowNames.Subset(static, frameData, subset, orderBySubset=TRUE, mergeOp=intersect, na.value="", verbose=FALSE, ...)}
 \usage{Subset$byRowNames(frameData, subset, orderBySubset=TRUE, mergeOp=intersect, na.value="", verbose=FALSE, ...)}
 
  \arguments{

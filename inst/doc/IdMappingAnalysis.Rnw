@@ -618,6 +618,9 @@ The following functionality is supported through the methods arguments or by sel
 
 - copying a plot into the file with a specified "zoom" (magnification factor).
 
+\section{Decision support}
+
+
 
 \section{The package architecture}
 

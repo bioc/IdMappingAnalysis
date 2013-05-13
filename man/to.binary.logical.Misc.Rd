@@ -19,7 +19,6 @@
  Convert number to a  vector of logicals with predefine length
  }
 
- \synopsis{to.binary.logical.Misc(static, n, digits=0, r=TRUE, ...)}
 \usage{Misc$to.binary.logical(n, digits=0, r=TRUE, ...)}
 
  \arguments{

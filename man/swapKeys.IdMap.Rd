@@ -16,7 +16,6 @@
 \title{Swap the primary and secondary key columns}
 \description{Swap the primary and secondary key columns.}
 
-\synopsis{swapKeys.IdMap(static, idMap, verbose=FALSE, ...)}
 \usage{IdMap$swapKeys(idMap, verbose=FALSE, ...)}
 
 \arguments{

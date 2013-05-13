@@ -16,7 +16,6 @@
  \title{Compute the Fisher transform}
  \description{Compute the Fisher transform.}
 
- \synopsis{fisherTransform.DataFilter(static, x, ...)}
 \usage{DataFilter$fisherTransform(x, ...)}
 
  \arguments{

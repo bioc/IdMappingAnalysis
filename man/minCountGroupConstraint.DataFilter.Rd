@@ -16,7 +16,6 @@
  \title{Perform minimum count based thresholding of an input vector subdivided into groups}
  \description{Perform minimum count based thresholding of an input vector subdivided into groups.}
 
- \synopsis{minCountGroupConstraint.DataFilter(static, X, filtParams, ...)}
 \usage{DataFilter$minCountGroupConstraint(X, filtParams, ...)}
 
  \arguments{

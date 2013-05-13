@@ -16,7 +16,6 @@
  \title{Perform minimum count based thresholding of an input vector}
  \description{Perform minimum count based thresholding of an input vector.}
 
- \synopsis{minCountConstraint.DataFilter(static, x, filtParams, ...)}
 \usage{DataFilter$minCountConstraint(x, filtParams, ...)}
 
  \arguments{

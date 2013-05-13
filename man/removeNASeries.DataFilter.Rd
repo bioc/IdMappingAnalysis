@@ -16,7 +16,6 @@
  \title{Remove NA series from the experiment set}
  \description{Remove NA series from the experiment set.}
 
- \synopsis{removeNASeries.DataFilter(static, experimentSet, byRows=TRUE, verbose=FALSE, ...)}
 \usage{DataFilter$removeNASeries(experimentSet, byRows=TRUE, verbose=FALSE, ...)}
 
  \arguments{

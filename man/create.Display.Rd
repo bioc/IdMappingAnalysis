@@ -17,7 +17,6 @@
 
  \description{Open a new display device.}
 
- \synopsis{create.Display(static, width=7, height=7, bg="transparent", ...)}
 \usage{Display$create(width=7, height=7, bg="transparent", ...)}
 
  \arguments{

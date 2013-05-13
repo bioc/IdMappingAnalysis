@@ -16,7 +16,6 @@
  \title{Compute the Fisher transform Jacobean}
  \description{Compute the Fisher transform Jacobean.}
 
- \synopsis{fisherTransformJacobean.DataFilter(static, x, ...)}
 \usage{DataFilter$fisherTransformJacobean(x, ...)}
 
  \arguments{

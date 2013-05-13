@@ -16,7 +16,6 @@
  \title{Compute log10 of a numerical vector combined with thresholding on minimum value}
  \description{Compute log10 of a numerical vector combined with thresholding on minimum value.}
 
- \synopsis{log10.DataFilter(static, x, filtParams, ...)}
 \usage{DataFilter$log10(x, filtParams, ...)}
 
  \arguments{

@@ -19,7 +19,6 @@
  Convert space delimited string to a vector of words.
  }
 
- \synopsis{words.Misc(static, string, ...)}
 \usage{Misc$words(string, ...)}
 
  \arguments{

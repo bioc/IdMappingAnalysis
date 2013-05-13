@@ -18,7 +18,6 @@
  \description{Convert aligned experiment data into the data structure incapsulated within the CorrData object.
  }
 
- \synopsis{pack.experiments.CorrData(static, experimentSetList, uniqueTuples, verbose=FALSE, ...)}
 \usage{CorrData$pack.experiments(experimentSetList, uniqueTuples, verbose=FALSE, ...)}
 
  \arguments{

@@ -23,7 +23,6 @@
  size reduction is necessary
  }
 
- \synopsis{create.UniquePairs(static, idMapSet, secondaryIDs=NULL, keepMissing=FALSE, verbose=FALSE, ...)}
 \usage{UniquePairs$create(idMapSet, secondaryIDs=NULL, keepMissing=FALSE, verbose=FALSE, ...)}
 
  \arguments{

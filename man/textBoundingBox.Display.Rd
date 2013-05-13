@@ -25,7 +25,6 @@
  graphical device, otherwise an error will be thrown.
  }
 
- \synopsis{textBoundingBox.Display(static, stext, units="user", cex=1, srt=0, get.biggest=TRUE, ...)}
 \usage{Display$textBoundingBox(stext, units="user", cex=1, srt=0, get.biggest=TRUE, ...)}
 
  \arguments{
