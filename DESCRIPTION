@@ -7,12 +7,14 @@ LazyData: yes
 Type: Package
 Author: Alex Lisovich, Roger Day
 Description: Identifier mapping performance analysis
-Version: 1.5.0
+Version: 1.5.1
 biocViews: Bioinformatics, Annotation, MultipleComparisons
-Date: 2012-11-07
-Depends: R (>= 2.14), R.oo (>= 1.10.1), rChoiceDialogs
+Date: 2013-05-13
+Depends: R (>= 2.14), R.oo (>= 1.13.0), rChoiceDialogs
 Collate: 'bootstrap.R' 'corr.R' 'corrData.R' 'data.R' 'dataFilter.R'
         'zzz.R' 'display.R' 'idMap.R' 'idMapBase.R' 'idMapCounts.R'
+        'fit2clusters.R'
+        'expectedUtility.R'
         'idMapDiff.R' 'idMapDiffCounts.R' 'IdMappingAnalysis-package.R'
         'jointIdMap.plots.R' 'jointIdMap.R'
         'jointUniquePairs.extensions.R'
