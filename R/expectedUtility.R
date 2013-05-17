@@ -7,7 +7,7 @@
 #' bioinformatics data preparation method.
 #'
 #' @param dataset A data frame or list from a call to \code{fit2clusters}, the
-#'   posterior probabilities for each observation, their variance estimates.
+#'   posterior probabilities for each observation, their variance estimates. See Details.
 #' @param label A text string describing the method being studied, to label the return value. This is
 #'   handy for using \code{rbind} to combine results for different methods.
 #' @param bootModelCorClusters Source for mixture model estimates. If missing, extracted from calling frame.
@@ -15,6 +15,7 @@
 #' @param Utp Utility of a true positive.
 #' @param Lfp Loss of a false positive. 
 #' @param deltaPlus Parameter defined as Pr("+" | "+" or "0")
+#' @param guarantee Minimum value for posterior probability.
 
 #' @return A data frame with just one row. The columns are: 
 #'   \item{Utp}{ Utility of a true positive.}
@@ -31,28 +32,30 @@
 #'   \item{Eutility1}{The average expected utility per ID pair: Utrue-Lfalse.} 
 #'   \item{Eutility}{The total expected utility, summing over ID pairs: \code{nrow(dataset)*Eutility1}.} 
 #'   
-#' \section Details:{
-#'   The \code{dataset} should be a dataframe with one row per
+#' @details 
+#'   The input \code{dataset} should be a dataframe with one row per
 #'   ID pair, and the following columns: 
 #'     \itemize{
-#'       \item\code{Utp}{ Utility
+#'       \item{\code{Utp}}{ Utility
 #'                        of a true positive.}
-#'       \item\code{Lfp}{ Loss of a false
+#'       \item{\code{Lfp}}{ Loss of a false
 #'                        positive.} 
-#'       \item\code{postProb}{ The posterior probabilities
+#'       \item{\code{postProb}}{ The posterior probabilities
 #'                             for each observation} 
-#'       \item\code{postProbVar}{ The variances
+#'       \item{\code{postProbVar}}{ The variances
 #'                                of the posterior probabilities, usually estimated from
 #'                                the bootstrap using \code{Boot}}
 #'     }
-#' }
 
 
 expectedUtility = 
   function(dataset, label="", 
            bootModelCorClusters,
-           columnsToRemove = c("Utp","Lfp","deltaPlus",pi1Hat),
-           Utp,Lfp,deltaPlus
+           columnsToRemove = c("Utp","Lfp","deltaPlus","pi1Hat"),
+           Utp,
+           Lfp,
+           deltaPlus,
+           guarantee=1e-9
   ){
     if(missing(bootModelCorClusters))
       bootModelCorClusters = get("bootModelCorClusters")
