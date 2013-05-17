@@ -5,9 +5,10 @@
 #' one-dimensional data.
 #' 
 #' @param Y The vector of numbers to fit.
+#' @param Ysigsq The vector of variance estimates for Y.
 #' @param Ylabel Label for the Y axis in a density fit figure.
 #' @param piStart Starting values for the component proportions.
-#' @param Vstart Starting values for the component variances.
+#' @param VStart Starting values for the component variances.
 #' @param psiStart  Starting values for the component means
 #' @param NinnerLoop Number of iterations in the "C" loop of ECM.
 #' @param nReps Upper limit of number of EM steps.
@@ -19,6 +20,7 @@
 #' @param estimatesOnly If TRUE, return only the estimates. Otherwise, returns
 #'   details per observations, and return the estimates as an attribute.
 #' @param plotMe If TRUE, plot the mixture density and kernel smooth estimates.
+#' @param testMe If TRUE, run a code test.
 #' @param Ntest For testing purposes, the number of replications of simulated
 #'   data.
 #' @param simPsi For testing purposes, the true means.
@@ -29,18 +31,20 @@
 #' @param simBeta For testing purposes, beta parameter in rgamma for measurement
 #'   error variance.
 #' @param seed For testing purposes, random seed.
+#' @param ... Not used; testing roxygen2.
+#'   
 #'   
 #' @return  If estimatesOnly is TRUE, return only the estimates:
 #' Otherwise, return a dataframe of 
-#'   details per observations, and return the estimates as an attribute.
-#'   The observation details are:
+#'   details per observations, and return the \code{estimates} as an attribute.
+#'   The \code{estimates} details are:
 #'   \item{pi1}{The probability of the 2nd mixture component}
 #'   \item{psi0}{The mean of the first component (psi0Constraint if provided)}
 #'   \item{psi1}{The mean of the second component }
 #'   \item{Var0}{The variance of the first component (V0Constraint if provided)}
 #'   \item{Var1}{The variance of the second component }
 #'   
-#'   The observation details are:
+#'   The \code{observations} details are:
 #'   \item{Y}{The original observations.}
 #'   \item{Ysigsq}{The original measurement variances.}
 #'   \item{posteriorOdds}{Posterior odds of being in component 2 of the mixture.}
@@ -51,7 +55,8 @@
 
 
 
-fit2clusters = function(Y, Ylabel="correlation", Ysigsq,
+fit2clusters = function(Y, Ylabel="correlation",
+			Ysigsq,
                         piStart = c(0.5, 0.5),
                         VStart = c(0.1,0.1),
                         psiStart = c(0,0.1),
@@ -69,17 +74,22 @@ fit2clusters = function(Y, Ylabel="correlation", Ysigsq,
                         simV = c(0.05^2, 0.05^2),
                         simAlpha = 5,
                         simBeta = 400,
-                        seed) {
+                        seed, ...
+			) {
   ### EM algorithm for 2 clusters, 
   ### with constraints on the cluster means and variances, and known data variances
+  if(!missing(seed) & !is.na(seed)) {
+	cat("Assigning this value to .Random.seed :", seed, "\n")
+	assign(".Random.seed", seed, pos=1)
+  }
   if(testMe) {
-    if(missing(seed)) .Random.seed <<- Random.seed.save
-    else if(!is.na(seed)) .Random.seed <<- seed
     #  NA ==>  a new dataset.
     simData = data.frame(G = 1+rbinom(Ntest, 1, simPi[2]))
     simData$Ysigsq = rgamma(Ntest, simAlpha, simBeta)
     simData$sd = sqrt(simV[simData$G] +simData$Ysigsq)
-    simData = within(simData, Y <- simPsi[G] + rnorm(Ntest)*sqrt(simV[G]) + rnorm(Ntest)*sqrt(Ysigsq)) 
+    simData$Y = simPsi[simData$G] + 
+      rnorm(Ntest)*sqrt(simV[simData$G]) + 
+      rnorm(Ntest)*sqrt(simData$Ysigsq)
     print(summary(simData$Y))
     Y = simData$Y
     Ysigsq = simData$Ysigsq
@@ -200,12 +210,12 @@ fit2clusters = function(Y, Ylabel="correlation", Ysigsq,
   return(returnVal)
 }
 
-clusterFitTest =
-  (fit2clusters(testMe=T, seed=NA, simAlpha=50, simBeta=1000,
-                simV=c(0.1,0.1)^2
-                , psi0Constraint=0, 
-                #              , V0Constraint=.02
-                , estimatesOnly=T
-  ))
-clusterFitTest
-print(summary(attr(clusterFitTest, "Ysigsq")))
+# clusterFitTest =
+#   (fit2clusters(testMe=T, seed=NA, simAlpha=50, simBeta=1000,
+#                 simV=c(0.1,0.1)^2
+#                 , psi0Constraint=0, 
+#                 #              , V0Constraint=.02
+#                 , estimatesOnly=T
+#   ))
+# clusterFitTest
+# print(summary(attr(clusterFitTest, "Ysigsq")))
