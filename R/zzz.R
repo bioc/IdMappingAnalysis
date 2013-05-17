@@ -1,4 +1,4 @@
-.First.lib <- function(libname, pkgname) {
+.onLoad <- function(libname, pkgname) {
 	### .First.lib is NOT RECOMMENDED for packages with #namespace, but it works.
 }
 
