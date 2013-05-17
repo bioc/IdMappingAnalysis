@@ -9,10 +9,12 @@
     estimatesOnly = TRUE, plotMe = TRUE, testMe = FALSE,
     Ntest = 5000, simPsi = c(0, 0.4), simPi = c(2/3, 1/3),
     simV = c(0.05^2, 0.05^2), simAlpha = 5, simBeta = 400,
-    seed)
+    seed, ...)
 }
 \arguments{
   \item{Y}{The vector of numbers to fit.}
+
+  \item{Ysigsq}{The vector of variance estimates for Y.}
 
   \item{Ylabel}{Label for the Y axis in a density fit
   figure.}
@@ -20,7 +22,7 @@
   \item{piStart}{Starting values for the component
   proportions.}
 
-  \item{Vstart}{Starting values for the component
+  \item{VStart}{Starting values for the component
   variances.}
 
   \item{psiStart}{Starting values for the component means}
@@ -46,6 +48,8 @@
   \item{plotMe}{If TRUE, plot the mixture density and
   kernel smooth estimates.}
 
+  \item{testMe}{If TRUE, run a code test.}
+
   \item{Ntest}{For testing purposes, the number of
   replications of simulated data.}
 
@@ -62,23 +66,25 @@
   rgamma for measurement error variance.}
 
   \item{seed}{For testing purposes, random seed.}
+
+  \item{...}{Not used; testing roxygen2.}
 }
 \value{
   If estimatesOnly is TRUE, return only the estimates:
   Otherwise, return a dataframe of details per
-  observations, and return the estimates as an attribute.
-  The observation details are: \item{pi1}{The probability
-  of the 2nd mixture component} \item{psi0}{The mean of the
-  first component (psi0Constraint if provided)}
-  \item{psi1}{The mean of the second component }
-  \item{Var0}{The variance of the first component
-  (V0Constraint if provided)} \item{Var1}{The variance of
-  the second component }
+  observations, and return the \code{estimates} as an
+  attribute.  The \code{estimates} details are:
+  \item{pi1}{The probability of the 2nd mixture component}
+  \item{psi0}{The mean of the first component
+  (psi0Constraint if provided)} \item{psi1}{The mean of the
+  second component } \item{Var0}{The variance of the first
+  component (V0Constraint if provided)} \item{Var1}{The
+  variance of the second component }
 
-  The observation details are: \item{Y}{The original
-  observations.} \item{Ysigsq}{The original measurement
-  variances.} \item{posteriorOdds}{Posterior odds of being
-  in component 2 of the mixture.}
+  The \code{observations} details are: \item{Y}{The
+  original observations.} \item{Ysigsq}{The original
+  measurement variances.} \item{posteriorOdds}{Posterior
+  odds of being in component 2 of the mixture.}
   \item{postProbVar}{Estimated variance of the posterior
   probability, using the delta method.}
 }
