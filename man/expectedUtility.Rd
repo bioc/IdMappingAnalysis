@@ -5,13 +5,13 @@ bioinformatics data preparation method}
 \usage{
   expectedUtility(dataset, label = "",
     bootModelCorClusters,
-    columnsToRemove = c("Utp", "Lfp", "deltaPlus", pi1Hat),
-    Utp, Lfp, deltaPlus)
+    columnsToRemove = c("Utp", "Lfp", "deltaPlus", "pi1Hat"),
+    Utp, Lfp, deltaPlus, guarantee = 1e-09)
 }
 \arguments{
   \item{dataset}{A data frame or list from a call to
   \code{fit2clusters}, the posterior probabilities for each
-  observation, their variance estimates.}
+  observation, their variance estimates. See Details.}
 
   \item{label}{A text string describing the method being
   studied, to label the return value. This is handy for
@@ -30,6 +30,9 @@ bioinformatics data preparation method}
 
   \item{deltaPlus}{Parameter defined as Pr("+" | "+" or
   "0")}
+
+  \item{guarantee}{Minimum value for posterior
+  probability.}
 }
 \value{
   A data frame with just one row. The columns are:
@@ -52,15 +55,6 @@ bioinformatics data preparation method}
   pair: Utrue-Lfalse.} \item{Eutility}{The total expected
   utility, summing over ID pairs:
   \code{nrow(dataset)*Eutility1}.}
-
-  \details{ The \code{dataset} should be a dataframe with
-  one row per ID pair, and the following columns: \itemize{
-  \item\code{Utp}{ Utility of a true positive.}
-  \item\code{Lfp}{ Loss of a false positive.}
-  \item\code{postProb}{ The posterior probabilities for
-  each observation} \item\code{postProbVar}{ The variances
-  of the posterior probabilities, usually estimated from
-  the bootstrap using \code{Boot}} } }
 }
 \description{
   \code{expectedUtility} calculates mean expected utility
@@ -68,5 +62,15 @@ bioinformatics data preparation method}
   two bioinformatics platforms. It is used to evaluate an
   ID mapping, ID filtering, or other bioinformatics data
   preparation method.
+}
+\details{
+  The input \code{dataset} should be a dataframe with one
+  row per ID pair, and the following columns: \itemize{
+  \item{\code{Utp}}{ Utility of a true positive.}
+  \item{\code{Lfp}}{ Loss of a false positive.}
+  \item{\code{postProb}}{ The posterior probabilities for
+  each observation} \item{\code{postProbVar}}{ The
+  variances of the posterior probabilities, usually
+  estimated from the bootstrap using \code{Boot}} }
 }
 
