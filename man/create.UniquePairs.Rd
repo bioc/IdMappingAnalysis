@@ -1,17 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  uniquePairs.R
+%  R/uniquePairs.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{create.UniquePairs}
+ \name{UniquePairs$create}
+\alias{UniquePairs$create}
 \alias{create.UniquePairs}
 \alias{UniquePairs.create}
-\alias{create.UniquePairs}
 \alias{create,UniquePairs-method}
-
 
 
  \title{Create a UniquePairs object from a single IdMap or a list of IdMap objects}
@@ -23,7 +22,13 @@
  size reduction is necessary
  }
 
-\usage{UniquePairs$create(idMapSet, secondaryIDs=NULL, keepMissing=FALSE, verbose=FALSE, ...)}
+ \usage{
+## Static method (use this):
+## UniquePairs$create(idMapSet, secondaryIDs=NULL, keepMissing=FALSE, verbose=FALSE, ...)
+
+## Don't use the below:
+\method{create}{UniquePairs}(static, idMapSet, secondaryIDs=NULL, keepMissing=FALSE, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{idMapSet}{an object or a list of object which can be coerced

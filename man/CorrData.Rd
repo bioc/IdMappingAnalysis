@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  corrData.R
+%  R/corrData.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,7 +15,7 @@
  \title{CorrData class}
 
  \description{
-  Package:   \cr
+  Package:  IdMappingAnalysis \cr
 \bold{Class CorrData}\cr
 
 \code{\link[R.oo]{Object}}\cr
@@ -45,7 +45,9 @@ extends \link[R.oo]{Object}\cr
  during the object creation.
  }
 
- \usage{CorrData(uniquePairs=NULL, expSet1=NULL, expSet2=NULL, verbose=FALSE, ...)}
+ \usage{
+CorrData(uniquePairs=NULL, expSet1=NULL, expSet2=NULL, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{uniquePairs}{ UniquePairs object or a list of such objects
@@ -79,7 +81,7 @@ extends \link[R.oo]{Object}\cr
 
 
  \bold{Methods inherited from Object}:\cr
-$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
+$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clearLookupCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFieldModifier, getFieldModifiers, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
 
 
  }

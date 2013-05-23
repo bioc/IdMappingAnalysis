@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMapDiff.R
+%  R/idMapDiff.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,12 +15,12 @@
  \title{The IdMapDiff class}
 
  \description{
-  Package:   \cr
+  Package:  IdMappingAnalysis \cr
 \bold{Class IdMapDiff}\cr
 
 \code{\link[R.oo]{Object}}\cr
 \code{~~|}\cr
-\code{~~+--}\code{\link{IdMapBase}}\cr
+\code{~~+--}\code{\link[IdMappingAnalysis]{IdMapBase}}\cr
 \code{~~~~~~~|}\cr
 \code{~~~~~~~+--}\code{IdMapDiff}\cr
 
@@ -28,7 +28,7 @@
 \cr
 
 public static class \bold{IdMapDiff}\cr
-extends \link{IdMapBase}\cr
+extends \link[IdMappingAnalysis]{IdMapBase}\cr
 
 
 
@@ -42,7 +42,9 @@ extends \link{IdMapBase}\cr
  in anticipation of being used by various processing pipelines in a future.
  }
 
- \usage{IdMapDiff(idMap1=NULL, idMap2=NULL, pairNames=c("First", "Second"), verbose=FALSE, ...)}
+ \usage{
+IdMapDiff(idMap1=NULL, idMap2=NULL, pairNames=c("First", "Second"), verbose=FALSE, ...)
+}
 
  \arguments{
  \item{idMap1}{The first ID Map object on which IdMapDiff object is constructed.}
@@ -73,14 +75,14 @@ extends \link{IdMapBase}\cr
 
  \section{Fields and Methods}{
   \bold{Methods:}\cr
-\emph{No public methods defined}.
+\emph{No methods defined}.
 
 
  \bold{Methods inherited from IdMapBase}:\cr
 [, aligned, as.data.frame, dim, dimnames, getName, primaryIDs, primaryKey, secondaryKey
 
  \bold{Methods inherited from Object}:\cr
-$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
+$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clearLookupCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFieldModifier, getFieldModifiers, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
 
 
  }

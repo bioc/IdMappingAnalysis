@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointIdMap.R
+%  R/jointIdMap.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{getUnionIdMap.JointIdMap}
 \alias{getUnionIdMap.JointIdMap}
 \alias{JointIdMap.getUnionIdMap}
-\alias{getUnionIdMap.JointIdMap}
 \alias{getUnionIdMap,JointIdMap-method}
-
 
  \title{ Create a union IdMap}
 
@@ -20,7 +18,9 @@
  is a union of all secondary IDs in a JointIdMap object for a given primary ID
  }
 
- \usage{\method{getUnionIdMap}{JointIdMap}(this, verbose=FALSE, ...)}
+ \usage{
+\method{getUnionIdMap}{JointIdMap}(this, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{verbose}{if \code{\link[base:logical]{TRUE}} enables diagnostic messages. Default is @FASLE.}

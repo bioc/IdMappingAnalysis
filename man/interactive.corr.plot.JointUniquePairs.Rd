@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.interactive.plots.R
+%  R/jointUniquePairs.interactive.plots.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{interactive.corr.plot.JointUniquePairs}
 \alias{interactive.corr.plot.JointUniquePairs}
 \alias{JointUniquePairs.interactive.corr.plot}
-\alias{interactive.corr.plot.JointUniquePairs}
 \alias{interactive.corr.plot,JointUniquePairs-method}
-
 
  \title{Interactive plot of correlation densities}
 
@@ -21,7 +19,9 @@
  JointUniquePairs@interactive.plot wrapper functionality.
  }
 
- \usage{\method{interactive.corr.plot}{JointUniquePairs}(this, corr, groups="loop", new.plot=FALSE, file.copy=FALSE, plot.Union=TRUE, subsetting=FALSE, lineColors=NULL, lineStyles=NULL, lineWidths=2, verbose=TRUE, ...)}
+ \usage{
+\method{interactive.corr.plot}{JointUniquePairs}(this, corr, groups="loop", new.plot=FALSE, file.copy=FALSE, plot.Union=TRUE, subsetting=FALSE, lineColors=NULL, lineStyles=NULL, lineWidths=2, verbose=TRUE, ...)
+}
 
  \arguments{
  \item{corr}{Corr object.}

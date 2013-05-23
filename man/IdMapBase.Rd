@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMapBase.R
+%  R/idMapBase.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,7 +15,7 @@
  \title{The ID Map base class}
 
  \description{
-  Package:   \cr
+  Package:  IdMappingAnalysis \cr
 \bold{Class IdMapBase}\cr
 
 \code{\link[R.oo]{Object}}\cr
@@ -23,7 +23,7 @@
 \code{~~+--}\code{IdMapBase}\cr
 
 \bold{Directly known subclasses:}\cr
-\link{Bootstrap}, \link{Corr}, \link{IdMap}, \link{IdMapCounts}, \link{IdMapDiff}, \link{IdMapDiffCounts}, \link{JointIdMap}, \link{JointUniquePairs}, \link{UniquePairs}\cr
+\link[IdMappingAnalysis]{Bootstrap}, \link[IdMappingAnalysis]{Corr}, \link[IdMappingAnalysis]{IdMap}, \link[IdMappingAnalysis]{IdMapCounts}, \link[IdMappingAnalysis]{IdMapDiff}, \link[IdMappingAnalysis]{IdMapDiffCounts}, \link[IdMappingAnalysis]{JointIdMap}, \link[IdMappingAnalysis]{JointUniquePairs}, \link[IdMappingAnalysis]{UniquePairs}\cr
 
 public static class \bold{IdMapBase}\cr
 extends \link[R.oo]{Object}\cr
@@ -38,7 +38,9 @@ extends \link[R.oo]{Object}\cr
  particular DB service.
  }
 
- \usage{IdMapBase(DF=NULL, name="", primaryKey=NULL, secondaryKey=NULL, ...)}
+ \usage{
+IdMapBase(DF=NULL, name="", primaryKey=NULL, secondaryKey=NULL, ...)
+}
 
  \arguments{
  \item{DF}{A \code{\link[base]{data.frame}} consisting of two columns (primary and secondary IDs)
@@ -54,7 +56,7 @@ extends \link[R.oo]{Object}\cr
  \section{Fields and Methods}{
   \bold{Methods:}\cr
 \tabular{rll}{
- \tab \code{\link[IdMappingAnalysis:000-LB-.IdMapBase]{[}} \tab Access the elements of a data frame encapsulated within the given IdMapBase object using indexation.\cr
+ \tab \code{[} \tab  -\cr
  \tab \code{\link[IdMappingAnalysis:aligned.IdMapBase]{aligned}} \tab Checks if two IdMapBase objects match on column names and primary ID set.\cr
  \tab \code{\link[IdMappingAnalysis:as.data.frame.IdMapBase]{as.data.frame}} \tab Retrieves a data frame encapsulated within the given IdMapBase object.\cr
  \tab \code{\link[IdMappingAnalysis:dim.IdMapBase]{dim}} \tab Retrieves dimensions of data frame encapsulated within the given IdMapBase object.\cr
@@ -67,7 +69,7 @@ extends \link[R.oo]{Object}\cr
 
 
  \bold{Methods inherited from Object}:\cr
-$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
+$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clearLookupCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFieldModifier, getFieldModifiers, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
 
 
  }

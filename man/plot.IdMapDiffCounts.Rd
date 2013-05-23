@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMapDiffCounts.R
+%  R/idMapDiffCounts.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{plot.IdMapDiffCounts}
 \alias{plot.IdMapDiffCounts}
 \alias{IdMapDiffCounts.plot}
-\alias{plot.IdMapDiffCounts}
 \alias{plot,IdMapDiffCounts-method}
-
 
  \title{Produce a fountain plot representing the quantitative relationship of the compound events}
 
@@ -20,7 +18,9 @@
  <'excess both', 'excess left', 'excess right', 'same list', 'in left only', 'in right only', 'in neither' >
  }
 
- \usage{\method{plot}{IdMapDiffCounts}(x, valRange=c(-20, 20, 10), reverse=FALSE, pairLabels=NULL, guideline.col="darkgrey", guideline.lty=2, guideline.lwd=par.zoom, cols=c("red", "blue", "green"), sides=2, cex=1, cex.side=0.75 * cex, srt=0, adj=0.5, par.zoom=1, ...)}
+ \usage{
+\method{plot}{IdMapDiffCounts}(x, valRange=c(-20, 20, 10), reverse=FALSE, pairLabels=NULL, guideline.col="darkgrey", guideline.lty=2, guideline.lwd=par.zoom, cols=c("red", "blue", "green"), sides=2, cex=1, cex.side=0.75 * cex, srt=0, adj=0.5, par.zoom=1, ...)
+}
 
  \arguments{
  \item{valRange}{\code{\link[base]{numeric}} vector of length 3 where the first and second elements

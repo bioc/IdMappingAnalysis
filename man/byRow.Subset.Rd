@@ -1,17 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  subset.R
+%  R/subset.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{byRow.Subset}
+ \name{Subset$byRow}
+\alias{Subset$byRow}
 \alias{byRow.Subset}
 \alias{Subset.byRow}
-\alias{byRow.Subset}
 \alias{byRow,Subset-method}
-
 
  \title{Extract subset of columns from a data frame or a list of data frames
  by intersecting on a particular row}
@@ -23,7 +22,13 @@
  of the imput data frame(s) columns with a given set of names (subset).
  }
 
-\usage{Subset$byRow(frameData, subset, row, verbose=FALSE, ...)}
+ \usage{
+## Static method (use this):
+## Subset$byRow(frameData, subset, row, verbose=FALSE, ...)
+
+## Don't use the below:
+\method{byRow}{Subset}(static, frameData, subset, row, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{frameData}{Input \code{\link[base]{data.frame}} or a \code{\link[base]{list}} of data frames.}

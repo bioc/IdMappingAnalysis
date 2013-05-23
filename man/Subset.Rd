@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  subset.R
+%  R/subset.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,7 +15,7 @@
  \title{The Subset class}
 
  \description{
- Package:   \cr
+ Package:  IdMappingAnalysis \cr
 \bold{Class Subset}\cr
 
 \code{\link[R.oo]{Object}}\cr
@@ -34,7 +34,9 @@ extends \link[R.oo]{Object}\cr
  defined as static methods of the Subset class.
  }
 
- \usage{Subset(...)}
+ \usage{
+Subset(...)
+}
 
  \arguments{
  \item{...}{Not used.}
@@ -45,15 +47,15 @@ extends \link[R.oo]{Object}\cr
 \tabular{rll}{
  \tab \code{\link[IdMappingAnalysis:byColNames.Subset]{byColNames}} \tab Extract subset of columns from a data frame or a list of data frames.\cr
  \tab \code{\link[IdMappingAnalysis:byColumn.Subset]{byColumn}} \tab # Extract subset of rows from a data frame or a list of data frames
- by intersecting on a particular column.\cr
+.\cr
  \tab \code{\link[IdMappingAnalysis:byRow.Subset]{byRow}} \tab Extract subset of columns from a data frame or a list of data frames
- by intersecting on a particular row.\cr
+.\cr
  \tab \code{\link[IdMappingAnalysis:byRowNames.Subset]{byRowNames}} \tab Extract subset of columns from a data frame or a list of data frames.\cr
 }
 
 
  \bold{Methods inherited from Object}:\cr
-$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
+$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clearLookupCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFieldModifier, getFieldModifiers, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
 
 
  }

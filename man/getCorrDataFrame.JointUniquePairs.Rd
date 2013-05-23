@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.extensions.R
+%  R/jointUniquePairs.extensions.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{getCorrDataFrame.JointUniquePairs}
 \alias{getCorrDataFrame.JointUniquePairs}
 \alias{JointUniquePairs.getCorrDataFrame}
-\alias{getCorrDataFrame.JointUniquePairs}
 \alias{getCorrDataFrame,JointUniquePairs-method}
-
 
  \title{Merge JointUniquePairs and Corr objects into a single data frame}
 
@@ -23,7 +21,9 @@
  correspond to the union of all ID Maps in consideration, i.e. should represent a full group.
  }
 
- \usage{\method{getCorrDataFrame}{JointUniquePairs}(this, corr, groups=NULL, full.group=FALSE, verbose=FALSE, ...)}
+ \usage{
+\method{getCorrDataFrame}{JointUniquePairs}(this, corr, groups=NULL, full.group=FALSE, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{corr}{Corr object from which the Corr object(s) retrieved

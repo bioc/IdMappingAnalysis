@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  corrData.R
+%  R/corrData.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,15 +9,15 @@
  \name{getExperimentSet.CorrData}
 \alias{getExperimentSet.CorrData}
 \alias{CorrData.getExperimentSet}
-\alias{getExperimentSet.CorrData}
 \alias{getExperimentSet,CorrData-method}
-
 
  \title{Get experiment set data frame for a given modality}
 
  \description{Get experiment set data frame for a given modality.}
 
- \usage{\method{getExperimentSet}{CorrData}(this, modality, as=c("data.frame", "ExpressionSet"), IDs=NULL, verbose=FALSE, ...)}
+ \usage{
+\method{getExperimentSet}{CorrData}(this, modality, as=c("data.frame", "ExpressionSet"), IDs=NULL, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{modality}{Experiment modality for which data to be retrieved, i.e. 'Uniprot', 'Affy' etc.}

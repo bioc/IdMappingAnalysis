@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMapDiffCounts.R
+%  R/idMapDiffCounts.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{getCompoundGroups.IdMapDiffCounts}
 \alias{getCompoundGroups.IdMapDiffCounts}
 \alias{IdMapDiffCounts.getCompoundGroups}
-\alias{getCompoundGroups.IdMapDiffCounts}
 \alias{getCompoundGroups,IdMapDiffCounts-method}
-
 
  \title{Get counts for each compound event in IdMapDiffCounts}
 
@@ -19,7 +17,9 @@
  Get counts for each compound event in IdMapDiffCounts. Used internally within IdMapDiffCounts$plot().
  }
 
- \usage{\method{getCompoundGroups}{IdMapDiffCounts}(this, verbose=FALSE, ...)}
+ \usage{
+\method{getCompoundGroups}{IdMapDiffCounts}(this, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{verbose}{If \code{\link[base:logical]{TRUE}} enables diagnostic messages. Default is \code{\link[base:logical]{FALSE}}.}

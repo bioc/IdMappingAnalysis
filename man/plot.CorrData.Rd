@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  corrData.R
+%  R/corrData.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,15 +9,15 @@
  \name{plot.CorrData}
 \alias{plot.CorrData}
 \alias{CorrData.plot}
-\alias{plot.CorrData}
 \alias{plot,CorrData-method}
-
 
  \title{Scatterplot of experiment data}
 
  \description{Scatterplot of experiment data.}
 
- \usage{\method{plot}{CorrData}(x, input, outcomePairs=NULL, xlab="protein count", ylab="mRNA expression (log10)", method="spearman", proteinNames=NULL, cols=brewer.pal(9, "Set1"), cex=1, cex.main=1.2, cex.lab=1, cex.axis=1, font=1, font.main=3, par.zoom=1, ...)}
+ \usage{
+\method{plot}{CorrData}(x, input, outcomePairs=NULL, xlab="protein count", ylab="mRNA expression (log10)", method="spearman", proteinNames=NULL, cols=brewer.pal(9, "Set1"), cex=1, cex.main=1.2, cex.lab=1, cex.axis=1, font=1, font.main=3, par.zoom=1, ...)
+}
 
  \arguments{
  \item{input}{ character vector of primary IDs, or either vector or list of match pairs.}

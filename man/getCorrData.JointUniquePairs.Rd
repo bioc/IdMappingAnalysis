@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.extensions.R
+%  R/jointUniquePairs.extensions.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{getCorrData.JointUniquePairs}
 \alias{getCorrData.JointUniquePairs}
 \alias{JointUniquePairs.getCorrData}
-\alias{getCorrData.JointUniquePairs}
 \alias{getCorrData,JointUniquePairs-method}
-
 
  \title{Create CorrData object from the JointUniquePairs object and two experiment sets}
 
@@ -20,7 +18,9 @@
  optionally subsetting on a list of ID Maps from the UniquePairsMatch object
  }
 
- \usage{\method{getCorrData}{JointUniquePairs}(this, expSet1, expSet2, groups=NULL, verbose=FALSE, ...)}
+ \usage{
+\method{getCorrData}{JointUniquePairs}(this, expSet1, expSet2, groups=NULL, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{expSet1}{First ExperimentSet object with primary IDs corresponding (partially intersecting)

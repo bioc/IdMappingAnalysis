@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  corr.R
+%  R/corr.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{plot.Corr}
 \alias{plot.Corr}
 \alias{Corr.plot}
-\alias{plot.Corr}
 \alias{plot,Corr-method}
-
 
  \title{Plot the density distributions for correlation object(s)}
 
@@ -21,7 +19,9 @@
  the method can accept a list of Corr objects using Corr$plot(corrList) call signature.
  }
 
- \usage{\method{plot}{Corr}(x, dataList=NULL, title="nonparametric density fit", lineColors=NULL, lineStyles=NULL, lineWidths=2, verbose=FALSE, cex.main=1.2, cex.lab=1, cex.axis=1, cex.legend=1, par.zoom=1, ...)}
+ \usage{
+\method{plot}{Corr}(x, dataList=NULL, title="nonparametric density fit", lineColors=NULL, lineStyles=NULL, lineWidths=2, verbose=FALSE, cex.main=1.2, cex.lab=1, cex.axis=1, cex.legend=1, par.zoom=1, ...)
+}
 
  \arguments{
  \item{dataList}{ the list of Corr objects (used if static version of method invoked).

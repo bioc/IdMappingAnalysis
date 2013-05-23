@@ -1,17 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  misc.R
+%  R/misc.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{CsvList.merge.Misc}
+ \name{Misc$CsvList.merge}
+\alias{Misc$CsvList.merge}
 \alias{CsvList.merge.Misc}
 \alias{Misc.CsvList.merge}
-\alias{CsvList.merge.Misc}
 \alias{CsvList.merge,Misc-method}
-
 
  \title{Pairwise merge of two string vectors}
 
@@ -19,7 +18,13 @@
  Pairwise merge of two string vectors.
  }
 
-\usage{Misc$CsvList.merge(s1, s2, mergeOp, asStrings=TRUE, ...)}
+ \usage{
+## Static method (use this):
+## Misc$CsvList.merge(s1, s2, mergeOp, asStrings=TRUE, ...)
+
+## Don't use the below:
+\method{CsvList.merge}{Misc}(static, s1, s2, mergeOp, asStrings=TRUE, ...)
+}
 
  \arguments{
  \item{s1}{First string vector.}

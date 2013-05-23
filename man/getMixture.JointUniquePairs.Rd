@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.extensions.R
+%  R/jointUniquePairs.extensions.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{getMixture.JointUniquePairs}
 \alias{getMixture.JointUniquePairs}
 \alias{JointUniquePairs.getMixture}
-\alias{getMixture.JointUniquePairs}
 \alias{getMixture,JointUniquePairs-method}
-
 
  \title{Extract mixture model object from  JointUniquePairs and Corr objects}
 
@@ -21,7 +19,9 @@
  on a list of ID Maps from the JointUniquePairs object.
  }
 
- \usage{\method{getMixture}{JointUniquePairs}(this, corr, groups=NULL, full.group=FALSE, G=c(1:5), verbose=FALSE, ...)}
+ \usage{
+\method{getMixture}{JointUniquePairs}(this, corr, groups=NULL, full.group=FALSE, G=c(1:5), verbose=FALSE, ...)
+}
 
  \arguments{
  \item{corr}{Corr object.}

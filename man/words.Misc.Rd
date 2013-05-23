@@ -1,17 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  misc.R
+%  R/misc.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{words.Misc}
+ \name{Misc$words}
+\alias{Misc$words}
 \alias{words.Misc}
 \alias{Misc.words}
-\alias{words.Misc}
 \alias{words,Misc-method}
-
 
  \title{Convert space delimited string to a vector of words}
 
@@ -19,7 +18,13 @@
  Convert space delimited string to a vector of words.
  }
 
-\usage{Misc$words(string, ...)}
+ \usage{
+## Static method (use this):
+## Misc$words(string, ...)
+
+## Don't use the below:
+\method{words}{Misc}(static, string, ...)
+}
 
  \arguments{
  \item{string}{Space delimited character string.}

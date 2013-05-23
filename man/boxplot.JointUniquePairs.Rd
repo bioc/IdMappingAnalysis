@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.plots.R
+%  R/jointUniquePairs.plots.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{boxplot.JointUniquePairs}
 \alias{boxplot.JointUniquePairs}
 \alias{JointUniquePairs.boxplot}
-\alias{boxplot.JointUniquePairs}
 \alias{boxplot,JointUniquePairs-method}
-
 
  \title{ Draw a basic boxplot based on a given JointUniquePairs object and external data}
 
@@ -22,7 +20,9 @@
  specific  response.data to this function and adding the title and x/y labels after the basic plot is complete
  }
 
- \usage{\method{boxplot}{JointUniquePairs}(x, response.data, args=NULL, showNone=NA, multiline=FALSE, plot=TRUE, truncate.labels=TRUE, group.gap=0.3, cex=1, cex.main=1.2, cex.lab=1, cex.axis=1, srt=0, adj=0, par.zoom=1, addPoints=TRUE, col.points="lightblue", allAgree="All Agree", ...)}
+ \usage{
+\method{boxplot}{JointUniquePairs}(x, response.data, args=NULL, showNone=NA, multiline=FALSE, plot=TRUE, truncate.labels=TRUE, group.gap=0.3, cex=1, cex.main=1.2, cex.lab=1, cex.axis=1, srt=0, adj=0, par.zoom=1, addPoints=TRUE, col.points="lightblue", allAgree="All Agree", ...)
+}
 
  \arguments{
  \item{response.data}{The \code{\link[base]{numeric}} data vector on which the distribution for each particular match group

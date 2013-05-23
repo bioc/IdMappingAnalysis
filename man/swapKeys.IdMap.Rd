@@ -1,22 +1,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMap.R
+%  R/idMap.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\name{swapKeys.IdMap}
+\name{IdMap$swapKeys}
+\alias{IdMap$swapKeys}
 \alias{swapKeys.IdMap}
 \alias{IdMap.swapKeys}
-\alias{swapKeys.IdMap}
 \alias{swapKeys,IdMap-method}
-
 
 \title{Swap the primary and secondary key columns}
 \description{Swap the primary and secondary key columns.}
 
-\usage{IdMap$swapKeys(idMap, verbose=FALSE, ...)}
+\usage{
+## Static method (use this):
+## IdMap$swapKeys(idMap, verbose=FALSE, ...)
+
+## Don't use the below:
+\method{swapKeys}{IdMap}(static, idMap, verbose=FALSE, ...)
+}
 
 \arguments{
 \item{idMap}{The IdMap object or a list of IdMap objects which keys to be swapped.}

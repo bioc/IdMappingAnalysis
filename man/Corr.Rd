@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  corr.R
+%  R/corr.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,12 +15,12 @@
  \title{The Corr class}
 
  \description{
-  Package:   \cr
+  Package:  IdMappingAnalysis \cr
 \bold{Class Corr}\cr
 
 \code{\link[R.oo]{Object}}\cr
 \code{~~|}\cr
-\code{~~+--}\code{\link{IdMapBase}}\cr
+\code{~~+--}\code{\link[IdMappingAnalysis]{IdMapBase}}\cr
 \code{~~~~~~~|}\cr
 \code{~~~~~~~+--}\code{Corr}\cr
 
@@ -28,7 +28,7 @@
 \cr
 
 public static class \bold{Corr}\cr
-extends \link{IdMapBase}\cr
+extends \link[IdMappingAnalysis]{IdMapBase}\cr
 
 
 
@@ -39,7 +39,9 @@ extends \link{IdMapBase}\cr
  reflecting the correlation method ('pearson', 'spearman' or 'kendall').
  }
 
- \usage{Corr(corrData=NULL, method="pearson", verbose=FALSE, ...)}
+ \usage{
+Corr(corrData=NULL, method="pearson", verbose=FALSE, ...)
+}
 
  \arguments{
  \item{corrData}{CorrData object on which correlation is performed
@@ -63,7 +65,7 @@ extends \link{IdMapBase}\cr
 [, aligned, as.data.frame, dim, dimnames, getName, primaryIDs, primaryKey, secondaryKey
 
  \bold{Methods inherited from Object}:\cr
-$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
+$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clearLookupCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFieldModifier, getFieldModifiers, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
 
 
  }

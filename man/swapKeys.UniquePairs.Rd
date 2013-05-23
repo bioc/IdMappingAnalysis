@@ -1,22 +1,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  uniquePairs.R
+%  R/uniquePairs.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{swapKeys.UniquePairs}
+ \name{UniquePairs$swapKeys}
+\alias{UniquePairs$swapKeys}
 \alias{swapKeys.UniquePairs}
 \alias{UniquePairs.swapKeys}
-\alias{swapKeys.UniquePairs}
 \alias{swapKeys,UniquePairs-method}
-
 
  \title{Swap the primary and secondary key columns}
  \description{Swap the primary and secondary key columns.}
 
-\usage{UniquePairs$swapKeys(uniquePairs, ...)}
+ \usage{
+## Static method (use this):
+## UniquePairs$swapKeys(uniquePairs, ...)
+
+## Don't use the below:
+\method{swapKeys}{UniquePairs}(static, uniquePairs, ...)
+}
 
  \arguments{
  \item{uniquePairs}{The UniquePairs object or a list of UniquePairs objects which keys to be swapped.}

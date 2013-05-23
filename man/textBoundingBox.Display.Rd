@@ -1,17 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  display.R
+%  R/display.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{textBoundingBox.Display}
+ \name{Display$textBoundingBox}
+\alias{Display$textBoundingBox}
 \alias{textBoundingBox.Display}
 \alias{Display.textBoundingBox}
-\alias{textBoundingBox.Display}
 \alias{textBoundingBox,Display-method}
-
 
  \title{Determine the size of the text bounding box}
 
@@ -25,7 +24,13 @@
  graphical device, otherwise an error will be thrown.
  }
 
-\usage{Display$textBoundingBox(stext, units="user", cex=1, srt=0, get.biggest=TRUE, ...)}
+ \usage{
+## Static method (use this):
+## Display$textBoundingBox(stext, units="user", cex=1, srt=0, get.biggest=TRUE, ...)
+
+## Don't use the below:
+\method{textBoundingBox}{Display}(static, stext, units="user", cex=1, srt=0, get.biggest=TRUE, ...)
+}
 
  \arguments{
  \item{stext}{The text which width and height to be determined.}

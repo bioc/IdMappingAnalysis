@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.interactive.plots.R
+%  R/jointUniquePairs.interactive.plots.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{interactive.mixture.boxplot.JointUniquePairs}
 \alias{interactive.mixture.boxplot.JointUniquePairs}
 \alias{JointUniquePairs.interactive.mixture.boxplot}
-\alias{interactive.mixture.boxplot.JointUniquePairs}
 \alias{interactive.mixture.boxplot,JointUniquePairs-method}
-
 
  \title{Interactive boxplot of mixture component probabilities by match group}
 
@@ -21,7 +19,9 @@
  utilizing the JointUniquePairs$interactive.plot wrapper functionality.
  }
 
- \usage{\method{interactive.mixture.boxplot}{JointUniquePairs}(this, corr, groups="loop", G=c(1:5), plot.G=NULL, show.None=FALSE, new.plot=FALSE, file.copy=FALSE, subsetting=FALSE, verbose=TRUE, srt=0, adj=0, ...)}
+ \usage{
+\method{interactive.mixture.boxplot}{JointUniquePairs}(this, corr, groups="loop", G=c(1:5), plot.G=NULL, show.None=FALSE, new.plot=FALSE, file.copy=FALSE, subsetting=FALSE, verbose=TRUE, srt=0, adj=0, ...)
+}
 
  \arguments{
  \item{corr}{Corr object.}

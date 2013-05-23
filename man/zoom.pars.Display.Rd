@@ -1,23 +1,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  display.R
+%  R/display.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{zoom.pars.Display}
+ \name{Display$zoom.pars}
+\alias{Display$zoom.pars}
 \alias{zoom.pars.Display}
 \alias{Display.zoom.pars}
-\alias{zoom.pars.Display}
 \alias{zoom.pars,Display-method}
-
 
  \title{Zoom graphics parameters}
 
  \description{Zoom graphics parameters.}
 
-\usage{Display$zoom.pars(zoom, par.names=c("lwd", "cex", "cex.axis", "cex.lab", "cex.main", "cex.sub", "mai"), ...)}
+ \usage{
+## Static method (use this):
+## Display$zoom.pars(zoom, par.names=c("lwd", "cex", "cex.axis", "cex.lab", "cex.main", "cex.sub", "mai"), ...)
+
+## Don't use the below:
+\method{zoom.pars}{Display}(static, zoom, par.names=c("lwd", "cex", "cex.axis", "cex.lab", "cex.main", "cex.sub", "mai"), ...)
+}
 
  \arguments{
  \item{zoom}{Zoom factor.}

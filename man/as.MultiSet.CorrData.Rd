@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  corrData.R
+%  R/corrData.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,16 +9,16 @@
  \name{as.MultiSet.CorrData}
 \alias{as.MultiSet.CorrData}
 \alias{CorrData.as.MultiSet}
-\alias{as.MultiSet.CorrData}
 \alias{as.MultiSet,CorrData-method}
-
 
  \title{Convert CorrData object into MultiSet object}
 
  \description{
  Convert CorrData object into MultiSet object.# }
 
- \usage{\method{as.MultiSet}{CorrData}(this, ...)}
+ \usage{
+\method{as.MultiSet}{CorrData}(this, ...)
+}
 
  \arguments{
  \item{...}{Not used}

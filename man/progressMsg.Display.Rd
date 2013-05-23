@@ -1,17 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  display.R
+%  R/display.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{progressMsg.Display}
+ \name{Display$progressMsg}
+\alias{Display$progressMsg}
 \alias{progressMsg.Display}
 \alias{Display.progressMsg}
-\alias{progressMsg.Display}
 \alias{progressMsg,Display-method}
-
 
  \title{Display a progress message}
 
@@ -19,7 +18,13 @@
  Display a message accompanied by the percentage of completion.
  }
 
-\usage{Display$progressMsg(msg, i, total, ...)}
+ \usage{
+## Static method (use this):
+## Display$progressMsg(msg, i, total, ...)
+
+## Don't use the below:
+\method{progressMsg}{Display}(static, msg, i, total, ...)
+}
 
  \arguments{
  \item{msg}{Message to be dysplayed.}

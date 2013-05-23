@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  uniquePairs.R
+%  R/uniquePairs.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,15 +9,15 @@
 \name{equals.UniquePairs}
 \alias{equals.UniquePairs}
 \alias{UniquePairs.equals}
-\alias{equals.UniquePairs}
 \alias{equals,UniquePairs-method}
-
 
 \title{Check  if two unique pairs data structures are identical}
 
 \description{Check  if two unique pairs data structures are identical.}
 
-\usage{\method{equals}{UniquePairs}(this, other, ...)}
+\usage{
+\method{equals}{UniquePairs}(this, other, ...)
+}
 
 \arguments{
 \item{other}{Another UniquePairs object the given object os compared to}

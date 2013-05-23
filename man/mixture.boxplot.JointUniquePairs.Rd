@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.plots.R
+%  R/jointUniquePairs.plots.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{mixture.boxplot.JointUniquePairs}
 \alias{mixture.boxplot.JointUniquePairs}
 \alias{JointUniquePairs.mixture.boxplot}
-\alias{mixture.boxplot.JointUniquePairs}
 \alias{mixture.boxplot,JointUniquePairs-method}
-
 
  \title{Boxplot of a mixture model component by match group}
 
@@ -21,7 +19,9 @@
  utilizing the JointUniquePairs$boxplot function
  }
 
- \usage{\method{mixture.boxplot}{JointUniquePairs}(this, corr, idMapNames=NULL, show.None=FALSE, subsetting=FALSE, group.gap=0.2, G=c(1:5), plot.G=NULL, cex.main=1.2, cex.lab=1, srt=0, adj=0, par.zoom=1, main="Component posterior probability by match group", plot=TRUE, verbose=FALSE, ...)}
+ \usage{
+\method{mixture.boxplot}{JointUniquePairs}(this, corr, idMapNames=NULL, show.None=FALSE, subsetting=FALSE, group.gap=0.2, G=c(1:5), plot.G=NULL, cex.main=1.2, cex.lab=1, srt=0, adj=0, par.zoom=1, main="Component posterior probability by match group", plot=TRUE, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{corr}{Corr object from which the Mixture object is constructed on the fly

@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  mixture.R
+%  R/mixture.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{plot.Mixture}
 \alias{plot.Mixture}
 \alias{Mixture.plot}
-\alias{plot.Mixture}
 \alias{plot,Mixture-method}
-
 
  \title{Plot the results of mixture modeling}
 
@@ -20,7 +18,9 @@
  empirical fit, mixture fit and each of the mixture components
  }
 
- \usage{\method{plot}{Mixture}(x, title="mixture density fit", cex.main=1.2, cex.lab=1, cex.axis=1, cex.legend=1, lineWidths=c(3, 3, 2), lineTypes=c(1, 2, 3), plot.crossover=TRUE, par.zoom=1, ...)}
+ \usage{
+\method{plot}{Mixture}(x, title="mixture density fit", cex.main=1.2, cex.lab=1, cex.axis=1, cex.legend=1, lineWidths=c(3, 3, 2), lineTypes=c(1, 2, 3), plot.crossover=TRUE, par.zoom=1, ...)
+}
 
  \arguments{
  \item{title}{ main plot title. Default is "nonparametric density fit".}

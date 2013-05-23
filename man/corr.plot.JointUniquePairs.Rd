@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.plots.R
+%  R/jointUniquePairs.plots.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{corr.plot.JointUniquePairs}
 \alias{corr.plot.JointUniquePairs}
 \alias{JointUniquePairs.corr.plot}
-\alias{corr.plot.JointUniquePairs}
 \alias{corr.plot,JointUniquePairs-method}
-
 
  \title{Plot the density distributions for a set of correlation objects
  derived from JointUniquePairs and Corr objects}
@@ -24,7 +22,9 @@
  the Corr.plot() on a resulting set of correlation objects.
  }
 
- \usage{\method{corr.plot}{JointUniquePairs}(this, corr, idMapNames=NULL, plot.Union=TRUE, subsetting=FALSE, lineColors=NULL, lineStyles=NULL, lineWidths=2, verbose=FALSE, ...)}
+ \usage{
+\method{corr.plot}{JointUniquePairs}(this, corr, idMapNames=NULL, plot.Union=TRUE, subsetting=FALSE, lineColors=NULL, lineStyles=NULL, lineWidths=2, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{corr}{Corr object.}

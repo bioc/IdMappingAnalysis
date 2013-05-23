@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMapBase.R
+%  R/idMapBase.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,14 +9,14 @@
  \name{aligned.IdMapBase}
 \alias{aligned.IdMapBase}
 \alias{IdMapBase.aligned}
-\alias{aligned.IdMapBase}
 \alias{aligned,IdMapBase-method}
-
 
  \title{Checks if two IdMapBase objects match on column names and primary ID set}
  \description{Checks if two IdMapBase objects match on column names and primary ID set.}
 
- \usage{\method{aligned}{IdMapBase}(this, other, ...)}
+ \usage{
+\method{aligned}{IdMapBase}(this, other, ...)
+}
 
  \arguments{
  \item{other}{ The second ID Map object to check the matching against.}

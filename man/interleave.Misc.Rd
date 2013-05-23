@@ -1,23 +1,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  misc.R
+%  R/misc.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{interleave.Misc}
+ \name{Misc$interleave}
+\alias{Misc$interleave}
 \alias{interleave.Misc}
 \alias{Misc.interleave}
-\alias{interleave.Misc}
 \alias{interleave,Misc-method}
-
 
  \title{Interleave two matrixes by columns}
 
  \description{Interleave two matrixes by columns.}
 
-\usage{Misc$interleave(A, B, ...)}
+ \usage{
+## Static method (use this):
+## Misc$interleave(A, B, ...)
+
+## Don't use the below:
+\method{interleave}{Misc}(stati, A, B, ...)
+}
 
  \arguments{
  \item{A}{First \code{\link[base]{matrix}}.}

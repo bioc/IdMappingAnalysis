@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMapCounts.R
+%  R/idMapCounts.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{getStats.IdMapCounts}
 \alias{getStats.IdMapCounts}
 \alias{IdMapCounts.getStats}
-\alias{getStats.IdMapCounts}
 \alias{getStats,IdMapCounts-method}
-
 
  \title{Retrieves a set of unique counts of secondary IDs}
  \description{
@@ -21,7 +19,9 @@
  for all ID Maps within the given object
  }
 
- \usage{\method{getStats}{IdMapCounts}(this, percent=TRUE, digits=1, summary=FALSE, cutoff=3, verbose=FALSE, ...)}
+ \usage{
+\method{getStats}{IdMapCounts}(this, percent=TRUE, digits=1, summary=FALSE, cutoff=3, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{idCounts}{ IdMapCounts object or a list of objects on which summary is computed}

@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointIdMap.R
+%  R/jointIdMap.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,14 +9,14 @@
  \name{getMatchInfo.JointIdMap}
 \alias{getMatchInfo.JointIdMap}
 \alias{JointIdMap.getMatchInfo}
-\alias{getMatchInfo.JointIdMap}
 \alias{getMatchInfo,JointIdMap-method}
-
 
  \title{Get match table(s) for a given set of primary IDs}
  \description{Get match table(s) for a given set of primary IDs.}
 
- \usage{\method{getMatchInfo}{JointIdMap}(this, IDs, idMapNames=NULL, ...)}
+ \usage{
+\method{getMatchInfo}{JointIdMap}(this, IDs, idMapNames=NULL, ...)
+}
 
  \arguments{
  \item{IDs}{A \code{\link[base]{character}} vector of primary IDs}

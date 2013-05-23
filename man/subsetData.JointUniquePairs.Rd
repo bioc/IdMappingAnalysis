@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.R
+%  R/jointUniquePairs.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,15 +9,15 @@
  \name{subsetData.JointUniquePairs}
 \alias{subsetData.JointUniquePairs}
 \alias{JointUniquePairs.subsetData}
-\alias{subsetData.JointUniquePairs}
 \alias{subsetData,JointUniquePairs-method}
-
 
  \title{Subset data on a UniquePairsMatch object}
 
  \description{Subset data on a UniquePairsMatch object.}
 
- \usage{\method{subsetData}{JointUniquePairs}(this, data, expr, ...)}
+ \usage{
+\method{subsetData}{JointUniquePairs}(this, data, expr, ...)
+}
 
  \arguments{
  \item{data}{\code{\link[base]{numeric}} vector to subset. Should be of the same length as ncol(this).}

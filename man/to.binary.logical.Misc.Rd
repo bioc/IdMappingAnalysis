@@ -1,17 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  misc.R
+%  R/misc.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{to.binary.logical.Misc}
+ \name{Misc$to.binary.logical}
+\alias{Misc$to.binary.logical}
 \alias{to.binary.logical.Misc}
 \alias{Misc.to.binary.logical}
-\alias{to.binary.logical.Misc}
 \alias{to.binary.logical,Misc-method}
-
 
  \title{Convert number to a  vector of logicals}
 
@@ -19,7 +18,13 @@
  Convert number to a  vector of logicals with predefine length
  }
 
-\usage{Misc$to.binary.logical(n, digits=0, r=TRUE, ...)}
+ \usage{
+## Static method (use this):
+## Misc$to.binary.logical(n, digits=0, r=TRUE, ...)
+
+## Don't use the below:
+\method{to.binary.logical}{Misc}(static, n, digits=0, r=TRUE, ...)
+}
 
  \arguments{
  \item{n}{Number to convert.}

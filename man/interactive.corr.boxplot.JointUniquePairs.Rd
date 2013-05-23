@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.interactive.plots.R
+%  R/jointUniquePairs.interactive.plots.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{interactive.corr.boxplot.JointUniquePairs}
 \alias{interactive.corr.boxplot.JointUniquePairs}
 \alias{JointUniquePairs.interactive.corr.boxplot}
-\alias{interactive.corr.boxplot.JointUniquePairs}
 \alias{interactive.corr.boxplot,JointUniquePairs-method}
-
 
  \title{Interactive boxplot of correlations by match group}
 
@@ -21,7 +19,9 @@
  JointUniquePairs@interactive.plot wrapper functionality.
  }
 
- \usage{\method{interactive.corr.boxplot}{JointUniquePairs}(this, corr, groups="loop", show.None=FALSE, new.plot=FALSE, file.copy=FALSE, subsetting=FALSE, verbose=TRUE, srt=0, adj=0, ...)}
+ \usage{
+\method{interactive.corr.boxplot}{JointUniquePairs}(this, corr, groups="loop", show.None=FALSE, new.plot=FALSE, file.copy=FALSE, subsetting=FALSE, verbose=TRUE, srt=0, adj=0, ...)
+}
 
  \arguments{
  \item{corr}{Corr object.}

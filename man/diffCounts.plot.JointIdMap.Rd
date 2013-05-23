@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointIdMap.plots.R
+%  R/jointIdMap.plots.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -10,9 +10,7 @@
  \name{diffCounts.plot.JointIdMap}
 \alias{diffCounts.plot.JointIdMap}
 \alias{JointIdMap.diffCounts.plot}
-\alias{diffCounts.plot.JointIdMap}
 \alias{diffCounts.plot,JointIdMap-method}
-
 
  \title{Interactive wrapper for IdMapDiffCounts$plot}
 
@@ -22,7 +20,9 @@
  for a fountaine plot through the dialog.
  }
 
- \usage{\method{diffCounts.plot}{JointIdMap}(this, idMapNames="loop", valRange=c(-20, 20, 10), reverse=FALSE, pairLabels=NULL, new.plot=FALSE, file.copy=FALSE, copy.zoom=1, cols=c("red", "blue", "green"), sides=2, cex=1, cex.side=0.75 * cex, srt=0, adj=0.5, verbose=TRUE, ...)}
+ \usage{
+\method{diffCounts.plot}{JointIdMap}(this, idMapNames="loop", valRange=c(-20, 20, 10), reverse=FALSE, pairLabels=NULL, new.plot=FALSE, file.copy=FALSE, copy.zoom=1, cols=c("red", "blue", "green"), sides=2, cex=1, cex.side=0.75 * cex, srt=0, adj=0.5, verbose=TRUE, ...)
+}
 
  \arguments{
  \item{idMapNames}{ either ID Maps pair names, 'menu' or 'loop'. If ID Map pairs, the functionality is similar to IdMapDiffCounts.plot

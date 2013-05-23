@@ -1,17 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  subset.R
+%  R/subset.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{byRowNames.Subset}
+ \name{Subset$byRowNames}
+\alias{Subset$byRowNames}
 \alias{byRowNames.Subset}
 \alias{Subset.byRowNames}
-\alias{byRowNames.Subset}
 \alias{byRowNames,Subset-method}
-
 
  \title{Extract subset of columns from a data frame or a list of data frames}
 
@@ -23,7 +22,13 @@
  which are not in an original data frame, the new rows are filled with value from na.value parameter.
  }
 
-\usage{Subset$byRowNames(frameData, subset, orderBySubset=TRUE, mergeOp=intersect, na.value="", verbose=FALSE, ...)}
+ \usage{
+## Static method (use this):
+## Subset$byRowNames(frameData, subset, orderBySubset=TRUE, mergeOp=intersect, na.value="", verbose=FALSE, ...)
+
+## Don't use the below:
+\method{byRowNames}{Subset}(static, frameData, subset, orderBySubset=TRUE, mergeOp=intersect, na.value="", verbose=FALSE, ...)
+}
 
  \arguments{
  \item{frameData}{Input \code{\link[base]{data.frame}} or a \code{\link[base]{list}} of data frames.}

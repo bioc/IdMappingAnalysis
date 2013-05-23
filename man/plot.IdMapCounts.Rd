@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMapCounts.R
+%  R/idMapCounts.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,16 +9,16 @@
  \name{plot.IdMapCounts}
 \alias{plot.IdMapCounts}
 \alias{IdMapCounts.plot}
-\alias{plot.IdMapCounts}
 \alias{plot,IdMapCounts-method}
-
 
  \title{Compute and plot the (inversed) ecdf for each ID Map count entry within the IdMapCounts object}
  \description{
  Compute and plot the (inversed) ecdf for each ID Map count entry within the IdMapCounts object.
  }
 
- \usage{\method{plot}{IdMapCounts}(x, idMapNames=NULL, complement=TRUE, log=TRUE, lineColors=NULL, pointSymbols=NULL, pointColors=NULL, cex.main=1.2, cex.lab=1, cex.axis=1, cex.legend=1, par.zoom=1, ...)}
+ \usage{
+\method{plot}{IdMapCounts}(x, idMapNames=NULL, complement=TRUE, log=TRUE, lineColors=NULL, pointSymbols=NULL, pointColors=NULL, cex.main=1.2, cex.lab=1, cex.axis=1, cex.legend=1, par.zoom=1, ...)
+}
 
  \arguments{
  \item{idMapNames}{ optional subset of ID Map names within the counts object

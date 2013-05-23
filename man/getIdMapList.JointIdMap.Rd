@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointIdMap.R
+%  R/jointIdMap.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{getIdMapList.JointIdMap}
 \alias{getIdMapList.JointIdMap}
 \alias{JointIdMap.getIdMapList}
-\alias{getIdMapList.JointIdMap}
 \alias{getIdMapList,JointIdMap-method}
-
 
  \title{ Create an Id Map list from a JointIdMap object}
 
@@ -20,7 +18,9 @@
  ID Map list has the same set and order of primary IDs
  }
 
- \usage{\method{getIdMapList}{JointIdMap}(this, idMapNames=NULL, verbose=FALSE, ...)}
+ \usage{
+\method{getIdMapList}{JointIdMap}(this, idMapNames=NULL, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{idMapNames}{optional vector of ID Map names within the jointIdMap for which the ID Map list constructed.

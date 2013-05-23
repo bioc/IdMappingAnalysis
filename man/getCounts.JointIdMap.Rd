@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointIdMap.R
+%  R/jointIdMap.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{getCounts.JointIdMap}
 \alias{getCounts.JointIdMap}
 \alias{JointIdMap.getCounts}
-\alias{getCounts.JointIdMap}
 \alias{getCounts,JointIdMap-method}
-
 
  \title{Create an IdMapCounts object}
  \description{
@@ -21,7 +19,9 @@
  and therefore guaranteed to be properly aligned
  }
 
- \usage{\method{getCounts}{JointIdMap}(this, idMapNames=NULL, verbose=FALSE, ...)}
+ \usage{
+\method{getCounts}{JointIdMap}(this, idMapNames=NULL, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{idMapNames}{Subset of ID Maps to be used to create IdCounts object.

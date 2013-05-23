@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.extensions.R
+%  R/jointUniquePairs.extensions.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -10,9 +10,7 @@
  \name{subsetCorr.JointUniquePairs}
 \alias{subsetCorr.JointUniquePairs}
 \alias{JointUniquePairs.subsetCorr}
-\alias{subsetCorr.JointUniquePairs}
 \alias{subsetCorr,JointUniquePairs-method}
-
 
  \title{Subset the Corr object}
 
@@ -22,7 +20,9 @@
  in a JointUniquePairs subset.
  }
 
- \usage{\method{subsetCorr}{JointUniquePairs}(this, corr, groups=NULL, verbose=FALSE, ...)}
+ \usage{
+\method{subsetCorr}{JointUniquePairs}(this, corr, groups=NULL, verbose=FALSE, ...)
+}
 
  \arguments{
  @param match UniquePairsMatch object

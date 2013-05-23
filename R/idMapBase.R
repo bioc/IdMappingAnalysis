@@ -60,11 +60,12 @@ setConstructorS3("IdMapBase",function(DF=NULL,name="",primaryKey=NULL,secondaryK
 	extend(Object(),"IdMapBase",
 		.df=DF,
 		.name=name,
-		.secondaryKey=secondaryKey
+    .primaryKey=primaryKey,
+	  .secondaryKey=secondaryKey
 	);
 })
 
-
+#' @export primaryKey.IdMapBase
 ###########################################################################/**
 # @RdocMethod primaryKey
 # 
@@ -82,20 +83,20 @@ setConstructorS3("IdMapBase",function(DF=NULL,name="",primaryKey=NULL,secondaryK
 #
 # \examples{
 # obj<-IdMapBase(examples$identDfList[[1]]);
-# obj$primaryKey();
+# primaryKey.IdMapBase(obj);
 # }
 # \seealso{@seeclass}
 # \author{Alex Lisovich, Roger Day}
 #*/###########################################################################
 
-setMethodS3("primaryKey","IdMapBase",function(this,DF=NULL,...){
+setMethodS3("primaryKey", export=TRUE, "IdMapBase",function(this,DF=NULL,...){
 	if(is.null(this$.df))
 		return(colnames(DF)[1])
 	else
 		return(colnames(this$.df)[1]);
 })
 
-
+#' @export secondaryKey.IdMapBase
 ###########################################################################/**
 # @RdocMethod secondaryKey
 # 
@@ -109,7 +110,7 @@ setMethodS3("primaryKey","IdMapBase",function(this,DF=NULL,...){
 #
 # \examples{
 # obj<-IdMapBase(examples$identDfList[[1]]);
-# obj$secondaryKey();
+# primaryKey.IdMapBase(obj);
 # }
 ## \seealso{@seeclass}
 # \author{Alex Lisovich, Roger Day}
@@ -119,7 +120,7 @@ setMethodS3("secondaryKey","IdMapBase",function(this,...){
 	return(this$.secondaryKey);
 })
 
-
+#' @export primaryIDs.IdMapBase
 ###########################################################################/**
 # @RdocMethod primaryIDs
 # 
@@ -150,6 +151,7 @@ setMethodS3("primaryIDs","IdMapBase",function(this,DF=NULL,...){
 		return(this$.df[,1]);
 })
 
+#' @export getName.IdMapBase
 ###########################################################################/**
 # @RdocMethod getName
 # 

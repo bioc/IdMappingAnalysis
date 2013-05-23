@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMapDiffCounts.R
+%  R/idMapDiffCounts.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{getCompoundEvents.IdMapDiffCounts}
 \alias{getCompoundEvents.IdMapDiffCounts}
 \alias{IdMapDiffCounts.getCompoundEvents}
-\alias{getCompoundEvents.IdMapDiffCounts}
 \alias{getCompoundEvents,IdMapDiffCounts-method}
-
 
  \title{Get compound events}
 
@@ -22,7 +20,9 @@
  and IdMapDiffCounts$plot() functions.
  }
 
- \usage{\method{getCompoundEvents}{IdMapDiffCounts}(this, verbose=FALSE, ...)}
+ \usage{
+\method{getCompoundEvents}{IdMapDiffCounts}(this, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{verbose}{If \code{\link[base:logical]{TRUE}} enables diagnostic messages. Default is \code{\link[base:logical]{FALSE}}.}

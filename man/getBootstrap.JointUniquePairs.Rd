@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.extensions.R
+%  R/jointUniquePairs.extensions.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{getBootstrap.JointUniquePairs}
 \alias{getBootstrap.JointUniquePairs}
 \alias{JointUniquePairs.getBootstrap}
-\alias{getBootstrap.JointUniquePairs}
 \alias{getBootstrap,JointUniquePairs-method}
-
 
  \title{Create Bootstrap object from JointUniquePairs object and two experiment sets}
 
@@ -20,7 +18,9 @@
  optionally subsetting on a list of ID Maps from the JointUniquePairs object
  }
 
- \usage{\method{getBootstrap}{JointUniquePairs}(this, expSet1, expSet2, groups=NULL, Fisher=FALSE, R=200, verbose=FALSE, ...)}
+ \usage{
+\method{getBootstrap}{JointUniquePairs}(this, expSet1, expSet2, groups=NULL, Fisher=FALSE, R=200, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{expSet1}{First ExperimentSet object with primary IDs corresponding (partially intersecting)

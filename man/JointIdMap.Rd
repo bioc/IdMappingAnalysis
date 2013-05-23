@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointIdMap.R
+%  R/jointIdMap.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,12 +15,12 @@
  \title{The Joint ID Map class}
 
  \description{
- Package:   \cr
+ Package:  IdMappingAnalysis \cr
 \bold{Class JointIdMap}\cr
 
 \code{\link[R.oo]{Object}}\cr
 \code{~~|}\cr
-\code{~~+--}\code{\link{IdMapBase}}\cr
+\code{~~+--}\code{\link[IdMappingAnalysis]{IdMapBase}}\cr
 \code{~~~~~~~|}\cr
 \code{~~~~~~~+--}\code{JointIdMap}\cr
 
@@ -28,7 +28,7 @@
 \cr
 
 public static class \bold{JointIdMap}\cr
-extends \link{IdMapBase}\cr
+extends \link[IdMappingAnalysis]{IdMapBase}\cr
 
 
 
@@ -38,7 +38,9 @@ extends \link{IdMapBase}\cr
  corresponding  to a particular Id Map, keeping all Id Maps properly aligned
  }
 
- \usage{JointIdMap(idMapList=list(), primaryIDs=NULL, name="", verbose=FALSE, ...)}
+ \usage{
+JointIdMap(idMapList=list(), primaryIDs=NULL, name="", verbose=FALSE, ...)
+}
 
  \arguments{
  \item{idMapList}{The \code{\link[base]{list}} of ID Maps on which the JointData is constructed.}
@@ -57,10 +59,10 @@ extends \link{IdMapBase}\cr
  \tab \code{\link[IdMappingAnalysis:ecdf.plot.JointIdMap]{ecdf.plot}} \tab Interactive wrapper for IdMapCounts$plot.\cr
  \tab \code{\link[IdMappingAnalysis:getCounts.JointIdMap]{getCounts}} \tab Create an IdMapCounts object.\cr
  \tab \code{\link[IdMappingAnalysis:getDiff.JointIdMap]{getDiff}} \tab Create an IdMapDiff object.\cr
- \tab \code{\link[IdMappingAnalysis:getIdMapList.JointIdMap]{getIdMapList}} \tab Create an Id Map list from a JointIdMap object.\cr
+ \tab \code{\link[IdMappingAnalysis:getIdMapList.JointIdMap]{getIdMapList}} \tab  Create an Id Map list from a JointIdMap object.\cr
  \tab \code{\link[IdMappingAnalysis:getMapNames.JointIdMap]{getMapNames}} \tab Get the names of IdMap objects encapsulated within the given JointIdMap object.\cr
  \tab \code{\link[IdMappingAnalysis:getMatchInfo.JointIdMap]{getMatchInfo}} \tab Get match table(s) for a given set of primary IDs.\cr
- \tab \code{\link[IdMappingAnalysis:getUnionIdMap.JointIdMap]{getUnionIdMap}} \tab Create a union IdMap.\cr
+ \tab \code{\link[IdMappingAnalysis:getUnionIdMap.JointIdMap]{getUnionIdMap}} \tab  Create a union IdMap.\cr
 }
 
 
@@ -68,7 +70,7 @@ extends \link{IdMapBase}\cr
 [, aligned, as.data.frame, dim, dimnames, getName, primaryIDs, primaryKey, secondaryKey
 
  \bold{Methods inherited from Object}:\cr
-$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
+$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clearLookupCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFieldModifier, getFieldModifiers, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
 
 
  }

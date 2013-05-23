@@ -1,18 +1,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.plots.R
+%  R/jointUniquePairs.plots.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
- \name{boxplotdataJitter.JointUniquePairs}
+ \name{JointUniquePairs$boxplotdataJitter}
+\alias{JointUniquePairs$boxplotdataJitter}
 \alias{boxplotdataJitter.JointUniquePairs}
 \alias{JointUniquePairs.boxplotdataJitter}
-\alias{boxplotdataJitter.JointUniquePairs}
 \alias{boxplotdataJitter,JointUniquePairs-method}
-
 
  \title{Plot a set of points representing the density distribution of a data set}
 
@@ -20,7 +19,13 @@
  Plot a set of points representing the density distribution of a data set.
  }
 
-\usage{JointUniquePairs$boxplotdataJitter(y, round, verbose=FALSE, ...)}
+ \usage{
+## Static method (use this):
+## JointUniquePairs$boxplotdataJitter(y, round, verbose=FALSE, ...)
+
+## Don't use the below:
+\method{boxplotdataJitter}{JointUniquePairs}(static, y, round, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{y}{\code{\link[base]{numeric}} vector representing a data set.}

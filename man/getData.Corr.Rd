@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  corr.R
+%  R/corr.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,15 +9,15 @@
  \name{getData.Corr}
 \alias{getData.Corr}
 \alias{Corr.getData}
-\alias{getData.Corr}
 \alias{getData,Corr-method}
-
 
  \title{Extract correlation results from the Corr object}
 
  \description{Extract correlation results from the Corr object.}
 
- \usage{\method{getData}{Corr}(this, ...)}
+ \usage{
+\method{getData}{Corr}(this, ...)
+}
 
  \arguments{
  \item{...}{Not used}

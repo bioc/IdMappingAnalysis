@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  corrData.R
+%  R/corrData.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,15 +9,15 @@
  \name{interactive.plot.CorrData}
 \alias{interactive.plot.CorrData}
 \alias{CorrData.interactive.plot}
-\alias{interactive.plot.CorrData}
 \alias{interactive.plot,CorrData-method}
-
 
  \title{Draw a scatterplot of experiment data interactively}
 
  \description{Draw a scatterplot of experiment data interactively.}
 
- \usage{\method{interactive.plot}{CorrData}(this, input="loop", new.plot=FALSE, file.copy=FALSE, copy.zoom=1, ...)}
+ \usage{
+\method{interactive.plot}{CorrData}(this, input="loop", new.plot=FALSE, file.copy=FALSE, copy.zoom=1, ...)
+}
 
  \arguments{
  \item{input}{ character vector of primary IDs, vector of match pairs, "menu" or "loop".

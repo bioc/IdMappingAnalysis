@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMap.R
+%  R/idMap.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,14 +9,14 @@
 \name{getCounts.IdMap}
 \alias{getCounts.IdMap}
 \alias{IdMap.getCounts}
-\alias{getCounts.IdMap}
 \alias{getCounts,IdMap-method}
-
 
 \title{Compute the count of secondaryIDs for each primary ID}
 \description{Compute the count of secondaryIDs for each primary ID.}
 
-\usage{\method{getCounts}{IdMap}(this, verbose=FALSE, ...)}
+\usage{
+\method{getCounts}{IdMap}(this, verbose=FALSE, ...)
+}
 
 \arguments{
 \item{idMap}{The IdMap object on which secondary ID counts should be computed.}

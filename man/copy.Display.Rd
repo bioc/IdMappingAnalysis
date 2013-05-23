@@ -1,17 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  display.R
+%  R/display.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{copy.Display}
+ \name{Display$copy}
+\alias{Display$copy}
 \alias{copy.Display}
 \alias{Display.copy}
-\alias{copy.Display}
 \alias{copy,Display-method}
-
 
  \title{Save current plot to the file}
 
@@ -19,7 +18,13 @@
  Save current plot to the file.
  }
 
-\usage{Display$copy(filename, zoom=1, plotFun=NULL, plotArgs=list(), type=c("png", "jpeg", "jpg", "tiff", "bmp", "pdf"), res=72, quality=100, compression=c("none", "rle", "lzw", "jpeg", "zip"), ...)}
+ \usage{
+## Static method (use this):
+## Display$copy(filename, zoom=1, plotFun=NULL, plotArgs=list(), type=c("png", "jpeg", "jpg", "tiff", "bmp", "pdf"), res=72, quality=100, compression=c("none", "rle", "lzw", "jpeg", "zip"), ...)
+
+## Don't use the below:
+\method{copy}{Display}(static, filename, zoom=1, plotFun=NULL, plotArgs=list(), type=c("png", "jpeg", "jpg", "tiff", "bmp", "pdf"), res=72, quality=100, compression=c("none", "rle", "lzw", "jpeg", "zip"), ...)
+}
 
  \arguments{
  \item{filename}{The filename under which to save the plot.}

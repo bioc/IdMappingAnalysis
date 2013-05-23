@@ -1,23 +1,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  display.R
+%  R/display.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{line.unsorted.Display}
+ \name{Display$line.unsorted}
+\alias{Display$line.unsorted}
 \alias{line.unsorted.Display}
 \alias{Display.line.unsorted}
-\alias{line.unsorted.Display}
 \alias{line.unsorted,Display-method}
-
 
  \title{Draw a curve from unsorted points}
 
  \description{Draw a curve from unsorted points.}
 
-\usage{Display$line.unsorted(x, y, type="l", ...)}
+ \usage{
+## Static method (use this):
+## Display$line.unsorted(x, y, type="l", ...)
+
+## Don't use the below:
+\method{line.unsorted}{Display}(static, x, y, type="l", ...)
+}
 
  \arguments{
  \item{x}{The (unsorted) x coordinates of points to plot.}

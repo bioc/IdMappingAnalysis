@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointIdMap.R
+%  R/jointIdMap.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{getDiff.JointIdMap}
 \alias{getDiff.JointIdMap}
 \alias{JointIdMap.getDiff}
-\alias{getDiff.JointIdMap}
 \alias{getDiff,JointIdMap-method}
-
 
  \title{Create an IdMapDiff object}
 
@@ -20,7 +18,9 @@
  which is guaranteed to be properly aligned (see also IdMapDiff class)
  }
 
- \usage{\method{getDiff}{JointIdMap}(this, idMapName1, idMapName2, verbose=FALSE, ...)}
+ \usage{
+\method{getDiff}{JointIdMap}(this, idMapName1, idMapName2, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{idMapName1}{The name of the first ID Map within the joint ID Map object.}

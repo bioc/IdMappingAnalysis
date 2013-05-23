@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointIdMap.plots.R
+%  R/jointIdMap.plots.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{ecdf.plot.JointIdMap}
 \alias{ecdf.plot.JointIdMap}
 \alias{JointIdMap.ecdf.plot}
-\alias{ecdf.plot.JointIdMap}
 \alias{ecdf.plot,JointIdMap-method}
-
 
  \title{Interactive wrapper for IdMapCounts$plot}
 
@@ -21,7 +19,9 @@
  for a ecdf plot through the dialog.
  }
 
- \usage{\method{ecdf.plot}{JointIdMap}(this, idMapNames="loop", complement=TRUE, log=TRUE, new.plot=FALSE, file.copy=FALSE, copy.zoom=1, verbose=TRUE, ...)}
+ \usage{
+\method{ecdf.plot}{JointIdMap}(this, idMapNames="loop", complement=TRUE, log=TRUE, new.plot=FALSE, file.copy=FALSE, copy.zoom=1, verbose=TRUE, ...)
+}
 
  \arguments{
  \item{jointIdMap}{ JointIdMap object from which ID Map counts information is extracted.}

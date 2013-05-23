@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  mixture.R
+%  R/mixture.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,15 +9,15 @@
  \name{getStats.Mixture}
 \alias{getStats.Mixture}
 \alias{Mixture.getStats}
-\alias{getStats.Mixture}
 \alias{getStats,Mixture-method}
-
 
  \title{Get mixture component model summary info}
 
  \description{Get mixture component model summary info.}
 
- \usage{\method{getStats}{Mixture}(this, ...)}
+ \usage{
+\method{getStats}{Mixture}(this, ...)
+}
 
  \arguments{
  \item{...}{Not used}

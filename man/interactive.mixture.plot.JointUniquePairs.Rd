@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.interactive.plots.R
+%  R/jointUniquePairs.interactive.plots.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{interactive.mixture.plot.JointUniquePairs}
 \alias{interactive.mixture.plot.JointUniquePairs}
 \alias{JointUniquePairs.interactive.mixture.plot}
-\alias{interactive.mixture.plot.JointUniquePairs}
 \alias{interactive.mixture.plot,JointUniquePairs-method}
-
 
  \title{Interactive plot of mixture model components}
 
@@ -22,7 +20,9 @@
  JointUniquePairs$interactive.plot wrapper functionality.
  }
 
- \usage{\method{interactive.mixture.plot}{JointUniquePairs}(this, corr, groups="loop", new.plot=FALSE, file.copy=FALSE, subsetting=FALSE, G=c(1:5), verbose=TRUE, ...)}
+ \usage{
+\method{interactive.mixture.plot}{JointUniquePairs}(this, corr, groups="loop", new.plot=FALSE, file.copy=FALSE, subsetting=FALSE, G=c(1:5), verbose=TRUE, ...)
+}
 
  \arguments{
  \item{corr}{Corr object.}

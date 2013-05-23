@@ -1,22 +1,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  dataFilter.R
+%  R/dataFilter.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{removeNASeries.DataFilter}
+ \name{DataFilter$removeNASeries}
+\alias{DataFilter$removeNASeries}
 \alias{removeNASeries.DataFilter}
 \alias{DataFilter.removeNASeries}
-\alias{removeNASeries.DataFilter}
 \alias{removeNASeries,DataFilter-method}
-
 
  \title{Remove NA series from the experiment set}
  \description{Remove NA series from the experiment set.}
 
-\usage{DataFilter$removeNASeries(experimentSet, byRows=TRUE, verbose=FALSE, ...)}
+ \usage{
+## Static method (use this):
+## DataFilter$removeNASeries(experimentSet, byRows=TRUE, verbose=FALSE, ...)
+
+## Don't use the below:
+\method{removeNASeries}{DataFilter}(static, experimentSet, byRows=TRUE, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{experimentSet}{\code{\link[base]{data.frame}} containing probeID (first column or row)

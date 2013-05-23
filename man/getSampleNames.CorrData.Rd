@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  corrData.R
+%  R/corrData.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,15 +9,15 @@
  \name{getSampleNames.CorrData}
 \alias{getSampleNames.CorrData}
 \alias{CorrData.getSampleNames}
-\alias{getSampleNames.CorrData}
 \alias{getSampleNames,CorrData-method}
-
 
  \title{Get experiment sample names}
 
  \description{Get experiment sample names.}
 
- \usage{\method{getSampleNames}{CorrData}(this, ...)}
+ \usage{
+\method{getSampleNames}{CorrData}(this, ...)
+}
 
  \arguments{
  \item{...}{Not used}

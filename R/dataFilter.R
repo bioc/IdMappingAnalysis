@@ -179,7 +179,7 @@ setMethodS3("minAvgCountConstraint","DataFilter",function(static,x,filtParams,..
 
 
 ###########################################################################/**
-# @RdocMethod log10
+# @RdocMethod logTen
 # 
 # @title "Compute log10 of a numerical vector combined with thresholding on minimum value"
 # \description{@get "title".}
@@ -190,7 +190,6 @@ setMethodS3("minAvgCountConstraint","DataFilter",function(static,x,filtParams,..
 # \item{x}{@numeric input @vector.}
 # \item{filtParams}{@vector of constraint parameters. If a particular
 # output element is less or equal than filtParams[1] it is assigned the filtParams[2] value.}
-# \item{...}{Not used}
 # }
 #
 # \value{
@@ -201,7 +200,7 @@ setMethodS3("minAvgCountConstraint","DataFilter",function(static,x,filtParams,..
 # #compute log10 transform of mrna experiment data replacing (clipping) 
 # #the output values with log10(0.5)for input values < 0.5
 # fltExperimentSet<-DataFilter$do.apply(examples$mrnaExperimentSet,
-#         byRows=TRUE,filterFun=DataFilter$log10,filtParams=c(0.5,log10(0.5)),verbose=TRUE);
+#         byRows=TRUE,filterFun=DataFilter$logTen,filtParams=c(0.5,log10(0.5)),verbose=TRUE);
 #
 # #print the number of elements clipped 
 # sum(fltExperimentSet[,-1]==log10(0.5))-sum(examples$mrnaExperimentSet[,-1]<=0.5);
@@ -211,7 +210,7 @@ setMethodS3("minAvgCountConstraint","DataFilter",function(static,x,filtParams,..
 # \author{Alex Lisovich, Roger Day}
 #*/###########################################################################
 
-setMethodS3("log10","DataFilter",function(static,x,filtParams,...){
+setMethodS3("logTen","DataFilter",function(static,x,filtParams,...){
 	x<-log10(x);
 	if (!is.null(filtParams))
 		x[x<=filtParams[1]]<-filtParams[2];

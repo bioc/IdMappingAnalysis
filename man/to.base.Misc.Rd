@@ -1,23 +1,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  misc.R
+%  R/misc.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{to.base.Misc}
+ \name{Misc$to.base}
+\alias{Misc$to.base}
 \alias{to.base.Misc}
 \alias{Misc.to.base}
-\alias{to.base.Misc}
 \alias{to.base,Misc-method}
-
 
  \title{Convert number to a numeric vector of a given base}
 
  \description{Convert number to a numeric vector of a given base.}
 
-\usage{Misc$to.base(n, base=2, r=TRUE, ...)}
+ \usage{
+## Static method (use this):
+## Misc$to.base(n, base=2, r=TRUE, ...)
+
+## Don't use the below:
+\method{to.base}{Misc}(static, n, base=2, r=TRUE, ...)
+}
 
  \arguments{
  \item{n}{Number to convert.}

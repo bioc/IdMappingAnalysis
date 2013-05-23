@@ -1,17 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  misc.R
+%  R/misc.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{to.index.expr.Misc}
+ \name{Misc$to.index.expr}
+\alias{Misc$to.index.expr}
 \alias{to.index.expr.Misc}
 \alias{Misc.to.index.expr}
-\alias{to.index.expr.Misc}
 \alias{to.index.expr,Misc-method}
-
 
  \title{Convert expression into index expression for a given list or data frame object}
 
@@ -22,7 +21,13 @@
  i.e. for an object X and expression 'a+b' generate the expression 'X$a + X$b'
  }
 
-\usage{Misc$to.index.expr(obj, expr, ...)}
+ \usage{
+## Static method (use this):
+## Misc$to.index.expr(obj, expr, ...)
+
+## Don't use the below:
+\method{to.index.expr}{Misc}(static, obj, expr, ...)
+}
 
  \arguments{
  \item{obj}{Input \code{\link[base]{list}} or 2data.frame -derived object on which the expression to be constructed.}

@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  uniquePairs.R
+%  R/uniquePairs.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{getMatch.UniquePairs}
 \alias{getMatch.UniquePairs}
 \alias{UniquePairs.getMatch}
-\alias{getMatch.UniquePairs}
 \alias{getMatch,UniquePairs-method}
-
 
  \title{Get the logical vector of pair matches of the given UniquePairs object
  in other UniquePair object(s)}
@@ -22,7 +20,9 @@
  Analog of match() or \%in\% for vectors
  }
 
- \usage{\method{getMatch}{UniquePairs}(this, other, verbose=FALSE, ...)}
+ \usage{
+\method{getMatch}{UniquePairs}(this, other, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{other}{Another UniquePairs object or a list of objects the given object os compared to}

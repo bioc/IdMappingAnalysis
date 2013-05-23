@@ -1,17 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMap.R
+%  R/idMap.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{as.list.IdMap}
+ \name{IdMap$as.list}
+\alias{IdMap$as.list}
 \alias{as.list.IdMap}
 \alias{IdMap.as.list}
-\alias{as.list.IdMap}
 \alias{as.list,IdMap-method}
-
 
  \title{Coerce an object or a list of compatible object
  to the IdMap object or a list of IdMap objects}
@@ -23,7 +22,13 @@
  otherwise an exception will be thrown.
  }
 
-\usage{IdMap$as.list(idMapList, verbose=FALSE, ...)}
+ \usage{
+## Static method (use this):
+## IdMap$as.list(idMapList, verbose=FALSE, ...)
+
+## Don't use the below:
+\method{as.list}{IdMap}(x, idMapList, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{idMapList}{A \code{\link[base]{list}} or a single object of compatible type.}

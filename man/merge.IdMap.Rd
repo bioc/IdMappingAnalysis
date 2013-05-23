@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMap.R
+%  R/idMap.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{merge.IdMap}
 \alias{merge.IdMap}
 \alias{IdMap.merge}
-\alias{merge.IdMap}
 \alias{merge,IdMap-method}
-
 
  \title{Merge the IdMap object with a second IdMap object or a list of IdMap objects}
 
@@ -24,7 +22,9 @@
  by using IdMap$merge(idMapSet) call signature.
  }
 
- \usage{\method{merge}{IdMap}(x, y, mergeOp, rowMergeOp=mergeOp, verbose=FALSE, ...)}
+ \usage{
+\method{merge}{IdMap}(x, y, mergeOp, rowMergeOp=mergeOp, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{idMapSet}{ IdMap object or a list of ID Map objects to merge with.}

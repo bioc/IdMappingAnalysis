@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMap.R
+%  R/idMap.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,16 +9,16 @@
  \name{as.UniquePairs.IdMap}
 \alias{as.UniquePairs.IdMap}
 \alias{IdMap.as.UniquePairs}
-\alias{as.UniquePairs.IdMap}
 \alias{as.UniquePairs,IdMap-method}
-
 
 
  \title{Create a UniquePairs object from a given IdMap object}
 
  \description{Create a UniquePairs object from a given IdMap object.}
 
- \usage{\method{as.UniquePairs}{IdMap}(this, secondaryIDs=NULL, verbose=FALSE, ...)}
+ \usage{
+\method{as.UniquePairs}{IdMap}(this, secondaryIDs=NULL, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{secondaryIDs}{optional secondary ID list on which the resulting UniquePairs

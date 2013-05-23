@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.R
+%  R/jointUniquePairs.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,12 +15,12 @@
  \title{The JointUniquePairs class}
 
  \description{
-  Package:   \cr
+  Package:  IdMappingAnalysis \cr
 \bold{Class JointUniquePairs}\cr
 
 \code{\link[R.oo]{Object}}\cr
 \code{~~|}\cr
-\code{~~+--}\code{\link{IdMapBase}}\cr
+\code{~~+--}\code{\link[IdMappingAnalysis]{IdMapBase}}\cr
 \code{~~~~~~~|}\cr
 \code{~~~~~~~+--}\code{JointUniquePairs}\cr
 
@@ -28,7 +28,7 @@
 \cr
 
 public static class \bold{JointUniquePairs}\cr
-extends \link{IdMapBase}\cr
+extends \link[IdMappingAnalysis]{IdMapBase}\cr
 
 
 
@@ -43,7 +43,9 @@ extends \link{IdMapBase}\cr
  computing the match (inclusions) for each particular ID Map.
  }
 
- \usage{JointUniquePairs(uniquePairs=NULL, idMapList=NULL, name="", verbose=FALSE, ...)}
+ \usage{
+JointUniquePairs(uniquePairs=NULL, idMapList=NULL, name="", verbose=FALSE, ...)
+}
 
  \arguments{
  \item{uniquePairs}{ UniquePairs object on which a UniquePairsMatch is created
@@ -61,14 +63,14 @@ extends \link{IdMapBase}\cr
  \section{Fields and Methods}{
   \bold{Methods:}\cr
 \tabular{rll}{
- \tab \code{\link[IdMappingAnalysis:boxplot.JointUniquePairs]{boxplot}} \tab Draw a basic boxplot based on a given JointUniquePairs object and external data.\cr
+ \tab \code{\link[IdMappingAnalysis:boxplot.JointUniquePairs]{boxplot}} \tab  Draw a basic boxplot based on a given JointUniquePairs object and external data.\cr
  \tab \code{\link[IdMappingAnalysis:corr.boxplot.JointUniquePairs]{corr.boxplot}} \tab Boxplot of correlations by match group.\cr
  \tab \code{\link[IdMappingAnalysis:corr.plot.JointUniquePairs]{corr.plot}} \tab Plot the density distributions for a set of correlation objects
- derived from JointUniquePairs and Corr objects.\cr
+.\cr
  \tab \code{\link[IdMappingAnalysis:do.glm.JointUniquePairs]{do.glm}} \tab Compute linear regression for the given set of ID Maps.\cr
  \tab \code{\link[IdMappingAnalysis:getBootstrap.JointUniquePairs]{getBootstrap}} \tab Create Bootstrap object from JointUniquePairs object and two experiment sets.\cr
  \tab \code{\link[IdMappingAnalysis:getCorr.JointUniquePairs]{getCorr}} \tab Extract a set of correlation objects from given JointUniquePairs object
- and corresponding Corr object.\cr
+.\cr
  \tab \code{\link[IdMappingAnalysis:getCorrData.JointUniquePairs]{getCorrData}} \tab Create CorrData object from the JointUniquePairs object and two experiment sets.\cr
  \tab \code{\link[IdMappingAnalysis:getCorrDataFrame.JointUniquePairs]{getCorrDataFrame}} \tab Merge JointUniquePairs and Corr objects into a single data frame.\cr
  \tab \code{\link[IdMappingAnalysis:getMapNames.JointUniquePairs]{getMapNames}} \tab Get the names of UniquePairs objects encapsulated within the given JointUniquePairs object.\cr
@@ -82,7 +84,7 @@ extends \link{IdMapBase}\cr
  \tab \code{\link[IdMappingAnalysis:interactive.plot.JointUniquePairs]{interactive.plot}} \tab General purpose JointUniquePairs interactive plot function.\cr
  \tab \code{\link[IdMappingAnalysis:mixture.boxplot.JointUniquePairs]{mixture.boxplot}} \tab Boxplot of a mixture model component by match group.\cr
  \tab \code{\link[IdMappingAnalysis:mixture.plot.JointUniquePairs]{mixture.plot}} \tab Plot the correlation densities of the empirical fit, mixture fit and each
- of the mixture components for a mixture object derived from JointUniquePairsand Corr objects.\cr
+.\cr
  \tab \code{\link[IdMappingAnalysis:subsetCorr.JointUniquePairs]{subsetCorr}} \tab Subset the Corr object.\cr
  \tab \code{\link[IdMappingAnalysis:subsetData.JointUniquePairs]{subsetData}} \tab Subset data on a UniquePairsMatch object.\cr
  \tab \code{\link[IdMappingAnalysis:subsetGroups.JointUniquePairs]{subsetGroups}} \tab Get a JointUniquePairs subset.\cr
@@ -93,7 +95,7 @@ extends \link{IdMapBase}\cr
 [, aligned, as.data.frame, dim, dimnames, getName, primaryIDs, primaryKey, secondaryKey
 
  \bold{Methods inherited from Object}:\cr
-$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
+$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clearLookupCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFieldModifier, getFieldModifiers, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
 
 
  }

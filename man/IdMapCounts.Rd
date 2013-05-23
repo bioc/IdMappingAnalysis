@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMapCounts.R
+%  R/idMapCounts.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,12 +15,12 @@
  \title{The IdMapCounts class}
 
  \description{
-  Package:   \cr
+  Package:  IdMappingAnalysis \cr
 \bold{Class IdMapCounts}\cr
 
 \code{\link[R.oo]{Object}}\cr
 \code{~~|}\cr
-\code{~~+--}\code{\link{IdMapBase}}\cr
+\code{~~+--}\code{\link[IdMappingAnalysis]{IdMapBase}}\cr
 \code{~~~~~~~|}\cr
 \code{~~~~~~~+--}\code{IdMapCounts}\cr
 
@@ -28,7 +28,7 @@
 \cr
 
 public static class \bold{IdMapCounts}\cr
-extends \link{IdMapBase}\cr
+extends \link[IdMappingAnalysis]{IdMapBase}\cr
 
 
 
@@ -46,7 +46,9 @@ extends \link{IdMapBase}\cr
  by using the JointIdMap.$getCounts() method.
  }
 
- \usage{IdMapCounts(idMapList=NULL, verbose=FALSE, ...)}
+ \usage{
+IdMapCounts(idMapList=NULL, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{idMapList}{The \code{\link[base]{list}} of ID Maps aligned on primary IDs.}
@@ -82,7 +84,7 @@ extends \link{IdMapBase}\cr
 [, aligned, as.data.frame, dim, dimnames, getName, primaryIDs, primaryKey, secondaryKey
 
  \bold{Methods inherited from Object}:\cr
-$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
+$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clearLookupCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFieldModifier, getFieldModifiers, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
 
 
  }

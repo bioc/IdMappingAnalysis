@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.plots.R
+%  R/jointUniquePairs.plots.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{corr.boxplot.JointUniquePairs}
 \alias{corr.boxplot.JointUniquePairs}
 \alias{JointUniquePairs.corr.boxplot}
-\alias{corr.boxplot.JointUniquePairs}
 \alias{corr.boxplot,JointUniquePairs-method}
-
 
  \title{Boxplot of correlations by match group}
 
@@ -21,7 +19,9 @@
  utilizing the JointUniquePairs$boxplot function
  }
 
- \usage{\method{corr.boxplot}{JointUniquePairs}(this, corr, idMapNames=NULL, show.None=FALSE, subsetting=FALSE, group.gap=0.2, cex.main=1.2, cex.lab=1, srt=0, adj=0, par.zoom=1, main=paste("Correlations (", colnames(corr)[3], ") by match group", sep = ""), plot=TRUE, verbose=FALSE, ...)}
+ \usage{
+\method{corr.boxplot}{JointUniquePairs}(this, corr, idMapNames=NULL, show.None=FALSE, subsetting=FALSE, group.gap=0.2, cex.main=1.2, cex.lab=1, srt=0, adj=0, par.zoom=1, main=paste("Correlations (", colnames(corr)[3], ") by match group", sep = ""), plot=TRUE, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{corr}{Corr object which correlation values are used for boxplot.}

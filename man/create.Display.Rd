@@ -1,23 +1,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  display.R
+%  R/display.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{create.Display}
+ \name{Display$create}
+\alias{Display$create}
 \alias{create.Display}
 \alias{Display.create}
-\alias{create.Display}
 \alias{create,Display-method}
-
 
  \title{Open a new display device}
 
  \description{Open a new display device.}
 
-\usage{Display$create(width=7, height=7, bg="transparent", ...)}
+ \usage{
+## Static method (use this):
+## Display$create(width=7, height=7, bg="transparent", ...)
+
+## Don't use the below:
+\method{create}{Display}(static, width=7, height=7, bg="transparent", ...)
+}
 
  \arguments{
  \item{width}{Display device width in inches. Default is 7.}

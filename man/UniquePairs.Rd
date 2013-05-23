@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  uniquePairs.R
+%  R/uniquePairs.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,12 +15,12 @@
  \title{The UniquePairs class}
 
  \description{
-  Package:   \cr
+  Package:  IdMappingAnalysis \cr
 \bold{Class UniquePairs}\cr
 
 \code{\link[R.oo]{Object}}\cr
 \code{~~|}\cr
-\code{~~+--}\code{\link{IdMapBase}}\cr
+\code{~~+--}\code{\link[IdMappingAnalysis]{IdMapBase}}\cr
 \code{~~~~~~~|}\cr
 \code{~~~~~~~+--}\code{UniquePairs}\cr
 
@@ -28,7 +28,7 @@
 \cr
 
 public static class \bold{UniquePairs}\cr
-extends \link{IdMapBase}\cr
+extends \link[IdMappingAnalysis]{IdMapBase}\cr
 
 
 
@@ -41,7 +41,9 @@ extends \link{IdMapBase}\cr
  keys of an Id Map ('acc' and 'probeset' for example)
  }
 
- \usage{UniquePairs(DF=NULL, name="", primaryKey=colnames(DF)[1], secondaryKey=colnames(DF)[2], ...)}
+ \usage{
+UniquePairs(DF=NULL, name="", primaryKey=colnames(DF)[1], secondaryKey=colnames(DF)[2], ...)
+}
 
  \arguments{
  \item{DF}{A \code{\link[base]{data.frame}} consisting of two columns (primary and secondary IDs) from which the UniquePairs object is to be created.}
@@ -74,7 +76,7 @@ extends \link{IdMapBase}\cr
  \tab \code{\link[IdMappingAnalysis:create.UniquePairs]{create}} \tab Create a UniquePairs object from a single IdMap or a list of IdMap objects.\cr
  \tab \code{\link[IdMappingAnalysis:equals.UniquePairs]{equals}} \tab Check  if two unique pairs data structures are identical.\cr
  \tab \code{\link[IdMappingAnalysis:getMatch.UniquePairs]{getMatch}} \tab Get the logical vector of pair matches of the given UniquePairs object
- in other UniquePair object(s).\cr
+.\cr
  \tab \code{\link[IdMappingAnalysis:swapKeys.UniquePairs]{swapKeys}} \tab Swap the primary and secondary key columns.\cr
  \tab \code{\link[IdMappingAnalysis:unique.UniquePairs]{unique}} \tab Extract unique elements.\cr
 }
@@ -84,7 +86,7 @@ extends \link{IdMapBase}\cr
 [, aligned, as.data.frame, dim, dimnames, getName, primaryIDs, primaryKey, secondaryKey
 
  \bold{Methods inherited from Object}:\cr
-$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
+$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clearLookupCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFieldModifier, getFieldModifiers, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
 
 
  }

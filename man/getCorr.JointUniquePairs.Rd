@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.extensions.R
+%  R/jointUniquePairs.extensions.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{getCorr.JointUniquePairs}
 \alias{getCorr.JointUniquePairs}
 \alias{JointUniquePairs.getCorr}
-\alias{getCorr.JointUniquePairs}
 \alias{getCorr,JointUniquePairs-method}
-
 
  \title{Extract a set of correlation objects from given JointUniquePairs object
  and corresponding Corr object}
@@ -23,7 +21,9 @@
  stored in a JointUniquePairs object.
  }
 
- \usage{\method{getCorr}{JointUniquePairs}(this, corr, groups=NULL, full.group=FALSE, verbose=FALSE, ...)}
+ \usage{
+\method{getCorr}{JointUniquePairs}(this, corr, groups=NULL, full.group=FALSE, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{corr}{Corr object from which the Corr object(s) retrieved

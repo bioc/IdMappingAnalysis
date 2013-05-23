@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.R
+%  R/jointUniquePairs.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,14 +9,14 @@
  \name{getMapNames.JointUniquePairs}
 \alias{getMapNames.JointUniquePairs}
 \alias{JointUniquePairs.getMapNames}
-\alias{getMapNames.JointUniquePairs}
 \alias{getMapNames,JointUniquePairs-method}
-
 
  \title{Get the names of UniquePairs objects encapsulated within the given JointUniquePairs object}
  \description{Get the names of UniquePairs objects encapsulated within the given JointUniquePairs object.}
 
- \usage{\method{getMapNames}{JointUniquePairs}(this, ...)}
+ \usage{
+\method{getMapNames}{JointUniquePairs}(this, ...)
+}
 
  \arguments{\item{...}{Not used}}
 

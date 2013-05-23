@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.R
+%  R/jointUniquePairs.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{do.glm.JointUniquePairs}
 \alias{do.glm.JointUniquePairs}
 \alias{JointUniquePairs.do.glm}
-\alias{do.glm.JointUniquePairs}
 \alias{do.glm,JointUniquePairs-method}
-
 
  \title{Compute linear regression for the given set of ID Maps}
 
@@ -20,7 +18,9 @@
  and auxiliary data (response.data) from another data object.
  }
 
- \usage{\method{do.glm}{JointUniquePairs}(this, response.data, weights=NULL, idMapNames=NULL, ...)}
+ \usage{
+\method{do.glm}{JointUniquePairs}(this, response.data, weights=NULL, idMapNames=NULL, ...)
+}
 
  \arguments{
  \item{response.data}{The data on which the regression to be fitted.}

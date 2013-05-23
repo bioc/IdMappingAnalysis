@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.plots.R
+%  R/jointUniquePairs.plots.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{mixture.plot.JointUniquePairs}
 \alias{mixture.plot.JointUniquePairs}
 \alias{JointUniquePairs.mixture.plot}
-\alias{mixture.plot.JointUniquePairs}
 \alias{mixture.plot,JointUniquePairs-method}
-
 
  \title{Plot the correlation densities of the empirical fit, mixture fit and each
  of the mixture components for a mixture object derived from JointUniquePairsand Corr objects}
@@ -24,7 +22,9 @@
  on a resulting Mixture object.
  }
 
- \usage{\method{mixture.plot}{JointUniquePairs}(this, corr, idMapNames=NULL, subsetting=FALSE, G=c(1:5), verbose=FALSE, ...)}
+ \usage{
+\method{mixture.plot}{JointUniquePairs}(this, corr, idMapNames=NULL, subsetting=FALSE, G=c(1:5), verbose=FALSE, ...)
+}
 
  \arguments{
  \item{corr}{Corr object.}

@@ -1,22 +1,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  dataFilter.R
+%  R/dataFilter.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{minCountGroupConstraint.DataFilter}
+ \name{DataFilter$minCountGroupConstraint}
+\alias{DataFilter$minCountGroupConstraint}
 \alias{minCountGroupConstraint.DataFilter}
 \alias{DataFilter.minCountGroupConstraint}
-\alias{minCountGroupConstraint.DataFilter}
 \alias{minCountGroupConstraint,DataFilter-method}
-
 
  \title{Perform minimum count based thresholding of an input vector subdivided into groups}
  \description{Perform minimum count based thresholding of an input vector subdivided into groups.}
 
-\usage{DataFilter$minCountGroupConstraint(X, filtParams, ...)}
+ \usage{
+## Static method (use this):
+## DataFilter$minCountGroupConstraint(X, filtParams, ...)
+
+## Don't use the below:
+\method{minCountGroupConstraint}{DataFilter}(static, X, filtParams, ...)
+}
 
  \arguments{
  \item{X}{\code{\link[base]{numeric}} input \code{\link[base]{vector}}.}

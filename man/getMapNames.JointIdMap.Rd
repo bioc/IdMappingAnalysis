@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointIdMap.R
+%  R/jointIdMap.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,14 +9,14 @@
  \name{getMapNames.JointIdMap}
 \alias{getMapNames.JointIdMap}
 \alias{JointIdMap.getMapNames}
-\alias{getMapNames.JointIdMap}
 \alias{getMapNames,JointIdMap-method}
-
 
  \title{Get the names of IdMap objects encapsulated within the given JointIdMap object}
  \description{Get the names of IdMap objects encapsulated within the given JointIdMap object.}
 
- \usage{\method{getMapNames}{JointIdMap}(this, ...)}
+ \usage{
+\method{getMapNames}{JointIdMap}(this, ...)
+}
 
  \arguments{\item{...}{Not used}}
 

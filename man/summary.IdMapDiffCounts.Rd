@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMapDiffCounts.R
+%  R/idMapDiffCounts.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{summary.IdMapDiffCounts}
 \alias{summary.IdMapDiffCounts}
 \alias{IdMapDiffCounts.summary}
-\alias{summary.IdMapDiffCounts}
 \alias{summary,IdMapDiffCounts-method}
-
 
  \title{Get a compaund event counts summary report}
 
@@ -20,7 +18,9 @@
  corresponding to a particular compound event
  }
 
- \usage{\method{summary}{IdMapDiffCounts}(object, ...)}
+ \usage{
+\method{summary}{IdMapDiffCounts}(object, ...)
+}
 
  \arguments{
  \item{...}{Not used}

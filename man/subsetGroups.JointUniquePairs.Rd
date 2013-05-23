@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.R
+%  R/jointUniquePairs.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{subsetGroups.JointUniquePairs}
 \alias{subsetGroups.JointUniquePairs}
 \alias{JointUniquePairs.subsetGroups}
-\alias{subsetGroups.JointUniquePairs}
 \alias{subsetGroups,JointUniquePairs-method}
-
 
  \title{Get a JointUniquePairs subset}
 
@@ -21,7 +19,9 @@
  so the resulting object events form the unity i.e. full event group.
  }
 
- \usage{\method{subsetGroups}{JointUniquePairs}(x, groups=NULL, verbose=FALSE, ...)}
+ \usage{
+\method{subsetGroups}{JointUniquePairs}(x, groups=NULL, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{groups}{The subset of groups (DBs) incapsulated within

@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.R
+%  R/jointUniquePairs.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,15 +9,15 @@
  \name{getMatchInfo.JointUniquePairs}
 \alias{getMatchInfo.JointUniquePairs}
 \alias{JointUniquePairs.getMatchInfo}
-\alias{getMatchInfo.JointUniquePairs}
 \alias{getMatchInfo,JointUniquePairs-method}
-
 
  \title{Get match table(s) for a given set of primary IDs}
 
  \description{Get match table(s) for a given set of primary IDs.}
 
- \usage{\method{getMatchInfo}{JointUniquePairs}(this, IDs, idMapNames=NULL, ...)}
+ \usage{
+\method{getMatchInfo}{JointUniquePairs}(this, IDs, idMapNames=NULL, ...)
+}
 
  \arguments{
  \item{IDs}{A \code{\link[base]{character}} vector of primary IDs.}

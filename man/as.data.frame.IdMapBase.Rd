@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMapBase.R
+%  R/idMapBase.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{as.data.frame.IdMapBase}
 \alias{as.data.frame.IdMapBase}
 \alias{IdMapBase.as.data.frame}
-\alias{as.data.frame.IdMapBase}
 \alias{as.data.frame,IdMapBase-method}
-
 
  \title{Retrieves a data frame encapsulated within the given IdMapBase object}
  \description{
@@ -20,7 +18,9 @@
  derived object by using IdMapBase$as.data.frame(object) call signature.
  }
 
- \usage{\method{as.data.frame}{IdMapBase}(x, row.names=NULL, optional=FALSE, ...)}
+ \usage{
+\method{as.data.frame}{IdMapBase}(x, row.names=NULL, optional=FALSE, ...)
+}
 
  \arguments{
  \item{row.names}{Not used}

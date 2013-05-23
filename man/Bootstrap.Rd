@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  bootstrap.R
+%  R/bootstrap.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,12 +15,12 @@
  \title{The Bootstrap class}
 
  \description{
-  Package:   \cr
+  Package:  IdMappingAnalysis \cr
 \bold{Class Bootstrap}\cr
 
 \code{\link[R.oo]{Object}}\cr
 \code{~~|}\cr
-\code{~~+--}\code{\link{IdMapBase}}\cr
+\code{~~+--}\code{\link[IdMappingAnalysis]{IdMapBase}}\cr
 \code{~~~~~~~|}\cr
 \code{~~~~~~~+--}\code{Bootstrap}\cr
 
@@ -28,7 +28,7 @@
 \cr
 
 public static class \bold{Bootstrap}\cr
-extends \link{IdMapBase}\cr
+extends \link[IdMappingAnalysis]{IdMapBase}\cr
 
 
  The Bootstrap object encapsulates a data frame containing
@@ -39,7 +39,9 @@ extends \link{IdMapBase}\cr
  to the correlation data.
  }
 
- \usage{Bootstrap(corrData=NULL, Fisher=FALSE, R=200, verbose=FALSE, ...)}
+ \usage{
+Bootstrap(corrData=NULL, Fisher=FALSE, R=200, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{corrData}{CorrData object on which the correlation related bootstrapping is performed.}
@@ -63,7 +65,7 @@ extends \link{IdMapBase}\cr
  \section{Fields and Methods}{
   \bold{Methods:}\cr
 \tabular{rll}{
- \tab \code{\link[IdMappingAnalysis:plot.Bootstrap]{plot}} \tab Scatterplot of bootstrapped results: sd vs correlation.\cr
+ \tab \code{\link[IdMappingAnalysis:plot.Bootstrap]{plot}} \tab Scatterplot of bootstrapped results: sd vs correlation .\cr
 }
 
 
@@ -71,7 +73,7 @@ extends \link{IdMapBase}\cr
 [, aligned, as.data.frame, dim, dimnames, getName, primaryIDs, primaryKey, secondaryKey
 
  \bold{Methods inherited from Object}:\cr
-$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
+$, $<-, [[, [[<-, as.character, attach, attachLocally, clearCache, clearLookupCache, clone, detach, equals, extend, finalize, gc, getEnvironment, getFieldModifier, getFieldModifiers, getFields, getInstantiationTime, getStaticInstance, hasField, hashCode, ll, load, objectSize, print, registerFinalizer, save
 
 
  }

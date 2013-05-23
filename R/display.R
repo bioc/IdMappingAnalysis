@@ -1,29 +1,13 @@
 
 ###########################################################################/**
-# @RdocClass Display
-# \encoding{latin1}
+#' The Display class
 #
-# @title "The Display class"
-#
-# \description{
-# @classhierarchy
-# 
-# Serves as a wrapper for a set of graphical functions 
-# defined as static methods of Display class
-# }
-# 
-# @synopsis
-#
-# \arguments{
-# \item{...}{Not used.}
-# }
-#
-# \section{Fields and Methods}{
-#  @allmethods "public"
-# }
-#
-# \author{Alex Lisovich, Roger Day}
-#*/###########################################################################
+#' The \code{Display} classs serves as a wrapper for a set of graphical functions 
+#' defined as static methods of Display class
+#' 
+#'
+#' @param
+#' @author{Alex Lisovich, Roger Day}
 
 setConstructorS3("Display",function(){
 	extend(Object(),"Display");
@@ -32,29 +16,25 @@ setConstructorS3("Display",function(){
 
 
 ###########################################################################/**
-# @RdocMethod line.loess
-# 
-# @title "Plot loess transformed data"
+#' 
+#' Plot loess transformed data
 #
-# \description{@get "title".}
-# 
-# @synopsis
+#' \code{line.loess} will plot loess transformed data
+#' 
+#' 
+#' @param x The x coordinates of points to plot.
+#' @param y The y coordinates of points to be loess transformed for plotting.
+#' @param ... Additional graphical parameters
 #
-# \arguments{
-# \item{x}{The x coordinates of points to plot.}
-# \item{y}{The y coordinates of points to be loess transformed for plotting.}
-# \item{...}{Additional graphical parameters}
-# }
+#' @examples
+#' \dontrun{
+#' plot.new();
+#' plot.window(c(min(x),max(x)),c(min(y),max(y)));
+#' Display$line.loess2(x,y);
+#' }
 #
-# \examples{\dontrun{
-# plot.new();
-# plot.window(c(min(x),max(x)),c(min(y),max(y)));
-# Display$line.loess(x,y);
-# }}
-#
-# \seealso{@seeclass}
-# \author{Alex Lisovich, Roger Day}
-#*/###########################################################################
+#' @seealso{Display}
+#' @author{Alex Lisovich, Roger Day}
 
 setMethodS3("line.loess","Display",function(static,x, y, ...) {
 	loess.out = loess(y ~ x)
@@ -64,29 +44,25 @@ setMethodS3("line.loess","Display",function(static,x, y, ...) {
 
 
 ###########################################################################/**
-# @RdocMethod line.unsorted
-# 
-# @title "Draw a curve from unsorted points"
+#' 
+#' Draw a curve from unsorted points
 #
-# \description{@get "title".}
-# 
-# @synopsis
+#' \code{line.unsorted}: Draw a curve from unsorted points
+#' 
+#' @param x The (unsorted) x coordinates of points to plot.
+#' @param y The correponding y coordinates of points to plot.
+#' @param type Line type. Default is "l"."
+#' @param ... Additional graphical parameters
+#' }
 #
-# \arguments{
-# \item{x}{The (unsorted) x coordinates of points to plot.}
-# \item{y}{The correponding y coordinates of points to plot.}
-# \item{type}{Line type. Default is "l"."}
-# \item{...}{Additional graphical parameters}
-# }
+#' @examples{\dontrun{
+#' plot.new();
+#' plot.window(c(min(x),max(x)),c(min(y),max(y)));
+#' Display$line.unsorted(x,y);
+#' }
 #
-# \examples{\dontrun{
-# plot.new();
-# plot.window(c(min(x),max(x)),c(min(y),max(y)));
-# Display$line.unsorted(x,y);
-# }}
-#
-# \seealso{@seeclass}
-# \author{Alex Lisovich, Roger Day}
+#' @seealso{Display}
+#' @author{Alex Lisovich, Roger Day}
 #*/###########################################################################
 
 setMethodS3("line.unsorted","Display",function (static,x, y, type = "l", ...) {
@@ -96,32 +72,28 @@ setMethodS3("line.unsorted","Display",function (static,x, y, type = "l", ...) {
 
 
 ###########################################################################/**
-# @RdocMethod progressMsg
-# 
-# @title "Display a progress message"
+#' 
+#' Display a progress message
 #
-# \description{
-# Display a message accompanied by the percentage of completion.
-# }
-# 
-# @synopsis
+#' \code{progressMsg}
+#' Display a message accompanied by the percentage of completion.
+#' 
 #
-# \arguments{
-# \item{msg}{Message to be dysplayed.}
-# \item{i}{Counter of the progress.}
-# \item{total}{The maximum value for a counter corresponding to 100 percent completion.}
-# \item{...}{Not used}
-# }
+#' @param msg Message to be dysplayed.
+#' @param i Counter of the progress.
+#' @param total The maximum value for a counter corresponding to 100 percent completion.
+#' @param ... Not used
+#' }
 #
-# \examples{\dontrun{
-# for (i in 1:100){
-#   Display$progressMsg("processing: ",i,100);
-# # do something ...
-# }
-# }}
+#' \examples{\dontrun{
+#' for (i in 1:100){
+#'   Display$progressMsg("processing: ",i,100);
+#' # do something ...
+#' }
+#' }}
 #
-# \seealso{@seeclass}
-# \author{Alex Lisovich, Roger Day}
+#' @seealso{Display}
+#' \author{Alex Lisovich, Roger Day}
 #*/###########################################################################
 
 setMethodS3("progressMsg","Display",function(static,msg,i,total,...){
@@ -136,27 +108,27 @@ setMethodS3("progressMsg","Display",function(static,msg,i,total,...){
 
 
 ###########################################################################/**
-# @RdocMethod create
-# 
-# @title "Open a new display device"
+#' @RdocMethod create
+#' 
+#' @title "Open a new display device"
 #
-# \description{@get "title".}
-# 
-# @synopsis
+#' \description{@get "title".}
+#' 
+#' @synopsis
 #
-# \arguments{
-# \item{width}{Display device width in inches. Default is 7.}
-# \item{height}{Display device height in inches. Default is 7.}
-# \item{bg}{Device background. Default is 'transparent'.}
-# \item{...}{Not used}
-# }
+#' \arguments{
+#' @param width Display device width in inches. Default is 7.
+#' @param height Display device height in inches. Default is 7.
+#' @param bg Device background. Default is 'transparent'.
+#' @param ... Not used
+#' }
 #
-# \examples{\dontrun{
-# Display$create(width=10,height=7,bg="green");
-# }}
+#' \examples{\dontrun{
+#' Display$create(width=10,height=7,bg="green");
+#' }}
 #
-# \seealso{@seeclass}
-# \author{Alex Lisovich, Roger Day}
+#' @seealso{Display}
+#' \author{Alex Lisovich, Roger Day}
 #*/###########################################################################
 
 setMethodS3("create","Display",function(static,width=7,height=7,bg="transparent",...){
@@ -172,43 +144,43 @@ setMethodS3("create","Display",function(static,width=7,height=7,bg="transparent"
 
 
 ###########################################################################/**
-# @RdocMethod textBoundingBox
-# 
-# @title "Determine the size of the text bounding box"
+#' @RdocMethod textBoundingBox
+#' 
+#' @title "Determine the size of the text bounding box"
 #
-# \description{
-# Determine the size of the text bounding box
-# taking into account the text angle (srt).
-# }
-# 
-# \note{
-# The function should be called only on already created
-# graphical device, otherwise an error will be thrown.
-# }
+#' \description{
+#' Determine the size of the text bounding box
+#' taking into account the text angle (srt).
+#' }
+#' 
+#' \note{
+#' The function should be called only on already created
+#' graphical device, otherwise an error will be thrown.
+#' }
 #
-# @synopsis
+#' @synopsis
 #
-# \arguments{
-# \item{stext}{The text which width and height to be determined.}
-# \item{units}{If 'user' (default) the aspect ratio is calculated based on 'usr' and 'pin'.
-# graphics parameters or kept equal to 1 otherwise.}
-# \item{cex}{Text font size. Default is 1.}
-# \item{srt}{Text angle.Default is 0.}
-# \item{get.biggest}{If @TRUE (default), returns the biggest bounding box 
-# in case stest contains multiple strings.}
-# \item{...}{Not used}
-# }
+#' \arguments{
+#' @param stext The text which width and height to be determined.
+#' @param units If 'user' (default) the aspect ratio is calculated based on 'usr' and 'pin'.
+#' graphics parameters or kept equal to 1 otherwise.}
+#' @param cex Text font size. Default is 1.
+#' @param srt Text angle.Default is 0.
+#' @param get.biggest If @TRUE (default), returns the biggest bounding box 
+#' in case stest contains multiple strings.}
+#' @param ... Not used
+#' }
 #
-# \value{
-# The @data.frame with two columns containing the width and height of the bounding box(es).
-# }
+#' \value{
+#' The @data.frame with two columns containing the width and height of the bounding box(es).
+#' }
 #
-# \examples{\dontrun{
-# bounding.box<-Display$textBoundingBox("text",cex=2,srt=30);
-# }}
+#' \examples{\dontrun{
+#' bounding.box<-Display$textBoundingBox("text",cex=2,srt=30);
+#' }}
 #
-# \seealso{@seeclass}
-# \author{Alex Lisovich, Roger Day}
+#' @seealso{Display}
+#' \author{Alex Lisovich, Roger Day}
 #*/###########################################################################
 
 setMethodS3("textBoundingBox","Display",function(static,stext,units="user",cex=1,srt=0,get.biggest=TRUE,...) {
@@ -244,30 +216,30 @@ setMethodS3("textBoundingBox","Display",function(static,stext,units="user",cex=1
 
 
 ###########################################################################/**
-# @RdocMethod zoom.pars
-# 
-# @title "Zoom graphics parameters"
+#' @RdocMethod zoom.pars
+#' 
+#' @title "Zoom graphics parameters"
 #
-# \description{@get "title".}
-# 
-# @synopsis
+#' \description{@get "title".}
+#' 
+#' @synopsis
 #
-# \arguments{
-# \item{zoom}{Zoom factor.}
-# \item{par.names}{Graphics parameters to zoom.}
-# \item{...}{Not used}
-# }
+#' \arguments{
+#' @param zoom Zoom factor.
+#' @param par.names Graphics parameters to zoom.
+#' @param ... Not used
+#' }
 #
-# \value{
-# Previous values of altered graphics parameters.
-# }
+#' \value{
+#' Previous values of altered graphics parameters.
+#' }
 #
-# \examples{\dontrun{
-# Display$zoom.pars(zoom=3);
-# }}
+#' \examples{\dontrun{
+#' Display$zoom.pars(zoom=3);
+#' }}
 #
-# \seealso{@seeclass}
-# \author{Alex Lisovich, Roger Day}
+#' @seealso{Display}
+#' \author{Alex Lisovich, Roger Day}
 #*/###########################################################################
  
 setMethodS3("zoom.pars","Display",function(static,zoom,
@@ -286,43 +258,42 @@ setMethodS3("zoom.pars","Display",function(static,zoom,
 
 
 ###########################################################################/**
-# @RdocMethod copy
-# 
-# @title "Save current plot to the file"
+#' @RdocMethod copy
+#' 
+#' @title "Save current plot to the file"
 #
-# \description{
-# @get "title".
-# }
-# 
-# @synopsis
+#' \description{
+#' @get "title".
+#' }
+#' 
+#' @synopsis
 #
-# \arguments{
-# \item{filename}{The filename under which to save the plot.}
-# \item{zoom}{Copy zoom factor. Default is 1.}
-# \item{plotFun}{If NULL (default), copies the content of the current device to the file,
-# otherwise uses plotFun to plot into the file.}
-# \item{plotArgs}{The @list of parameters for the poltFun. Default is an empty @list.}
-# \item{type}{The type of plot, PNG, JPEG, TIFF, or PDF. Default is PNG.}
-# \item{res}{DPI resolution. Default is 72dpi.}
-# \item{quality}{If type is JPEG, the 'quality' of the JPEG image, as a percentage. 
-# Smaller values will give more compression but also more degradation of the image.
-# Default is 100 (best quality).}
-# \item{compression}{If type is TIFF the type of compression to be used.
-# Could be 'none', 'rle', 'lzw', 'jpeg' or 'zip'. Default is 'none'.}
-# \item{...}{Not used}
-# }
+#' \arguments{
+#' @param filename The filename under which to save the plot.
+#' @param zoom Copy zoom factor. Default is 1.
+#' @param plotFun If NULL (default), copies the content of the current device to the file,
+#' otherwise uses plotFun to plot into the file.}
+#' @param plotArgs The @list of parameters for the poltFun. Default is an empty @list.
+#' @param type The type of plot, PNG, JPEG, TIFF, or PDF. Default is PNG.
+#' @param res DPI resolution. Default is 72dpi.
+#' @param quality If type is JPEG, the 'quality' of the JPEG image, as a percentage. 
+#' Smaller values will give more compression but also more degradation of the image.
+#' Default is 100 (best quality).
+#' @param compression If type is TIFF the type of compression to be used.
+#' Could be 'none', 'rle', 'lzw', 'jpeg' or 'zip'. Default is 'none'.}
+#' @param ... Not used
 #
-# \value{
-# Name of the file the plot was saved to.
-# }
+#' \value{
+#' Name of the file the plot was saved to.
+#' }
 #
-# \examples{\dontrun{
-# plot(c(1:20),c(1:20));
-# Display$copy("plot.png");
-# }}
+#' \examples{\dontrun{
+#' plot(c(1:20),c(1:20));
+#' Display$copy("plot.png");
+#' }}
 #
-# \seealso{@seeclass}
-# \author{Alex Lisovich, Roger Day}
+#' @seealso{Display}
+#' \author{Alex Lisovich, Roger Day}
 #*/###########################################################################
  
 setMethodS3("copy","Display",function(static,filename,zoom=1,plotFun=NULL,plotArgs=list(),type=c("png","jpeg","jpg","tiff","bmp","pdf"),

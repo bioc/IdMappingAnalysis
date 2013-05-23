@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMapBase.R
+%  R/idMapBase.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{primaryIDs.IdMapBase}
 \alias{primaryIDs.IdMapBase}
 \alias{IdMapBase.primaryIDs}
-\alias{primaryIDs.IdMapBase}
 \alias{primaryIDs,IdMapBase-method}
-
 
  \title{Retrieves the primary IDs for a given IdMapBase object}
  \description{Retrieves the primary IDs for a given IdMapBase object.
@@ -20,7 +18,9 @@
  returning the <data.frame> first column.
 }
 
- \usage{\method{primaryIDs}{IdMapBase}(this, DF=NULL, ...)}
+ \usage{
+\method{primaryIDs}{IdMapBase}(this, DF=NULL, ...)
+}
 
  \arguments{\item{...}{Not used}}
  \value{A \code{\link[base]{character}} vector of primary IDs for given IdMapBase object}

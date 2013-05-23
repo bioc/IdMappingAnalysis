@@ -1,22 +1,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  dataFilter.R
+%  R/dataFilter.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{minCountConstraint.DataFilter}
+ \name{DataFilter$minCountConstraint}
+\alias{DataFilter$minCountConstraint}
 \alias{minCountConstraint.DataFilter}
 \alias{DataFilter.minCountConstraint}
-\alias{minCountConstraint.DataFilter}
 \alias{minCountConstraint,DataFilter-method}
-
 
  \title{Perform minimum count based thresholding of an input vector}
  \description{Perform minimum count based thresholding of an input vector.}
 
-\usage{DataFilter$minCountConstraint(x, filtParams, ...)}
+ \usage{
+## Static method (use this):
+## DataFilter$minCountConstraint(x, filtParams, ...)
+
+## Don't use the below:
+\method{minCountConstraint}{DataFilter}(static, x, filtParams, ...)
+}
 
  \arguments{
  \item{x}{\code{\link[base]{numeric}} input \code{\link[base]{vector}}.}

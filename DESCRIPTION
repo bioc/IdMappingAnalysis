@@ -1,5 +1,9 @@
 Package: IdMappingAnalysis
-Imports: boot, mclust, RColorBrewer, Biobase
+Imports:
+    boot,
+    mclust,
+    RColorBrewer,
+    Biobase
 Maintainer: Alex Lisovich <alex.lisovich@gmail.com>, Roger Day <day01@pitt.edu>
 License: GPL-2
 Title: ID Mapping Analysis
@@ -7,17 +11,36 @@ LazyData: yes
 Type: Package
 Author: Alex Lisovich, Roger Day
 Description: Identifier mapping performance analysis
-Version: 1.5.1
+Version: 1.5.2
 biocViews: Bioinformatics, Annotation, MultipleComparisons
-Date: 2013-05-13
-Depends: R (>= 2.14), R.oo (>= 1.13.0), rChoiceDialogs
-Collate: 'bootstrap.R' 'corr.R' 'corrData.R' 'data.R' 'dataFilter.R'
-        'zzz.R' 'display.R' 'idMap.R' 'idMapBase.R' 'idMapCounts.R'
-        'fit2clusters.R'
-        'expectedUtility.R'
-        'idMapDiff.R' 'idMapDiffCounts.R' 'IdMappingAnalysis-package.R'
-        'jointIdMap.plots.R' 'jointIdMap.R'
-        'jointUniquePairs.extensions.R'
-        'jointUniquePairs.interactive.plots.R'
-        'jointUniquePairs.plots.R' 'jointUniquePairs.R' 'misc.R'
-        'mixture.R' 'subset.R' 'uniquePairs.R'
+Date: 2013-05-22
+Depends:
+    R (>= 2.14),
+    R.oo (>= 1.13.0),
+    rChoiceDialogs
+Collate:
+    'bootstrap.R'
+    'corr.R'
+    'corrData.R'
+    'data.R'
+    'dataFilter.R'
+    'zzz.R'
+    'display.R'
+    'idMap.R'
+    'idMapBase.R'
+    'idMapCounts.R'
+    'fit2clusters.R'
+    'expectedUtility.R'
+    'idMapDiff.R'
+    'idMapDiffCounts.R'
+    'IdMappingAnalysis-package.R'
+    'jointIdMap.plots.R'
+    'jointIdMap.R'
+    'jointUniquePairs.extensions.R'
+    'jointUniquePairs.interactive.plots.R'
+    'jointUniquePairs.plots.R'
+    'jointUniquePairs.R'
+    'misc.R'
+    'mixture.R'
+    'subset.R'
+    'uniquePairs.R'

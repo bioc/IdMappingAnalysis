@@ -1,22 +1,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  dataFilter.R
+%  R/dataFilter.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{minAvgCountConstraint.DataFilter}
+ \name{DataFilter$minAvgCountConstraint}
+\alias{DataFilter$minAvgCountConstraint}
 \alias{minAvgCountConstraint.DataFilter}
 \alias{DataFilter.minAvgCountConstraint}
-\alias{minAvgCountConstraint.DataFilter}
 \alias{minAvgCountConstraint,DataFilter-method}
-
 
  \title{Perform mean based thresholding of an input vector}
  \description{Perform mean based thresholding of an input vector.}
 
-\usage{DataFilter$minAvgCountConstraint(x, filtParams, ...)}
+ \usage{
+## Static method (use this):
+## DataFilter$minAvgCountConstraint(x, filtParams, ...)
+
+## Don't use the below:
+\method{minAvgCountConstraint}{DataFilter}(static, x, filtParams, ...)
+}
 
  \arguments{
  \item{x}{\code{\link[base]{numeric}} input \code{\link[base]{vector}}.}

@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  jointUniquePairs.interactive.plots.R
+%  R/jointUniquePairs.interactive.plots.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -10,9 +10,7 @@
  \name{interactive.plot.JointUniquePairs}
 \alias{interactive.plot.JointUniquePairs}
 \alias{JointUniquePairs.interactive.plot}
-\alias{interactive.plot.JointUniquePairs}
 \alias{interactive.plot,JointUniquePairs-method}
-
 
  \title{General purpose JointUniquePairs interactive plot function}
 
@@ -22,7 +20,9 @@
  through the graphical selection dialog.
  }
 
- \usage{\method{interactive.plot}{JointUniquePairs}(this, data, plotFun, plotType, toggle_keys=list(), keys=list(), idMapNames="loop", new.plot=FALSE, file.copy=FALSE, copy.zoom=1, verbose=TRUE, ...)}
+ \usage{
+\method{interactive.plot}{JointUniquePairs}(this, data, plotFun, plotType, toggle_keys=list(), keys=list(), idMapNames="loop", new.plot=FALSE, file.copy=FALSE, copy.zoom=1, verbose=TRUE, ...)
+}
 
  \arguments{
  \item{data}{The data to be plotted.}

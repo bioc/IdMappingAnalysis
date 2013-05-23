@@ -1,17 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  dataFilter.R
+%  R/dataFilter.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{do.apply.DataFilter}
+ \name{DataFilter$do.apply}
+\alias{DataFilter$do.apply}
 \alias{do.apply.DataFilter}
 \alias{DataFilter.do.apply}
-\alias{do.apply.DataFilter}
 \alias{do.apply,DataFilter-method}
-
 
  \title{Filter experiment using constraints}
 
@@ -24,7 +23,13 @@
  series which do not pass the QC by applying the removeNASeries method as the last step.
  }
 
-\usage{DataFilter$do.apply(experimentSet, byRows=TRUE, filterFun=NULL, filtParams=NULL, verbose=FALSE, ...)}
+ \usage{
+## Static method (use this):
+## DataFilter$do.apply(experimentSet, byRows=TRUE, filterFun=NULL, filtParams=NULL, verbose=FALSE, ...)
+
+## Don't use the below:
+\method{do.apply}{DataFilter}(static, experimentSet, byRows=TRUE, filterFun=NULL, filtParams=NULL, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{experimentSet}{\code{\link[base]{data.frame}} containing probeID (first column/row)

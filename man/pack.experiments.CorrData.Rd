@@ -1,24 +1,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  corrData.R
+%  R/corrData.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{pack.experiments.CorrData}
+ \name{CorrData$pack.experiments}
+\alias{CorrData$pack.experiments}
 \alias{pack.experiments.CorrData}
 \alias{CorrData.pack.experiments}
-\alias{pack.experiments.CorrData}
 \alias{pack.experiments,CorrData-method}
-
 
  \title{Convert aligned experiment data into the data structure incapsulated within the CorrData object}
 
  \description{Convert aligned experiment data into the data structure incapsulated within the CorrData object.
  }
 
-\usage{CorrData$pack.experiments(experimentSetList, uniqueTuples, verbose=FALSE, ...)}
+ \usage{
+## Static method (use this):
+## CorrData$pack.experiments(experimentSetList, uniqueTuples, verbose=FALSE, ...)
+
+## Don't use the below:
+\method{pack.experiments}{CorrData}(static, experimentSetList, uniqueTuples, verbose=FALSE, ...)
+}
 
  \arguments{
  \item{experimentSetList}{ list of aligned ExperimentSet to be converted.}

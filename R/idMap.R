@@ -311,7 +311,6 @@ setMethodS3("swapKeys","IdMap",function(static,idMap,verbose=FALSE,...) {
 # \arguments{
 # \item{idMapList}{A @list or a single object of compatible type.}
 # \item{verbose}{If @TRUE enables diagnostic messages. Default is @FALSE.}
-# \item{...}{Not used}
 # }
 #
 # \value{

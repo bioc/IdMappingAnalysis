@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  idMapBase.R
+%  R/idMapBase.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{primaryKey.IdMapBase}
 \alias{primaryKey.IdMapBase}
 \alias{IdMapBase.primaryKey}
-\alias{primaryKey.IdMapBase}
 \alias{primaryKey,IdMapBase-method}
-
 
  \title{Retrieves a primary key for a given IdMapBase object}
  \description{Retrieves a primary key for a given IdMapBase object.
@@ -20,7 +18,9 @@
  returning the name of the <data.frame> first column.
  }
 
- \usage{\method{primaryKey}{IdMapBase}(this, DF=NULL, ...)}
+ \usage{
+\method{primaryKey}{IdMapBase}(this, DF=NULL, ...)
+}
 
  \arguments{\item{...}{Not used}}
  \value{A \code{\link[base]{character}} string representing primary key for given IdMapBase object}

@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  uniquePairs.R
+%  R/uniquePairs.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{unique.UniquePairs}
 \alias{unique.UniquePairs}
 \alias{UniquePairs.unique}
-\alias{unique.UniquePairs}
 \alias{unique,UniquePairs-method}
-
 
  \title{Extract unique elements}
 
@@ -20,7 +18,9 @@
  UniquePairs object contains only unique ID pairs
  }
 
- \usage{\method{unique}{UniquePairs}(x, incomparables=FALSE, verbose=FALSE, ...)}
+ \usage{
+\method{unique}{UniquePairs}(x, incomparables=FALSE, verbose=FALSE, ...)
+}
 
  \arguments{
 \ item{incomparables}{Not used (defined for compatibility with generic).}

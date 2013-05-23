@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  mixture.R
+%  R/mixture.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,14 +9,14 @@
  \name{secondaryKey.Mixture}
 \alias{secondaryKey.Mixture}
 \alias{Mixture.secondaryKey}
-\alias{secondaryKey.Mixture}
 \alias{secondaryKey,Mixture-method}
-
 
  \title{Retrieves a secondary key for a given Mixture object}
  \description{Retrieves a secondary key for a given Mixture object.}
 
- \usage{\method{secondaryKey}{Mixture}(this, ...)}
+ \usage{
+\method{secondaryKey}{Mixture}(this, ...)
+}
 
  \arguments{\item{...}{Not used}}
 

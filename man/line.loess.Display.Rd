@@ -1,23 +1,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  display.R
+%  R/display.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \name{line.loess.Display}
+ \name{Display$line.loess}
+\alias{Display$line.loess}
 \alias{line.loess.Display}
 \alias{Display.line.loess}
-\alias{line.loess.Display}
 \alias{line.loess,Display-method}
-
 
  \title{Plot loess transformed data}
 
  \description{Plot loess transformed data.}
 
-\usage{Display$line.loess(x, y, ...)}
+ \usage{
+## Static method (use this):
+## Display$line.loess(x, y, ...)
+
+## Don't use the below:
+\method{line.loess}{Display}(static, x, y, ...)
+}
 
  \arguments{
  \item{x}{The x coordinates of points to plot.}

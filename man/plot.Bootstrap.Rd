@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Do not modify this file since it was automatically generated from:
 % 
-%  bootstrap.R
+%  R/bootstrap.R
 % 
 % by the Rdoc compiler part of the R.oo package.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -9,9 +9,7 @@
  \name{plot.Bootstrap}
 \alias{plot.Bootstrap}
 \alias{Bootstrap.plot}
-\alias{plot.Bootstrap}
 \alias{plot,Bootstrap-method}
-
 
  \title{Scatterplot of bootstrapped results: sd vs correlation }
 
@@ -21,7 +19,9 @@
  and a second (dashed red) for a normal theory formula
  }
 
- \usage{\method{plot}{Bootstrap}(x, new.plot=FALSE, file.copy=FALSE, copy.zoom=1, cex.main=1.2, cex.lab=1, cex.axis=1, cex.legend=1, ...)}
+ \usage{
+\method{plot}{Bootstrap}(x, new.plot=FALSE, file.copy=FALSE, copy.zoom=1, cex.main=1.2, cex.lab=1, cex.axis=1, cex.legend=1, ...)
+}
 
  \arguments{
  \item{new.plot}{\code{\link[base]{logical}} indicating if the new graphic device should be created for plot. Default is \code{\link[base:logical]{FALSE}}.}

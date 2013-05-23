@@ -2,6 +2,8 @@ importFrom(mclust,Mclust,mclustBIC)
 importFrom(RColorBrewer,brewer.pal)
 importFrom(boot,boot)
 
+
+####exportPattern("^[^\\.]")
 export(
   plot.Bootstrap,
   plot.Corr,
@@ -12,6 +14,7 @@ export(
   as.data.frame.IdMapBase,
   dim.IdMapBase,
   dimnames.IdMapBase,
+  getName.IdMapBase,
   "[.IdMapBase",
   plot.IdMapCounts,
   summary.IdMapDiffCounts,
@@ -54,11 +57,9 @@ export(
   do.apply,
   do.glm,
   ecdf.plot,
-  expectedUtility,
   fisherTransform,
   fisherTransformInverse,
   fisherTransformJacobean,
-  fit2clusters,
   getBootstrap,
   getCompoundEvents,
   getCompoundGroups,
@@ -126,9 +127,11 @@ export(
   do.apply.DataFilter,
   do.glm.JointUniquePairs,
   ecdf.plot.JointIdMap,
+expectedUtility,
   fisherTransform.DataFilter,
   fisherTransformInverse.DataFilter,
   fisherTransformJacobean.DataFilter,
+fit2clusters,
   getBootstrap.JointUniquePairs,
   getCompoundEvents.IdMapDiffCounts,
   getCompoundGroups.IdMapDiffCounts,
@@ -190,4 +193,3 @@ export(
   to.index.expr.Misc,
   words.Misc,
   zoom.pars.Display)
-
