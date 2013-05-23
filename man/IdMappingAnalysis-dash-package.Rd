@@ -5,8 +5,8 @@ retrieved from bioinformatics annotation resources}
 \details{\tabular{ll}{
 Package: \tab IdMappingAnalysis\cr
 Type: \tab Package\cr
-Version: \tab 0.0.5 \cr
-Date: \tab 2012-03-07 \cr
+Version: \tab 1.5.2 \cr
+Date: \tab 2013-05-23 \cr
 License: \tab GPL (>= 2)\cr
 LazyLoad: \tab yes\cr
 }}
