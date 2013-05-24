@@ -30,7 +30,7 @@ extends \link[R.oo]{Object}\cr
 
 
 
- IdMapBase is an abstract object encapsultating a data frame
+ IdMapBase is an abstract object encapsulating a data frame
  with at least two columns, the first one (primary) containing
  character string s identifying the ID under consideration
  (unprot accessions ID or acc, Entrez Gene ID etc) and the rest of columns containing

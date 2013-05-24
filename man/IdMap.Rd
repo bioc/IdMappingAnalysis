@@ -32,7 +32,7 @@ extends \link[IdMappingAnalysis]{IdMapBase}\cr
 
 
 
- IdMap is an object encapsultating a data frame
+ IdMap is an object encapsulating a data frame
  with two columns (Primary ID and Secondary ID)
  where primaryID is a character string uniquely identifying the ID under consideration
  (unprot accessions ID or acc, Entrez Gene ID etc) and the Secondary ID is a

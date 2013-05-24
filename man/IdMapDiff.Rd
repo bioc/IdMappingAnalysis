@@ -34,7 +34,7 @@ extends \link[IdMappingAnalysis]{IdMapBase}\cr
 
  IdMapDiff constructor implements most time consuming step in comparing
  two DBs and the structure itself stores the results in a compact form.
- The IdMapDiff object encapsultates a \code{\link[base]{data.frame}} the first column
+ The IdMapDiff object encapsulates a \code{\link[base]{data.frame}} the first column
  of which contains the primary IDs and the rest of columns contain a disjoint
  representation of the ID Map pair in the form of 3 columns <A-A*B,A*B,B-A*B>,
  where A and B are secondary ID lists for ID Maps A and B.

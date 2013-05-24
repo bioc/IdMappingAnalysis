@@ -52,7 +52,7 @@ Bootstrap(corrData=NULL, Fisher=FALSE, R=200, verbose=FALSE, ...)
  }
 
  \value{
- A Bootstrap object encapsultating the \code{\link[base]{data.frame}} with following columns:
+ A Bootstrap object encapsulating the \code{\link[base]{data.frame}} with following columns:
  \item{column 1}{the first component (primary IDs) of unique pairs. The column name corresponds to the primary key
  of a source ID Map}
  \item{column 2}{the second component (secondary IDs) of unique pairs. The column name corresponds to the secondary key

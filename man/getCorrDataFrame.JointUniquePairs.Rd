@@ -37,7 +37,7 @@
  }
 
  \value{
- A \code{\link[base]{data.frame}} similar to the one encapsultaed wwithin the JointUniquePairs object, but the \code{\link[base]{logical}} values
+ A \code{\link[base]{data.frame}} similar to the one encapsulated wwithin the JointUniquePairs object, but the \code{\link[base]{logical}} values
  indicating the presence of the given match pair for a particular ID Map are replaced by correlation values
  from Corr object if the \code{\link[base]{logical}} value is \code{\link[base:logical]{TRUE}} or by \code{\link[base]{NA}} 's otherwise.
  }

@@ -32,7 +32,7 @@ extends \link[IdMappingAnalysis]{IdMapBase}\cr
 
 
 
- UniquePairsMatch object encapsultates a data frame the
+ UniquePairsMatch object encapsulates a data frame the
  first two columns of which contain the unique pairs corresponding to the merge (union)
  of all ID Maps in consideration while the rest of columns contains the match (logical value)
  between the merged unique pairs set and a unique pairs set specific to the particular
