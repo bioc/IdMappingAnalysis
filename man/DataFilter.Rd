@@ -39,7 +39,6 @@ DataFilter()
 }
 
  \arguments{
- \item{...}{Not used.}
  }
 
  \section{Fields and Methods}{
@@ -49,7 +48,7 @@ DataFilter()
  \tab \code{\link[IdMappingAnalysis:fisherTransform.DataFilter]{fisherTransform}} \tab Compute the Fisher transform.\cr
  \tab \code{\link[IdMappingAnalysis:fisherTransformInverse.DataFilter]{fisherTransformInverse}} \tab Compute the Fisher inversed transform.\cr
  \tab \code{\link[IdMappingAnalysis:fisherTransformJacobean.DataFilter]{fisherTransformJacobean}} \tab Compute the Fisher transform Jacobean.\cr
- \tab \code{\link[IdMappingAnalysis:logTen.DataFilter]{logTen} \tab Compute log10 of a numerical vector combined with thresholding on minimum value.\cr
+ \tab \code{\link[IdMappingAnalysis:logTen.DataFilter]{logTen}} \tab Compute log10 of a numerical vector combined with thresholding on minimum value.\cr
  \tab \code{\link[IdMappingAnalysis:minAvgCountConstraint.DataFilter]{minAvgCountConstraint}} \tab Perform mean based thresholding of an input vector.\cr
  \tab \code{\link[IdMappingAnalysis:minCountConstraint.DataFilter]{minCountConstraint}} \tab Perform minimum count based thresholding of an input vector.\cr
  \tab \code{\link[IdMappingAnalysis:minCountGroupConstraint.DataFilter]{minCountGroupConstraint}} \tab Perform minimum count based thresholding of an input vector subdivided into groups.\cr
