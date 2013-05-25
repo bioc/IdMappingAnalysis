@@ -7,6 +7,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
  \name{DataFilter$logTen}
+\alias{logTen}
 \alias{DataFilter$logTen}
 \alias{logTen.DataFilter}
 \alias{DataFilter.logTen}
