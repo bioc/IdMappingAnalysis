@@ -1,2 +1,3 @@
 DataAnalysis    Analyze experimental data non-interactively using pre-collected ID Map set
 InteractiveDataAnalysis    Explore experimental data interactively using pre-collected ID Map set
+readECMdoc    See documentation of the mathematics behind the function fit2clusters

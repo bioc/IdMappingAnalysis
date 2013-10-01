@@ -1,0 +1,745 @@
+%% Originally  created by LyX 1.6.9; hand-edited in Rstudio. 
+%% 
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=3cm,lmargin=2cm,rmargin=1cm,headheight=1cm,headsep=1cm,footskip=2cm}
+\usepackage{babel}
+
+\usepackage{setspace}
+\usepackage[unicode=true]
+ {hyperref}
+\usepackage{breakurl}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxaddress}[1]{
+\par {\raggedright #1
+\vspace{1.4em}
+\noindent\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\hypersetup{colorlinks=true,urlcolor=cyan}
+\newcommand{\Rcode}[1]{{\texttt{#1}}}
+\newcommand{\Robject}[1]{{\texttt{#1}}}
+\newcommand{\Rcommand}[1]{{\texttt{#1}}}
+\newcommand{\Rfunction}[1]{{\texttt{#1}}}
+\newcommand{\Rfunarg}[1]{{\textit{#1}}}
+\newcommand{\Rpackage}[1]{{\textit{#1}}}
+\newcommand{\Rmethod}[1]{{\textit{#1}}}
+\newcommand{\Rclass}[1]{{\textit{#1}}}
+
+% Meta information - fill between {} and do not remove %
+% \VignetteIndexEntry{Critically comparing identifier maps retrieved from bioinformatics annotation resources.}
+% \VignetteDepends{R.oo}
+% \VignetteKeywords{}
+% \VignettePackage{IdMappingAnalysis}
+
+\makeatother
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\SweaveOpts{center.fig=TRUE}
+
+\title{The \Rpackage{IdMappingAnalysis} package in Bioconductor: Critically
+comparing identifier maps retrieved from bioinformatics annotation
+resources }
+
+
+\author{Alex Lisovich \dag{}, Roger S. Day \dag{}\ddag{} }
+
+\maketitle
+
+\lyxaddress{\dag{}Department of Biomedical Informatics, \dag{}\ddag{} Department
+of Biostatistics, 
+University of Pittsburgh}
+
+
+\section{Introduction}
+
+With increasing frequency, studies of biological samples include processing on two (or more) high-throughput platforms. Each platform produces a large set of features, each labeled by an identifier.  It is one thing to merge the data by sample, simply combining the features on both platforms into a single data set. However, exploiting the full biological significance of the data depends on linking a feature from one platform with a feature on the other, where the pair of features are believed to be closely causally related to one another biologically. Examples include an ID from an mRNA expression array and an ID from a proteome-wide mass spectrometry data set, when the mRNA species is believed to produce the corresponding protein when translated.  Many bioinformatics resources facilitate this mapping between two types of ID. But they tend to disagree with each other, sometimes dramatically. 
+
+The \Rpackage{IdMappingAnalysis} package helps an analyst to critically compare the identifier maps retrieved from various annotation
+resources, to help choose the best ID mapping resource to use in
+merging the data. One can also use this technique to choose the best ID filtering strategy for removing dubious ID's.
+
+
+As presented here, this methodology focuses on comparing several ID mapping resources, but it is actually quite general. One can also use it to optimize the selection of a threshold for some quality index for mappings or for individual features, or to compare other data preparation and preprocessing methods.
+
+This  document begins with an overview of the setting and capabilities, followed by  detailed examples and explanations, and finishing with a few notes about the package architecture.
+ 
+\section{Overview of capabilities}
+
+\subsection{The setting and the problem statement}
+
+Suppose we have two data frames containing high-throughput data on the
+same set of samples.
+The two data frames are from two different platforms, designed to quantitate
+different but related types of molecular features. The two sets of feature names
+are identifiers, or IDs, which may be platform-specific, such as a
+probe set ID on an expression array, or may
+correspond to a standard identifier set, such as gene name, UniProt
+ID, or microRNA identifier or accession.
+
+In light of widespread annotation errors in bioinformatics resources,
+our problem is to evaluate different
+data processing options, either for mapping between the two ID lists
+(ID mapping, IDM) or for selecting IDs more likely to be correctly
+annotated (ID filtering, IDF). Our strategy is to use these two data
+frames merged across both sample and ID, using different IDM or IDF
+methods, and compare the methods by comparing the distributions of correlations between
+mapped features. (Correlation is just one possible quality indicator; others may be more suitable for some applications.)
+
+
+
+The \Rpackage{IdMappingAnalysis} package characterizes individual ID maps, creates data-free comparisons of two ID maps, and creates comparative evaluations of two ID maps in light of merged experimental data for a set of samples. 
+In  detail, the three capabilities provided are:
+
+\begin{enumerate}
+\item \textbf{Characterizing ID maps.} Each ID map is described by the empirical distribution of the number of secondary IDs. The ID map may be obtained by sending a list of primary IDs from an experimental data set to a bioinformatics resource, to retrieve for each primary ID the list of secondary IDs that according to this resource, correspond to the primary ID. 
+
+Section 3.4 demonstrates this capability.
+
+
+\item \textbf{Comparing two ID maps (without data).} The next step in understanding the behavior of different mapping resources is to compare them. Two given mapping resources A and B probed with the same list of primary IDs will each provide a list of secondary IDs. This data is easily converted into a set of ID pairs for each resource. Each primary-secondary ID pair is classified as appearing in ``A only'', ``B only'', or both. Then the counts in these categories are summarized across all ID pairs appearing in either A or B. 
+  
+Section 3.5 demonstrates this capability.
+
+\item \textbf{Evaluating and comparing two ID maps based on
+    integrating experimental results.} 
+    To obtain an evaluation of the relative quality of two mapping resources A and B, we require two data sets reporting results from two different high-throughput platforms 1 and 2 applied to the same samples. The names of the features of platform 1 are primary IDs; the names of the features of platform 2 are  secondary IDs. For each ID pair reported by either A or B, we imagine that the corresponding pair of features  falls into one of three categories:
+    
+
+\itemize{
+\item{\textbf{``+''}:	both features are correctly identified and mapped between platforms, and truly biologically coupled (for example, correlated) as expected,} 
+
+\item{\textbf{``0''}:	both features are correctly identified and mapped, but biologically decoupled in the sample group under study, due to causes unaccounted-for up to now, so that the correlation, regression coefficient, or other measure of association is near zero. This decoupling is sometimes called discordance,
+}
+\item{\textbf{``x''}:	one or both features are incorrectly identified, or incorrectly mapped to each other.
+}
+}
+
+\begin{enumerate}
+\item both features are correctly identified and mapped between platforms, and truly biologically coupled (for example, correlated)  as expected, 
+\item both features are correctly identified and mapped, but biologically decoupled or dysregulated in the sample group under study, due to causes unaccounted-for up to now,
+\item one or both features are incorrectly identified, or incorrectly mapped to each other.
+\end{enumerate}
+
+Comparing two strategies A and B for ID mapping, the best of the two should be enriched for the first and second categories of feature pairs, relative to the third.  With enough samples and feature pairs, the identity of the best strategy should become clear.
+\pb
+Unfortunately, we cannot distinguish the second from the third.
+However, suppose we define
+
+\mbox{}\\
+$\delta _{+}$ is defined as ${n_{+ }}/({n_{+ }} + {n_{0}})$, and
+$\delta _{0}$ is defined as ${n_{0 }}/({n_{0 }} + {n_{x}})$, where the $n$'s are counts of ID pairs in the three categories.
+\pb
+
+Then it can be shown that if either 
+$\delta _{+}$ is the same in A and B, or 
+$\delta _{0}$ is the same in A and B, 
+then the method with the most ``+'' pairs also has the fewest ``x'' pairs.
+\pb
+This result justifies the use of mixture modeling followed by regression modeling to choose the best strategy.
+One selects the strategy, A or B, with the largest fitted ``+'' component.
+Once a preferred strategy for ID mapping is selected,
+the same strategy can then serve to comparatively evaluate two different criteria or algorithms for filtering features on one of the platforms,
+using the same kind of mixture model.
+\pb
+Section 3.6 demonstrates this capability.
+
+
+
+\section{Examples in detail}
+The examples in this section recapitulate the creation of tables and figures in  an article {[}4{]} comparing ID mapping resources for semantically merging mass spectrometry shotgun proteomics data with expression microarray data. The results are not identical, primarily because the data analyzed here constitute a subset of the full data set, for purposes of storage and speed.
+
+\subsection{Package setup}
+
+We begin loading the package. 
+
+\begin{singlespace}
+<<chunk1,keep.source=TRUE>>=
+library(IdMappingAnalysis);
+@
+\end{singlespace}
+
+This also loads \Rpackage{rChoiceDialogs}, needed for some interactive features.
+
+\subsection{Collecting the ID mapping data}
+
+The starting point of the analysis is a vector of bioinformatics
+identifiers, the primary IDs.  This list may be the list of features
+for a particular high-througut platform, such as the probe sets on a
+specific expression array. Alternatively, the primary IDs may come
+from a specific experiment, for example a mass spectrometry "shotgun" experiment, where protein UniProt accession identifiers 
+are delivered by a specific algorithm matching a peptide spectrum to a
+peptide and thence to a protein.
+
+With a list of primary IDs in hand, the task is to map
+these to a set of secondary IDs, and the problem statement is to
+select the best bioinformatics mapping resource to use for this task.
+For each primary ID, each resource is queried for secondary ID matches. 
+The results from each service are assembled into an \Robject{IdMap} object. The
+\Robject{IdMap} objects for the services are then assembled into a single \Robject{JointIdMap} object.
+
+In the following example, the mapping services of interest are accessible using
+the \Rpackage{IdMappingRetrieval} Bioconductor package {[}5{]}. 
+Alternatively, one can use the ID map constructor for any mapping
+services not handled by \Rpackage{IdMappingRetrieval}.
+(OSX users should install \Rpackage{IdMappingRetrieval} via the command 
+\\
+\Rcode{biocLite("IdMappingRetrieval", type="source") }
+
+because of Java version issues.)
+
+Depending on the mapping service, the process of retrieving a mapping may take significant time and disk space. 
+To make this overview document practical to assemble in packaging and
+to use as a tutorial,
+the subsequent
+code snippets use subsets of the maps pre-acquired using the
+code listed above and placed into the \Rpackage{IdMappingAnalysis} package data
+section.
+
+\begin{singlespace}
+<<chunk1,eval=TRUE,keep.source=FALSE>>=
+options(width=110)
+@
+<<chunk2,eval=FALSE,keep.source=TRUE>>=
+# Initialize the ID mapping retrieval system
+library(IdMappingRetrieval); 
+Annotation$init(); 
+AnnotationAffx$setCredentials(user=MY_AFFY_USERNAME,
+      password=MY_AFFY_PASSWORD,verbose=FALSE);
+# Create a service manage object encapsulating default ID retrieval services.
+svm <- ServiceManager(ServiceManager$getDefaultServices());
+# Retrieve the ID Map list for selected array type and services.
+identDfList <- getIdMapList(svm,arrayType="HG-U133_Plus_2", 
+      selection=names(svm$getServices()),verbose=TRUE); 
+class(identDfList)
+class(identDfList)[[1]]
+@
+\end{singlespace}
+
+In this example, however,  we use the data provided with the package.
+
+Notice that \Robject{identDfList} is an ordinary list, but each member of identDfList is an object of class \Robject{IdMap}.
+The first column of an \Robject{IdMap} data object is the primary ID. There is also a secondary ID column containing the retrieved matches for each primary ID value, pasted 
+into a single string with \Robject{collapse=","} as the separator.
+
+\subsection{Preparing a \Robject{JointIdMap} object from multiple ID maps}
+
+\begin{singlespace}
+<<chunk3,keep.source=TRUE>>=
+# A list of ID maps to be analysed.
+names(examples$identDfList)
+head(examples$identDfList[[1]], 5)
+
+# Define the primary and secondary IDs to work with. 
+primaryIDs <- IdMapBase$primaryIDs(examples$msmsExperimentSet)
+head(primaryIDs)   ### UniProt IDs for proteins.
+secondaryIDs <- IdMapBase$primaryIDs(examples$mrnaExperimentSet);
+head(secondaryIDs)  ### Affymetrix probeset IDs.
+
+# Construct a JointIdMap object which combines 
+# the various ID maps, aligned by the union of the primary ID vectors.
+jointIdMap <- JointIdMap(examples$identDfList,primaryIDs,verbose=FALSE);
+names(getMethods.Class(JointIdMap)[["JointIdMap"]])  ### Methods specific to JointIDMap
+str(jointIdMap$as.data.frame())  ##  Structure of the data field of JointIdMap
+@
+\end{singlespace}
+Note that the first column of the \Rcommand{JointIdMap} data object is the primary ID. The other columns are the retrieved matches (pasted with ``,'', as with IdMap), for each of the ID mapping resources.
+
+We can also reverse the mapping, as follows.
+<<chunkSwapKeys,echo=TRUE>>=
+identDfListReversed <- lapply(examples$identDfList, function(identDf)
+    IdMap$swapKeys(IdMap(identDf)))
+jointIdMapReversed <- JointIdMap(identDfListReversed, secondaryIDs, verbose=FALSE)
+@
+(Reversing the mapping is not necessarily its own inverse; an ID with no matches will disappear in the reverse of the reverse.) 
+
+\subsection{Individual characterization of ID maps.}
+The following code creates the analogues of Table 1  and Figure 1 in {[}4{]}.
+\begin{singlespace}
+<<chunk4,fig=TRUE,height=7,width=14,keep.source=TRUE>>=
+# Assemble secondary ID counts object for a given set of DB's
+mapCounts <- getCounts(jointIdMap,
+          idMapNames=c("NetAffx_Q","NetAffx_F","DAVID_Q","DAVID_F","EnVision_Q"),
+          verbose=FALSE);
+#  This shows the structure of the contents of an IdMapCounts object.
+str(mapCounts$as.data.frame()) 
+names(getMethods.Class(mapCounts)[["IdMapCounts"]])
+
+#  Tabulating the number of returned secondary IDs per primary ID, aligned across services.
+statsByMatchCount <- mapCounts$getStats(summary=FALSE,verbose=FALSE); 
+statsByMatchCount[1:6,1:10];
+#  ...and the same results with a simplified summary.
+mapCounts$getStats(summary=TRUE,cutoff=3,verbose=FALSE);
+
+#  A plot of empirical cdf's of the secondary ID counts
+par(mfrow = c(1, 2));
+mapCounts$plot();  ### Or alternatice syntax:  plot(mapCounts)
+@
+\end{singlespace}
+
+\subsection{Comparison of two ID maps}
+Now we compare two ID maps for each primary ID, then display the results across primary IDs with tabular and graphical summaries. 
+The following code creates the analogues of Figures 2-5 in {[}4{]}.
+
+<<chunk5,fig=TRUE,height=7,width=14,keep.source=TRUE>>=
+diffsBetweenMap <- jointIdMap$getDiff("DAVID_Q","EnVision_Q",verbose=FALSE);
+class(diffsBetweenMap)
+diffCounts <- IdMapDiffCounts(diffsBetweenMap,verbose=FALSE); 
+names(getMethods(IdMapDiffCounts)[["IdMapDiffCounts"]])
+
+###  We characterize the differences betwen the two ID maps.
+diffCounts$summary(verbose);
+par(mfrow = c(1, 2));
+diffCounts$plot(adj=0.1,sides=1);
+
+# The same result is achieved more succinctly (for a different pair of ID mapping resources in this example) in this way: 
+# summary(jointIdMap$diffCounts.plot(c("DAVID_Q", "EnVision_Q"),
+#                                           adj=0.1,sides=1,verbose=FALSE));
+# We can also characterize the reverse  mapping created above.
+summary(jointIdMapReversed$diffCounts.plot(c("DAVID_Q", "EnVision_Q"),
+                                           adj=0.1,sides=1,verbose=FALSE));
+@
+
+Interactive use is available through a wrapper menu, invoked by the arg "loop". 
+<<chunk6,eval=FALSE,keep.source=TRUE>>=
+jointIdMap$diffCounts.plot("loop",adj=0.1,sides=1,verbose=FALSE);
+@
+
+
+\subsection{Performing a comparative evaluation of two ID maps based on integrating
+  experimental results from two platforms.}
+In this section, we utilize data from the two experiments to create and compare evaluations of several ID mapping resources, as manifest in the semantically integrated data.  By ``semantic integration'' we mean the process of selecting, for each ID pair obtained from any of the ID maps, the two corresponding features in the two experiments, and merging them by sample. It is semantic in the sense that the ID maps are intended to represent true biological relations.
+
+\subsubsection{Preparing a data set for each ID pair}
+
+\begin{singlespace}
+In this example, the data-based comparison of ID maps uses a  mass spectrometry experiment and an Affymetrix microarray experiment on the same samples. In the interest of reducing package storage, a subset of features is selected. In the interest of anonymity, data are jittered.
+The primary IDs are the protein UniProt IDs from the mass spectrometry experiment.
+The MS/MS data is first filtered. 
+We keep columns for which 
+the average of counts across all samples  is greater than 0.5.
+We keep rows for which all the data are not missing.
+The secondary IDs  are the probe set IDs from the HG-U133_Plus_2 expression array experiment.
+
+<<chunk7,keep.source=TRUE>>=
+msmsExperimentSet <- DataFilter$do.apply(examples$msmsExperimentSet,
+     byRows=TRUE,filterFun=DataFilter$minAvgCountConstraint,filtParams=0.52,verbose=FALSE);
+dim(examples$msmsExperimentSet)
+dim(msmsExperimentSet)
+msmsExperimentSet <- DataFilter$removeNASeries(msmsExperimentSet,byRows=TRUE,verbose=FALSE); 
+dim(msmsExperimentSet)
+
+mrnaExperimentSet <- examples$mrnaExperimentSet
+# We log10-transform the mRNA signal data.
+mrnaExperimentSet[,-1] <- log10(mrnaExperimentSet[,-1]);
+
+#  The primary IDs are now defined by the experiment.
+primaryIDs_from_dataset <- IdMapBase$primaryIDs(msmsExperimentSet);
+secondaryIDs <- IdMapBase$primaryIDs(mrnaExperimentSet);
+#  The method name primaryIDs() is unfortunate! This will be changed.
+
+# Create a JointIdMap object as before, 
+# but with a  primary ID vector reduced by the filtering step above.
+jointIdMap_from_dataset <- JointIdMap(examples$identDfList, primaryIDs_from_dataset, verbose=FALSE);
+@
+\end{singlespace}
+
+
+\subsubsection{Creating a merged data set for each ID pair}
+Next we create an object of class \Robject{UniquePairs} containing a data frame of all ID pairs from all the ID maps being analyzed.
+For each  ID pair, we want to calculate the correlation of the corresponding features from the two experimental data sets. Therefore we prepare a \Robject{CorrData} object which collates the data to facilitate rapidly calculating all the correlations in one step. 
+
+<<chunk8,keep.source=TRUE>>=
+uniquePairs <- as.UniquePairs(
+    getUnionIdMap(jointIdMap_from_dataset,verbose=FALSE),secondaryIDs);
+str(uniquePairs$as.data.frame())
+
+corrData <- CorrData(uniquePairs, 
+    examples$msmsExperimentSet,examples$mrnaExperimentSet,verbose=FALSE);
+str(corrData)
+names(getMethods(CorrData)[["CorrData"]])
+# (The method as.MultiSet() is deprecated.)
+@
+
+Next, we create an  object of class \Rfunarg{JointUniquePairs} that records, for each  unique pair, which of the ID maps reported it. This will be used later for regression analyses to determine which ID maps best predict good correlations.
+It is also handy for subselecting secondary ID features.
+
+<<chunkJointUniquePairs, keep.source=TRUE>>=
+# create pairs match object from unique pairs and joint ID map object 
+jointUniquePairs <- JointUniquePairs(uniquePairs, 
+    getIdMapList(jointIdMap_from_dataset,verbose=FALSE),verbose=FALSE);
+str(jointUniquePairs$as.data.frame())
+@
+
+\subsubsection{Scatterplots for data corresponding to a selected ID pair}
+
+For a particular primary ID, in this example P07355, we want to view correlations and scatterplots for this feature together with the features on the other experiment corresponding to mapped secondary IDs: in this example, the probeset IDs which are reported in one or more ID pairs to correspond to P07355. 
+The following code creates the analogues of Figures 6 and 7 in {[}4{]}.
+
+<<chunkIndividualScatterplot,fig=TRUE,height=7,width=14,keep.source=TRUE>>=
+
+# cross-correlation matrix of the  expression signals for probesets mapped with UniprotAcc="P07355"
+
+idMatchInfo <- jointIdMap_from_dataset$
+                      getMatchInfo(IDs="P07355", 
+                               idMapNames=c("NetAffx_Q", "DAVID_Q", "EnVision_Q"))[[1]] 
+print(idMatchInfo)
+data_Uniprot = corrData$getExperimentSet(modality="Uniprot",
+      IDs="P07355")
+data_Affy <- corrData$getExperimentSet(modality="Affy",
+      IDs=colnames(idMatchInfo)); 
+data <- cbind(t(data_Uniprot[,-1]), t(data_Affy[,-1]))
+cor(data,method="spearman");
+
+# Scatterplot  for Uniprot="P07355" (annexin 2), probe set ID="1568126_at".  
+# Patient outcomes guide symbols and colors.
+par(mfrow = c(1, 2));
+corrData$plot(input=list(c("P07355","1568126_at")),
+ 	outcomePairs=examples$outcomeMap,proteinNames="ANXA2",
+     cex=1.2,cex.main=1.2,cex.lab=1.2,cols=c("green","red","darkblue"));
+
+# scatterplot with outcome for Uniprot="P07384" (annexin 2)
+# for all matching probesets without outcome
+corrData$plot(input="P07384",proteinNames="ANXA2",
+     cex=1.2,cex.main=1.2,cex.lab=1.2,cols=c("green","red","darkblue"));
+@
+
+
+\subsection{Exploring merged data interactively using the high level wrappers }
+There are also interactive menu-driven versions.
+<<chunk10,eval=FALSE,keep.source=TRUE>>=
+# interactive scatterplot with a single primary ID (uniprot) and outcomes
+corrData$interactive.plot(c("P07355"),
+      outcomePairs=examples$outcomeMap,proteinNames="ANXA2");
+
+# interactive scatterplot with a single primary ID (uniprot) and without outcomes
+ corrData$interactive.plot(c("P07355"),proteinNames="ANXA2");
+
+# interactive scatterplot with multiple probeset IDs (uniprot) and without outcomes
+corrData$interactive.plot(c("P07355","P07384","P09382"));
+
+# interactive scatterplot with all available probeset 
+#IDs (uniprot) and without outcomes 
+corrData$interactive.plot();
+@
+
+
+\subsection{Evaluating and comparing Id Map quality using correlations}
+
+We can calculate correlations for all the ID pairs, and use them as "model quality" measures, for the model in which protein abundance should be proportional to transcript abundance. There are many things to criticize about this model, but by looking across a large set of ID pairs, the correlations can provide insight as to which of the ID mapping methods is working the best.  
+
+\subsubsection{Calculating and displaying the correlations}
+
+The following code creates the analogues of Figures 8-10 in {[}4{]}.
+The  density fit for correlations is for the union of all ID maps from all the ID mapping resources under study.  Each unique ID pair counts just once regardless of the number of ID maps that contain it.
+The left-most graph shows a fairly tendency towards positive correlations.  Its appearance is consistent with a mixture of a substantial proportion of ``noise'' correlations with  a substantial proportion of ``real'' correlations. 
+The next two graphs show more detail. The middle graph overlays individual correlation densities for each ID mapping resource. It shows all the curves, while the right-hand graph  overlays individually chosen correlation densities for each ID mapping resource.
+
+<<chunkDensityFit,fig=TRUE,height=7,width=14,keep.source=TRUE>>=
+par(mfrow = c(1, 3));
+corr <- Corr(corrData,method="pearson",verbose=FALSE); 
+corr[1:6, ]
+
+## Left-hand plot: density estimate for all correlations.
+corr$plot(cex=1.2,cex.main=1.4,cex.lab=1.2,cex.legend=1.2);
+
+## Center plot: individual density estimates for selected Id mapping resources.
+corrSet <- getCorr(jointUniquePairs,corr,
+      groups=c("union","EnVision_Q","NetAffx_Q","DAVID_Q","DAVID_F"),
+      full.group=TRUE,verbose=FALSE); 
+names(corrSet)
+Corr$plot(corrSet,cex=1.2,cex.main=1.4,cex.lab=1.2,cex.legend=1.2);
+
+## Right-hand plot: individual density estimates for selected Id mapping resources.
+corrSet <- jointUniquePairs$corr.plot(corr,
+      idMapNames=c("NetAffx_Q","DAVID_Q","EnVision_Q"), 
+      plot.Union=FALSE, subsetting=TRUE, verbose=FALSE,
+      cex=1.2, cex.main=1.4 ,cex.lab=1.2, cex.legend=1.2);
+names(corrSet)
+@
+
+To construct a correlation density plot interactively, the following method call provides an alternative.
+
+<<chunk13,eval=FALSE,keep.source=TRUE>>=
+jointUniquePairs$interactive.corr.plot(corr,verbose=FALSE);
+@
+
+
+
+\subsubsection{Alternative endpoint: posterior probability of a "good" correlation base on a mixture model}
+
+The density smooths suggest a mixture model, with a component cntered at correlation=zero and another located in the positive range of correlations. We fit a mixture model using the package \textbf{mclust}. This generates a posterior probability for each component (assuming a 50-50 prior for component membership).  The posterior probability of the positive component is arguably a better measure than the correlation itself for purposes of identifying factors that predict a correct ID mapping. Only large really correlations matter, and the difference between a negative correlation and a zero correlation is nil. While the transformation from correlation to the posterior probability is approximately monotone (as currently calculated), it stretches the important part of the correlation scale and compresses the unimportant part.
+
+We also implemented an ECM algorithm, to overcome some shortcomings with using mclust. With mclust, the model is fit without assuming equal variances;  consequently, if the fitted variances are much different, then the transformation to posterior probability is not monotone. Second, by rights the zero-centered component should be centered exactly at zero.  The option to fix one of the means is not readily available through \Rpackage{mclust}. (So far in practice the left-most component has always had its mean very close to zero, making it a plausible representation for correlations due to noise.) 
+
+To 
+overcome these problems, the function \Rcode{fit2clusters} provides an ECM algorithm described in this package via
+support the analysis in the manuscript
+<<>>=
+demo("readECMdoc", "IdMappingAnalysis")
+@
+
+\newcommand{\mytilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
+
+
+<<chunkMIXTURE,fig=TRUE,height=7,width=14,keep.source=TRUE>>=
+
+# create and plot the mixture model for number of components = 2 
+mixture <- Mixture(corr,G=2,verbose=FALSE); 
+par(mfrow=c(1, 2));
+mixture$plot(); 
+mixture$getStats();
+@
+
+There are a few options. One can vary the number of components in the mixture, and one can restrict to a subset of the ID mappers (the \Rcode{groups} parameter).
+
+<<chunkPlotMixtureNotEvaluated,eval=FALSE,keep.source=TRUE>>=
+# Create and plot the mixture model determining 
+#the optimal number of components) 
+# for a given DB subset treating the subset as a full group
+mixture.subset <- jointUniquePairs$getMixture(corr, groups=c("NetAffx_Q","DAVID_Q","EnVision_Q"),
+      full.group=TRUE,G=c(1:5),verbose); 
+
+mixture.subset <- jointUniquePairs$mixture.plot(corr,
+      idMapNames=c("NetAffx_Q","DAVID_Q","EnVision_Q"),
+      subsetting=TRUE,G=c(1:5),verbose=FALSE);
+@
+
+The mean of component \#1 is close to zero. The standard deviations of the components are somewhat different. In principle, then, a correlation near -1 could be classified as component \#2; but so far this does not happen in practice.
+<<chunk17,keep.source=TRUE>>=
+# retrieve the mixture parameters 
+mixture$getStats();
+@
+
+
+We can compare the correlation distributions of the subsets of ID pairs defined by which of the mapping services reports the pair. The analogous boxplot figure using the compenent \#2 posterior probability emphasizes the differences for large positive correlations, and is probably more informative. Note how the individual groups are accessible through list item names with a Boolean-like syntax.
+
+<<chunkBOXPLOTS,fig=TRUE,height=7,width=14,keep.source=TRUE>>=
+par(mfrow = c(1, 2));
+
+# Choose the mapping services, and define the corresponding short names to use in the figure.
+mappingServicesToPlot <- list("NetAffx_Q"="AffQ","DAVID_Q"="DQ","EnVision_Q"="EnV");
+# Plot correlation probability distributions by match group
+boxplotResult_correlation = jointUniquePairs$corr.boxplot(
+  corr, idMapNames=mappingServicesToPlot, subsetting=TRUE,
+  srt=35, col.points="green");
+# The following extracts the correlations for the group of ID pairs 
+# reported by DQ and EnV but not by AffQ.
+boxplotResult_correlation$response.grouped$`!AffQ & DQ & EnV`
+
+# Plot posterior second component probability distributions by match group
+boxplotResult_mixtureProb = jointUniquePairs$mixture.boxplot(
+  corr, idMapNames=mappingServicesToPlot, subsetting=TRUE, 
+  plot.G=2, srt=35, col.points="green");
+# invisible by default.
+boxplotResult_mixtureProb$response.grouped$`!AffQ & DQ & EnV`
+@
+
+
+Again, there is an interactive menu-driven version.
+<<chunk18,eval=FALSE,keep.source=TRUE>>=
+# plot the results of mixture fit interactively choosing the DB subset
+ interactive.mixture.plot(jointUniquePairs,corr,verbose=FALSE);
+@
+
+
+\subsubsection{Comparisons of mapping services}
+
+We can use regression modeling to investigate many different possible predictors of correlation, where correlation is a model quality measure, thought of as a reflection of the chance that the ID pair is correct. Here, for our quality measure for the linear model, instead of the correlation between the features, we use the posterior probability of belonging to  the right-hand positive-correlation mixture component.
+
+<<chunkCOMPARE,echo=TRUE>>=
+# Perform regression analysis relating which mapping services predict good correlations.
+
+fit<-jointUniquePairs$do.glm(corr$getData(),
+       idMapNames=c("DAVID_Q","EnVision_Q","NetAffx_Q"));
+coefficients(summary(fit));
+
+# Perform regression analysis using the second mixture component as the outcome variable.
+qualityMeasure <- mixture$getData(G=2) ## 2nd component posterior probability
+fitLinear <- jointUniquePairs$do.glm(qualityMeasure,
+      idMapNames=c("DAVID_Q","EnVision_Q","NetAffx_Q")); 
+coefficients(summary(fitLinear));
+#To do this directly:
+fitLinear <- with(as.data.frame(jointUniquePairs),
+      glm(qualityMeasure ~ DAVID_Q + EnVision_Q + NetAffx_Q))
+coefficients(summary(fitLinear));
+# Another variation:
+fitHitCount <- with(as.data.frame(jointUniquePairs),
+      glm(qualityMeasure ~ I(DAVID_Q + EnVision_Q + NetAffx_Q)))
+coefficients(summary(fitHitCount));
+fitHitCount$dev - fitLinear$dev
+@
+
+With the caveat that this is a reduced illustrative data set compared to the full data reported in {[}4{]}, the linear model seems to indicate that EnVision is the best predictor, DAVID less so, and NetAffx the least, although comparison with "hit count" model counteracts that impression. Using the 2nd component probability seems somewhat more sensitive than using the correlations as the endpoint.
+
+The regression analyses above are unweighted analyses. However, the error variance is not constant. We can supply weights reflecting the variances as estimated either by the Fisher's formula for the variance of a correlation coefficient (ignoring the non-normality), or by a bootstrap. The latter are provided by the \Rcode{Bootstrap} class within the \Rpackage{IdMappingAnalysis} package. 
+
+<<chunkBootstrap,echo=TRUE>>=
+
+bootstrap<-Bootstrap(corrData,Fisher=TRUE,verbose=FALSE);
+str(as.data.frame(bootstrap))
+# Scatterplot of the estimated standard deviation versus the observed correlation.
+bootstrap$plot(new.plot=TRUE,file.copy=TRUE,copy.zoom=2,bg="white");
+# One can use these estimates as weights. 
+fitLinear <- with(as.data.frame(jointUniquePairs),
+      glm(qualityMeasure ~ DAVID_Q + EnVision_Q + NetAffx_Q,
+         weights=(as.data.frame(bootstrap)$sd) ^ (-2))
+)
+coefficients(summary(fitLinear));
+# Another variation:
+fitHitCount <- with(as.data.frame(jointUniquePairs),
+      glm(qualityMeasure ~ I(DAVID_Q + EnVision_Q + NetAffx_Q),
+         weights=(as.data.frame(bootstrap)$sd) ^ (-2))
+)
+coefficients(summary(fitHitCount));
+fitHitCount$dev - fitLinear$dev
+@
+With this weighting, the evidence in favor of EnVision's predictive power is much stronger.
+
+To compare two services directly, the following code is illustrative. One can perform two-sample tests on the subgroups of ID pairs that exclusively are reported by one but not the other service.  Performing a Wilcoxon test, it will not usually matter whether the endpoint is the correlation or Pr(component \#2).  But a \emph{t} test should be more powerful in detecting a difference where it matters: large correlations.
+
+<<chunkTWOSAMPLE,echo=TRUE>>=
+affyOnly = boxplotResult_mixtureProb$response.grouped$`AffQ & !DQ & !EnV`
+envOnly = boxplotResult_mixtureProb$response.grouped$`!AffQ & !DQ & EnV`
+davidOnly = boxplotResult_mixtureProb$response.grouped$`!AffQ & DQ & !EnV`
+allThree = boxplotResult_mixtureProb$response.grouped$`AffQ & DQ & EnV`
+t.test(affyOnly, envOnly)
+wilcox.test(affyOnly, envOnly)
+t.test(affyOnly, davidOnly)
+wilcox.test(affyOnly, envOnly)
+t.test(affyOnly, allThree)
+wilcox.test(affyOnly, allThree)
+@
+
+The last two tests show the increased power from using the 2nd component probability instead of the correlation as the quality measure.
+
+<<chunkDeleteMe,echo=TRUE>>=
+head(jointUniquePairs$as.data.frame() )
+pairs <- jointUniquePairs$as.data.frame()
+pairsNotReportedByNetAffx = pairs[
+  (!pairs$NetAffx_Q & (pairs$DAVID_Q | pairs$EnVision_Q))  
+  , c("Uniprot", "Affy")]
+head(pairsNotReportedByNetAffx)
+@
+
+
+\section{High-level wrapper methods and interactive data exploration}
+
+The \Robject{JointIdMap}, \Robject{JointUniquePairs} and \Robject{CorrData} classes provide a set
+of high level wrapper methods supporting interactive menu-driven selection of arguments and  performance of multiple processing
+steps within a single method invocation. 
+The interactive session can generate either single
+or multiple data sets/plots corresponding to the user input selections
+or these methods can be used non-interactively. 
+The user is protected from some of the complexity of multiple processing steps. 
+The following functionality is supported through the methods arguments or by selection within the GUI:
+
+- multiple or single GUI-based data exploration sessions
+
+- optional subsetting on ID mapping identifiers or ID mapping resources  
+
+- plotting into existing or automatically created new device device
+
+- copying a plot into the file with a specified "zoom" (magnification factor).
+
+\section{Decision support}
+
+
+
+\section{The package architecture}
+
+A few notes on the  architecture of the package may be helpful. The package \Rpackage{R.oo} provides a reasonably simple class/method framework based on the S3 class system. 
+
+\subsection{Classes}
+
+The \Robject{IdMapBase}
+class is fundamental to the \Rpackage{IdMappingRetrieval} package. 
+It contains a data frame whose columns include two columns designated as primaryKey and secondaryKey, whose values are two ID types under study. An \Robject{IdMapBase} object is usually obtained from methods of the package \Rpackage{IdMappingRetrieval}. 
+Classes which extend \Robject{IdMapBase} are: 
+\\
+\Rfunction{IdMap, IdMapCounts, JointIdMap, IdMapDiff, IdMapDiffCounts, UniquePairs, JointUniquePairs, Corr, Bootstrap}
+
+They all inherit \Rfunction{as.data.frame()}.
+
+An \Robject{IdMap} object has a \Robject{primaryKey} which is truly a key: values are unique. All classes use the same \Rfunction{as.data.frame} method, except \Robject{JointIdMap}, for which the notion of \Robject{secondaryKey} needs modification, because there are multiple \Robject{secondaryKey} columns.
+
+Viewing the names of methods specific to each of these classes, use the \Rpackage{R.oo} function \Rfunction{getMethods.Class} and this syntax:\
+\begin{center}
+\Rcode{names(getMethods.Class(JointIdMap)[["JointIdMap"]])}.\\
+\end{center}
+To see the content of any method, use the usual syntax for S3 class methods, for example 
+\Rcode{diffCounts.plot.JointIdMap}.  To see the names of fields in a class (including ``hidden'' fields), use  syntax like this:
+\begin{center}
+\Rcode{getFields.Class(JointIdMap, private=TRUE)}.\\
+\end{center}
+To access the  value of a field in an instance, use  syntax like this:
+\Rcode{jointIdMap\$.secondaryKey}.
+
+
+The rest of the classes are just containers for static auxiliary functions:
+
+- \textbf{Subset:} handles  data subsetting and merging operations
+
+- \textbf{DataFilter:} provides various algorithms for data preprocessing
+
+- \textbf{Display:} provides utility functions for graphics support, including   rescaling of plots for export to files.
+
+- \textbf{Misc:} contains miscellaneous helper functions.
+
+Contents of the classes 
+
+
+
+\section{Session information }
+
+
+<<sessionInfo, results=tex>>=
+toLatex(sessionInfo())
+@
+
+
+\section{References}
+\begin{description}
+\item [{{[}1{]}}] Liu G., NetAffx: Affymetrix probesets and annotations.
+Nucleic Acids Res. 2003, 31(1):82-6.
+\item [{{[}2{]}}] Huang D.W., Sherman B.T.,  Lempicki R.A. (2008) Systematic
+and integrative analysis of large gene lists using DAVID bioinformatics
+resources. Nat. Protoc., doi: 10.1038/nprot.2008.211.
+\item [{{[}3{]}}]  Reisinger F.,  Corpas M.,  Hancock J., 
+Hermjakob H.,  Birney E.,   Kahlem P.. ENFIN - An Integrative Structure
+for Systems Biology. Data Integration in the Life Sciences Lecture
+Notes in Computer Science, 2008, Volume 5109/2008, 132-143, DOI: 10.1007/978-3-540-69828-9\_13 
+\item [{{[}4{]}}]  Day R.S., McDade K.K.,  Chandran U.,  Lisovich A.,
+ Conrads T.P.,  Hood B., Kolli V.S.K.,  Kirchner D., 
+Litzi T.,  Maxwell G.L.. Identifier mapping performance for integrating
+transcriptomics and proteomics experimental results. BMC Bioinformatics,
+2011. 12: p. 213.
+\item [{{[}5{]}}] Day R.S., Lisovich A.. DAVIDQuery: Retrieval from
+the DAVID bioinformatics data resource into R. R package version 1.12.0.,
+in Bioconductor Release, 2.9. 2010.
+\item [{{[}6{]}}] Lisovich A., Day R.S., ENVISIONQuery: Retrieval
+from the ENVISION bioinformatics data portal into R. R package version
+1.2.0, in Bioconductor Release 2.9, 2011 
+\item [{{[}7{]}}] Lisovich A., Day R.S., The IdMappingRetrieval package
+in Bioconductor: Collecting and caching identifier mappings from online
+sources. R package Version 1.1.0, in Bioconductor Development, 2.10.
+2011. 
+\item [{{[}8{]}}] Lisovich A.,  Day R.S., The rChoiceDialogs package
+in CRAN: Collection of portable choice dialog widgets. R package version
+1.0.1 Published 2011-01-15. 
+\item [{{[}9{]}}] Bengtsson H., The R.oo package - Object-oriented
+programming with references using standard R code, Talk at the DSC
+2003 conference, Wienna, March 22, 2003.
+\end{description}
+
+\end{document}
