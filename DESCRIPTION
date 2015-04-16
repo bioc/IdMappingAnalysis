@@ -8,7 +8,7 @@ LazyData: yes
 Type: Package
 Author: Alex Lisovich, Roger Day
 Description: Identifier mapping performance analysis
-Version: 1.11.0
+Version: 1.12.0
 Date: 2013-05-24
 Depends: R (>= 2.14), R.oo (>= 1.13.0), rChoiceDialogs
 Collate: 'bootstrap.R' 'corr.R' 'corrData.R' 'data.R' 'dataFilter.R'
