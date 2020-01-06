@@ -2,14 +2,12 @@
 	### .First.lib is NOT RECOMMENDED for packages with #namespace, but it works.
 }
 
-.onAttach = function(libname, pkgname) {
-	desc <- packageDescription(pkgname)
-	DQdate <-  desc$Date
-	DQVersion =  desc$Version
-	packageStartupMessage("This is ", pkgname, " ", desc$Version, " ", desc$Date)
-	return(invisible(NULL))
+.onAttach <- function(libname, pkgname) {
+    msg <- sprintf(
+        "Package '%s' is deprecated and will be removed from Bioconductor
+         version %s", pkgname, "3.12")
+    .Deprecated(msg=paste(strwrap(msg, exdent=2), collapse="\n"))
 }
-
 
 
 
